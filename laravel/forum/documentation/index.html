@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Forumium PRO - Documentation</title>
+		<link href="assets/bootstrap.css" rel="stylesheet">
+		<style type="text/css">
+		img{
+			max-width: 100%;
+			border:5px solid #1EFF16;
+			margin:20px;
+		}
+		</style>
+	</head>
+	<body>
+	<h3 align="center">Forumium PRO - Documentation</h3>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+			<div class="panel panel-primary">
+				  <div class="panel-heading">
+						<h3 class="panel-title">Navigation  Menu</h3>
+				  </div>
+				  <div class="panel-body">
+						<ul>
+							<li><a href="#install">Installation</a></li>
+							<li><a href="#translation">Translation</a></li>
+							<li><a href="#start">Start Guide</a></li>
+							<li><a href="#used">Used Libraries</a></li>
+						</ul>
+				  </div>
+				</div>
+			</div>
+			<div class="col-sm-4"></div>
+		</div>
+
+		<h2 id="install">1. Installation</h2>
+		<p>You need to configure some details in order to install your forum but there are some requirements</p>
+		<div class="panel panel-default">
+			<div class="panel-body">
+			   <strong>Requirements:</strong>
+			   <ul>
+			   		<li>Apache/Nginx</li>
+			   		<li>MySQL Server</li>
+			   		<li>PHP Version >=5.4</li>
+			   		<li>Rewrite Module</li>
+			   		<li>PHP Mcrypt Exension</li>
+			   		<li>Composer (Optional)</li>
+			   </ul>
+			</div>
+		</div>
+		<div id="basic_conf">
+		<div class="alert alert-success">1. Extract forum files in your www/htdocs folder.</div>
+		<div class="alert alert-success">2. Open file "conf.php" in the main forum folde.</div>
+		<img src="assets/images/conf.jpg">
+		<div class="alert alert-success">3. You will see this</div>
+		<img src="assets/images/conf-o.png">
+		<div class="alert alert-success">4. You need to configure MySQL database name and username/password. SMTP username/password. Facebook AppId and Secret key.
+		<br>
+		<strong>$conf_site_url</strong> - the url of your forum script. For example: http://forumiumpro.tk. !!!YOU NEED TO REDIRECT THE DOMAIN TO THE "PUBLIC" FOLDER. THE "PUBLIC" FOLDER IS THE FOLDER WHERE ALL USERS NEED TO GO"
+		<br>
+		<strong>$db_host</strong> - this usually is localhost but if it is not you can enter teh address of the host. 
+		<br>
+		<strong>$db_username</strong> - the username of MySQL user who HAS ALL PERMISSIONS (TO EDIT/DELETE/CREATE ETC.)
+		<br>
+		<strong>$db_password</strong> - the password of the MySQL user
+		<br>
+		<strong>$db_name</strong> - the name of the MySQL database !!!THE DATABASE MUST BE EMPTY!!!
+		<br>
+		<strong>$smtp_host</strong> - if you have smtp server you can enter its address but you can also leave it smtp.gmail.com.
+		<br>
+		<strong>$smtp_username</strong> - the username of your smtp server. If it is smtp.gmail.com you need to write YOUR GMAIL ACCOUNT EMAIL.
+		<br>
+		<strong>$smtp_password</strong> - the password of your smtp server user. If it is smtp.gmail.com you need to write YOUR GMAIL ACCOUNT PASSWORD.
+		<br>
+		<strong>$smtp_port</strong> - 587 is the default but you can change it.
+		<br>
+		</div>
+		</div>
+		<h4>Facebook Login Configuration</h4>
+		<div id="fb_conf">
+		<p>You need to configure your facebook app's appId and facebook app's secret key. In order to do that you must create app in <a href="http://developers.facebook.com/">http://developers.facebook.com/</a>
+		</p>
+		<h4>Creating a Facebook App.</h4>
+		<img src="assets/images/dev_fb.png">
+		<div class="alert alert-success">Now you need to click on "Apps" in the top-left corner and then click "Create a New App"</div>
+		<img src="assets/images/dev_fb_m_o.png">
+		<img src="assets/images/fb_create_app.png">
+		<div class="alert alert-success">In Dispaly Name field enter some name. Ex.:myforumpro<br>
+		In Namespace field enter something that isn't taken. Ex.:myforumpronamespace.
+		Then choose category
+		and click "Create App". Then reload the page and click "Apps" and then click on your app.
+		</div>
+		<img src="assets/images/app_created.png">
+		<img src="assets/images/fb_dashboard.png">
+		<div class="alert alert-success">Click on settings in the left and then click "Add Platform".</div>
+		<img src="assets/images/fb_settings.png">
+		<img src="assets/images/add_platform_button.png">
+		<div class="alert alert-success">
+			Choose Website
+		</div>
+		<img src="assets/images/fb_website.png">
+		<img src="assets/images/fb_select_platform.png">
+		<img src="assets/images/fb_web_platform_created.png">
+		<div class="alert alert-success">
+			In Site URL field enter the url of the forum. For example: http://forumiumpro.tk/ and in Mobile Site URL enter the same url and then click "Save Changes".
+		</div>
+		<img src="assets/images/fb_website_plat_created.png">
+		<div class="alert alert-success">
+			In App Domains fieldenter again your forum site url and in Contact Email field enter your contact email and click again "Save Changes". Then go to Status & Review and turn your application to public. 
+		</div>
+		<img src="assets/images/statusnreview.png">
+		<img src="assets/images/statusnreviewclick.png">
+		<div class="alert alert-success">
+			Then go to "Dashboard" and copy the APP ID and App Secret and enter them in "conf.php" in the main forum folder.
+		</div>
+		<img src="assets/images/fb_dash_key.png">
+		<img src="assets/images/conf_fb.png">
+		</div>
+		<h4>Creating the database tables and inserting rows</h4>
+		<p>Now you need to create db tables in your database and insert some data in them. In order to do that you need to open the terminal and navigate to your main forum folder. If your are using windows you click SHIFT+RIGHT MOUSE CLICK and then choose "Open command window here" or if you are using linux you can navigate to the folder in terminal using the command "cd"</p>
+		<img src="assets/images/nav.png">
+		<div class="alert alert-success">
+		Now you need to type "php artisan migrate", it will ask you "Do you really wish to run this command?" and you need to press ENTER. 
+		</div>
+		<img src="assets/images/migrate_b.png">
+		<img src="assets/images/migrate_a.png">
+		<div class="alert alert-success">
+		After you are done with "php artisan migrate" you need to type "php artisan db:seed", it will ask you "Do you really wish to run this command?" and you need to press ENTER. 
+		</div>
+		<img src="assets/images/seed_b.png">
+		<img src="assets/images/seed_a.png">
+		<div class="alert alert-success">
+		After you are done with "php artisan db:seed" you need to type "php artisan key:generate", it will ask you "Do you really wish to run this command?" and you need to press ENTER. 
+		</div>
+		<img src="assets/images/keyg_before.png">
+		<img src="assets/images/keyg_after.png">
+		<h3 align="center">DONE. The forum is ready. Open browser go to localhost and navigate to your forum folder and then go to public folder. THE "PUBLIC" FOLDER IS THE FOLDER WHERE YOU CAN SEE THE FORUM THIS IS THE FOLDER WHERE USERS NEED TO BE REDIRECTED.</h3>
+		<img src="assets/images/loc.png">
+		<img src="assets/images/public_nav.png">
+		<img src="assets/images/public.png">
+		<h3 align="center" id="translation">Translation</h3>
+		<div>
+		Forumiumpro can be translated in different langauges. All you need to do is to create folder in "app/lang" folder with the language name for example: IT/ES/RO/CH. !!! Do not change the name of "en" folder in app/lang folder.!!! Then you need to copy all of the files in "en" folder and paste it in the other langauge folder for example "it". Then you need to open then and edit the words.
+		<div class="alert alert-success">
+			Navigate to your main script folder -> app -> lang
+		</div>
+		<img src="assets/images/lang_f.png">
+		<div class="alert alert-success">
+			Create folder with the language you want. For example: "it" (Italian)
+		</div>
+		<img src="assets/images/it_created.png">
+		<div class="alert alert-success">
+			Then copy all the files from "en" folder to the other language folder. In my case "it"
+		</div>
+		<img src="assets/images/copy_en_to_it.png">
+		<div class="alert alert-success">
+			Then open messages.php and you need to change the english words with the words in the langauge you want. 'constant' => 'word', you need to chnage the WORD not the CONSTANT for example: 'wrong_email/password' => 'Wrong Email or Password', you need to change "WRONG EMAIL OR PASSWORD NOT WRONG_EMAIL/PASSWORD". Change all the words in the three files and that's all :). When you open your forum you will see "Language" dropdown in the right corner showing the 2 langauges. 
+		</div>
+		<img src="assets/images/open_it.png">
+		<div class="alert alert-success">DONE. YOUR FORUM NOW HAS 2 LANGUAGES. YOU CAN HAVE AS MANY LANGUAGES AS YOU WANT</div>
+		<img src="assets/images/forum_2_lang.png">
+		</div>	
+		<h3 id="start" align="center">Start Guide</h3>
+		<h4>Registration</h4>
+		<div class="alert alert-success">
+		     You can create account easily. You need just to fill small registration form. All fields are required.
+		</div>
+		<img src="assets/images/register.png">
+		<h4>Login</h4>
+		<div class="alert alert-success">
+		     You can login using your facebook account or using the normal login. If you want to login using facebook you need just to click on the "Facebook" button and it will create an account for you automatically. Or you need to enter your email and password and click "Login".
+		</div>
+		<img src="assets/images/login.png">
+		<div class="alert alert-success">
+		     After you login you can see your first name on the navigation menu. Click on it and then click "Profile"
+		</div>
+		<img src="assets/images/nav_profile.png">
+		<img src="assets/images/profile.png">
+		<div class="alert alert-success">
+		     Now you need to complete your profile. You need to describe yourself, write the town where you live and your job. You can make it public (For all users) or for your friends only.
+		     <br>When you describe yourself click "Update" then you need to enter you town and click "Update" and then your job and again click "Update". From "My Settings" you can change these details.
+		</div>
+		<h4>Other's profile</h4>
+		<div class="alert alert-success">You can send message to others as well as you can add them into your friend list. If they accept your request you can see their description, job and city where they live.</div>
+		<img src="assets/images/o_profile.png">
+		<h4>Mail</h4>
+		<div class="alert alert-success">
+        You can send messages to other users. You can view your received/sent messages, you can delete them and restore them from the trash.
+		</div>
+		<img src="assets/images/mail.png">
+		<h3 align="center">Admin Panel</h3>
+		<div class="alert alert-success">
+			Admin Email: admin@forumiumpro.tk<br>
+			Password: 123456<br>
+			!!! IMPORTANT -> CHANGE ADMIN'S PASSWORD AFTER YOU LOGIN IN ADMIN'S ACCOUNT !!!
+		</div>
+		<img src="assets/images/admin_panel.png">
+		<div class="alert alert-success">
+		In the Admin Panel you can manage users, ban/mute users, edit site settings, see all reports, edit tos and change themes.
+		</div>
+		<h4>Basic Settings</h4>
+		<div class="alert alert-success">
+			You can change the title,keywords,description of the website. These fields are used for better SEO (Search Engine Optimization). You can set the max. profile picture upload size. So if the user uploads picture bigger than this limit it will return an error. You can also enable account activation (When the users register it will receive an email with activation link/code. If the user doesn't activate his account it won't be able to login.). You can also enable/disable Terms Of Service (The user must accept Terms Of Service of the forum in order to register.).
+		</div>
+		<img src="assets/images/b_settings.png">
+		<h4>Themes</h4>
+		<div class="alert alert-success">
+			You can change the theme of the forum easily. Just choose the other theme and click "Update".
+		</div>
+		<img src="assets/images/themes.png">
+		<h4>Users</h4>
+		<div class="alert alert-success">
+			Here you can see all registered users. You can delete them or view their profiles or increase/decrease their rank.
+		</div>
+		<img src="assets/images/u_managment.png">
+		<h4>Reports</h4>
+		<div class="alert alert-success">
+			Here you can see all reported posts/discussions.
+		</div>
+		<h4>Reports</h4>
+		<div class="alert alert-success">
+			Here you can see all reported posts/discussions.
+		</div>
+		<img src="assets/images/reports.png">
+		<h4>Bans</h4>
+		<div class="alert alert-success">
+			Here you can see all banned users/ips and unban them.
+		</div>
+		<img src="assets/images/bans.png">
+		<h4>Banning IP/User</h4>
+		<div class="alert alert-success">
+			You can ban User or IP Address so the user/ip address won't be able to login/register anymore. You need to go to Admin Panel->Bans->Ban user or IP.
+		</div>
+		<img src="assets/images/ban_1.png">
+		<div class="alert alert-success">
+			You need to choose the type of the ban. User or IP Address. If you select IP Address you need to enter the IP Address you want to ban. If user you need to enter the email of the user. After that you need to enter the ban's length in days. For example 5. The user/Ip Address will be banned for 5 days from the moment of the ban.
+		</div>
+		<img src="assets/images/ban_2.png">
+		<img src="assets/images/ban_3.png">
+		<h4>Terms Of Service</h4>
+		<div class="alert alert-success">
+			Here you need to write the terms of service of the website. When you are ready you need just to click "Update".
+		</div>
+		<img src="assets/images/tos_a.png">
+		<div class="panel panel-primary" id="used">
+			  <div class="panel-heading">
+					<h3 class="panel-title">Used Libraries</h3>
+			  </div>
+			  <div class="panel-body">
+					<ul>
+						<li>Bootstrap 3.2.0 - Styling Library</li>
+						<li>CKEDITOR - WYSIWYG Editor</li>
+						<li>Jquery - Powerful Javascript Library</li>
+					</ul>
+			  </div>
+		</div>
+		<h1 align="center">Thank you for purchasing Forumium PRO.</h1>
+		<h1 align="center">Feel free to contact me : imcodecanyon@gmail.com</h1>
+	</div>
+	<script src="assets/jquery.js"></script>
+	<script src="assets/bootstrap.js"></script>
+	</body>
+</html>

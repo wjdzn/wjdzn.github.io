@@ -1,0 +1,37 @@
+body{
+	background-color: #eee;
+}
+.modal-body{
+color:#000;
+}
+.navbar-default .badge {
+  background-color: #fff;
+  color: #dd4814;
+}
+.navbar-inverse .badge {
+  background-color: #fff;
+  color: #772953;
+}
+.title-dis{
+  border-radius: 0px;
+  margin:0px;
+  background-color: #FFF;
+  font-family: font-awesome;
+  border:1px solid #dd4814;
+  text-align: center;
+  padding: 10px;
+}
+.post-body{
+  background-color: #dd4814;
+  color:#FFF;
+  vertical-align: middle;
+}
+.table{
+	border:2px solid #eee;
+}
+.box{
+	padding:10px;
+    box-shadow: 0px 2px 3px #777;
+	background-color:#FFF;
+	border:1px solid #8FC8F1;
+}

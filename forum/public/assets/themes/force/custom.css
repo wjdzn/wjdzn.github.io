@@ -1,0 +1,9 @@
+.table{
+	border:2px solid #eee;
+}
+.box{
+	padding:10px;
+  box-shadow: 0px 2px 3px #777;
+	background-color:#555E67;
+	border:1px solid #8FC8F1;
+}
