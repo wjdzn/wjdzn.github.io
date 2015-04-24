@@ -1,7 +1,7 @@
 <?php namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Facades\Cart;
+use App\Models\Cart\Cart;
 
 class ShoppingcartServiceProvider extends ServiceProvider {
 
