@@ -318,7 +318,7 @@
             },
             eventSources: [
                 {
-                    url: 'calendar_events.json',
+                    url: '{{ asset('/plugins/fullcalendar/calendar_event.json') }}',
                     editable: false
                 }
             ],
