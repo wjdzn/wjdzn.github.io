@@ -127,7 +127,7 @@ function initialise_calendar(){
 		},
 		eventSources: [
 			{
-				url:'../plugins/fullcalendar/calendar_events.json',
+				url:'plugins/fullcalendar/calendar_events.json',
 				editable: false
 			}
 		],
