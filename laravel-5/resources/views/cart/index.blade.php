@@ -19,9 +19,7 @@
                             </thead>
 
                             <tbody>
-
-                            <?php foreach($cart as $row) :?>
-
+                            @foreach(Cart::content() as $row)
                             <tr>
                                 <td>
                                     <p><strong><?php echo $row->name;?></strong></p>
@@ -31,9 +29,7 @@
                                 <td>$<?php echo $row->price;?></td>
                                 <td>$<?php echo $row->subtotal;?></td>
                             </tr>
-
-                            <?php endforeach;?>
-
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
