@@ -148,7 +148,11 @@ return [
 		/*
 		 * Shopping Cart Providers...
 		 */
-                'Gloudemans\Shoppingcart\ShoppingcartServiceProvider'
+        'Gloudemans\Shoppingcart\ShoppingcartServiceProvider',
+        /*
+		 * Roles Providers...
+		 */
+        'Bican\Roles\RolesServiceProvider',
 
 	],
 
