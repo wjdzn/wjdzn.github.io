@@ -5,15 +5,7 @@
 		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
         <link href="{{ asset('/plugins/fullcalendar/fullcalendar.css') }}" rel="stylesheet">
         <link href="{{ asset('/plugins/fullcalendar/fullcalendar.css') }}" rel="stylesheet">
-        <script src="{{ asset('/plugins/fullcalendar/lib/jquery.min.js') }}"></script>
-        <script src="{{asset('/plugins/fullcalendar/lib/moment.min.js')}}"></script>
-        <script src="{{ asset('/plugins/fullcalendar/fullcalendar.js') }}"></script>
-        <script src="{{ asset('/plugins/fullcalendar/gcal.js') }}"></script>
-        <link rel="stylesheet" type="text/css" href="{{ asset('/plugins/fullcalendar/view_calendar.css') }}"  />
-        <link rel="stylesheet" type="text/css" href="{{ asset('/plugins/fullcalendar/jquery.miniColors.css') }}" />
-        <script type='text/javascript' src="{{ asset('/plugins/fullcalendar/jquery-ui-1.9.2.custom.min.js') }}"></script>
-        <script type='text/javascript' src="{{ asset('/plugins/fullcalendar/view_calendar.js') }}"></script>
-        <script type='text/javascript' src="{{ asset('/plugins/fullcalendar/jquery.miniColors.js') }}"></script>
+        <link href="{{ asset('/plugins/fullcalendar/jquery.miniColors.css') }}" rel="stylesheet" type="text/css" />
 
 		<style>
 			body {
@@ -188,6 +180,15 @@
 		</div>
 	</body>
 </html>
+
+<script src="{{ asset('/plugins/fullcalendar/lib/jquery.min.js') }}"></script>
+<script src="{{asset('/plugins/fullcalendar/lib/moment.min.js')}}"></script>
+<script src="{{ asset('/plugins/fullcalendar/fullcalendar.js') }}"></script>
+<script src="{{ asset('/plugins/fullcalendar/gcal.js') }}"></script>
+<script src="{{ asset('/plugins/fullcalendar/jquery-ui-1.9.2.custom.min.js') }}"></script>
+<script src="{{ asset('/plugins/fullcalendar/view_calendar.js') }}"></script>
+<script src="{{ asset('/plugins/fullcalendar/jquery.miniColors.js') }}"></script>
+
 <script type="text/javascript">
     $(document).ready(function(){
 
