@@ -148,11 +148,11 @@ return [
 		/*
 		 * Shopping Cart Providers...
 		 */
-        'Gloudemans\Shoppingcart\ShoppingcartServiceProvider',
+        'App\Providers\ShoppingcartServiceProvider',
         /*
 		 * Roles Providers...
 		 */
-        'Bican\Roles\RolesServiceProvider',
+        'App\Providers\RolesServiceProvider',
 
 	],
 
