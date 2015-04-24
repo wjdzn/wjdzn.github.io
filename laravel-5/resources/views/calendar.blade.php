@@ -46,6 +46,7 @@
 		<div class="container">
 			<div class="content">
                 <div id='calendar'></div>
+                <iframe src="https://www.google.com/calendar/embed?src=jfllopiz87%40gmail.com&ctz=America/New_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 			</div>
 		</div>
 	</body>
