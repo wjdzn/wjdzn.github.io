@@ -8,6 +8,7 @@
         <script src="{{ asset('/plugins/fullcalendar/lib/jquery.min.js') }}"></script>
         <script src="{{asset('/plugins/fullcalendar/lib/moment.min.js')}}"></script>
         <script src="{{ asset('/plugins/fullcalendar/fullcalendar.js') }}"></script>
+        <script src="{{ asset('/plugins/fullcalendar/gcal.js') }}"></script>
 		<style>
 			body {
 				margin: 0;
@@ -55,7 +56,10 @@
         // page is now ready, initialize the calendar...
 
         $('#calendar').fullCalendar({
-            // put your options and callbacks here
+            googleCalendarApiKey: 'AIzaSyAwPtWpxcxLqmNgHT4cgq3_ZK7eXaDUJkc',
+            events: {
+                googleCalendarId: ' jfllopiz87@gmail.com'
+            }
         })
 
     });
