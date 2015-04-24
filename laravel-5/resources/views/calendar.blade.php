@@ -11,7 +11,7 @@
         <script src="{{ asset('/plugins/fullcalendar/gcal.js') }}"></script>
         <link rel="stylesheet" type="text/css" href="{{ asset('/plugins/fullcalendar/view_calendar.css') }}"  />
         <link rel="stylesheet" type="text/css" href="{{ asset('/plugins/fullcalendar/jquery.miniColors.css') }}" />
-
+        <script type='text/javascript' src="{{ asset('/plugins/fullcalendar/jquery-ui-1.9.2.custom.min.js') }}"></script>
         <script type='text/javascript' src="{{ asset('/plugins/fullcalendar/view_calendar.js') }}"></script>
         <script type='text/javascript' src="{{ asset('/plugins/fullcalendar/jquery.miniColors.js') }}"></script>
 
