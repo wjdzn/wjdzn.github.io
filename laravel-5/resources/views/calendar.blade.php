@@ -52,15 +52,11 @@
 </html>
 <script type="text/javascript">
     $(document).ready(function() {
-
-        // page is now ready, initialize the calendar...
-
         $('#calendar').fullCalendar({
-            googleCalendarApiKey: 'AIzaSyAwPtWpxcxLqmNgHT4cgq3_ZK7eXaDUJkc',
+            googleCalendarApiKey: '<YOUR API KEY>',
             events: {
-                googleCalendarId: ' jfllopiz87@gmail.com'
+                googleCalendarId: 'abcd1234@group.calendar.google.com'
             }
-        })
-
+        });
     });
 </script>
