@@ -2,8 +2,7 @@
 	<head>
 		<title>Laravel</title>
 		
-		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-        <link href="{{ asset('/plugins/fullcalendar/css/jquery-ui-1.9.2.custom.css') }}" rel="stylesheet">
+		<link href="{{ asset('/plugins/fullcalendar/css/jquery-ui-1.9.2.custom.css') }}" rel="stylesheet">
         <link href="{{ asset('/plugins/fullcalendar/css/fullcalendar.css') }}" rel="stylesheet">
         <link href="{{ asset('/plugins/fullcalendar/css/view_calendar.css') }}" rel="stylesheet">
         <link href="{{ asset('/plugins/fullcalendar/css/jquery.miniColors.css') }}" rel="stylesheet" type="text/css" />
