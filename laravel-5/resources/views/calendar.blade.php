@@ -53,9 +53,9 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('#calendar').fullCalendar({
-            googleCalendarApiKey: '<YOUR API KEY>',
+            googleCalendarApiKey: 'AIzaSyAwPtWpxcxLqmNgHT4cgq3_ZK7eXaDUJkc',
             events: {
-                googleCalendarId: 'abcd1234@group.calendar.google.com'
+                googleCalendarId: ' jfllopiz87@gmail.com'
             }
         });
     });
