@@ -47,6 +47,12 @@
 			<div class="content">
                 <div id='calendar'></div>
                 <iframe src="https://www.google.com/calendar/embed?src=jfllopiz87%40gmail.com&ctz=America/New_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+                <div id="eventContent" title="Event Details" style="display:none;">
+                    Start: <span id="startTime"></span><br>
+                    End: <span id="endTime"></span><br><br>
+                    <p id="eventInfo"></p>
+                    <p><strong><a id="eventLink" href="" target="_blank">Read More</a></strong></p>
+                </div>
 			</div>
 		</div>
 	</body>
@@ -54,9 +60,21 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('#calendar').fullCalendar({
-            googleCalendarApiKey: 'AIzaSyD6CLYZi5HpWMwpo7cnBEt2AHFumQwf35Q',
-            events: {
-                googleCalendarId: ' jfllopiz87@gmail.com'
+            events: source,
+            header: {
+                left: '',
+                center: 'prev title next',
+                right: ''
+            },
+            eventRender: function (event, element) {
+                element.attr('href', 'javascript:void(0);');
+                element.click(function() {
+                    $("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
+                    $("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
+                    $("#eventInfo").html(event.description);
+                    $("#eventLink").attr('href', event.url);
+                    $("#eventContent").dialog({ modal: true, title: event.title, width:350});
+                });
             }
         });
     });
