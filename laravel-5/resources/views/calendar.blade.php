@@ -3,10 +3,10 @@
 		<title>Laravel</title>
 		
 		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+        <link href="{{ asset('/plugins/fullcalendar/css/jquery-ui-1.9.2.custom.css') }}" rel="stylesheet">
         <link href="{{ asset('/plugins/fullcalendar/css/fullcalendar.css') }}" rel="stylesheet">
-        <link href="{{ asset('/plugins/fullcalendar/css/fullcalendar.css') }}" rel="stylesheet">
+        <link href="{{ asset('/plugins/fullcalendar/css/view_calendar.css') }}" rel="stylesheet">
         <link href="{{ asset('/plugins/fullcalendar/css/jquery.miniColors.css') }}" rel="stylesheet" type="text/css" />
-
 		<style>
 			body {
 				margin: 0;
@@ -181,11 +181,9 @@
 	</body>
 </html>
 
-<script src="{{ asset('/plugins/fullcalendar/lib/jquery.min.js') }}"></script>
-<script src="{{asset('/plugins/fullcalendar/lib/moment.min.js')}}"></script>
-<script src="{{ asset('/plugins/fullcalendar/fullcalendar.js') }}"></script>
-<script src="{{ asset('/plugins/fullcalendar/gcal.js') }}"></script>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
 <script src="{{ asset('/plugins/fullcalendar/jquery-ui-1.9.2.custom.min.js') }}"></script>
+<script src="{{ asset('/plugins/fullcalendar/fullcalendar.js') }}"></script>
 <script src="{{ asset('/plugins/fullcalendar/view_calendar.js') }}"></script>
 <script src="{{ asset('/plugins/fullcalendar/jquery.miniColors.js') }}"></script>
 
