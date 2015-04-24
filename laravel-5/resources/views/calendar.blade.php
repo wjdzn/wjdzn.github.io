@@ -53,7 +53,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('#calendar').fullCalendar({
-            googleCalendarApiKey: 'AIzaSyAwPtWpxcxLqmNgHT4cgq3_ZK7eXaDUJkc',
+            googleCalendarApiKey: 'AIzaSyD6CLYZi5HpWMwpo7cnBEt2AHFumQwf35Q',
             events: {
                 googleCalendarId: ' jfllopiz87@gmail.com'
             }
