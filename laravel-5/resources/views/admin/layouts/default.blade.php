@@ -888,9 +888,9 @@
     </a>
     <!-- global js -->
     <script src="{{ asset('/plugins/AdminJhon/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
-    @if (Request::is('admin/form_builder2') || Request::is('admin/gridmanager') || Request::is('admin/portlet_draggable'))
-        <script src="{{ asset('/plugins/AdminJhon/vendors/form_builder1/js/jquery.ui.min.js') }}"></script>
-    @endif
+    {{--@if (Request::is('admin/form_builder2') || Request::is('admin/gridmanager') || Request::is('admin/portlet_draggable'))--}}
+        {{--<script src="{{ asset('/plugins/AdminJhon/vendors/form_builder1/js/jquery.ui.min.js') }}"></script>--}}
+    {{--@endif--}}
     <script src="{{ asset('/plugins/AdminJhon/js/bootstrap.min.js') }}" type="text/javascript"></script>
     <!--livicons-->
     <script src="{{ asset('/plugins/AdminJhon/vendors/livicons/minified/raphael-min.js') }}"></script>
