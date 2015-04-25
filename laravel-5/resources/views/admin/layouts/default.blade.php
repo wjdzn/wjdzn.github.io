@@ -876,7 +876,7 @@
         <aside class="right-side">
 
             <!-- Notifications -->
-            @include('notifications')
+            {{--@include('notifications')--}}
             
             <!-- Content -->
             @yield('content')
