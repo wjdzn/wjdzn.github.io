@@ -16,12 +16,12 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <!-- global css -->
-    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/plugins/AdminJhon/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- font Awesome -->
-    <link href="{{ asset('assets/vendors/font-awesome-4.2.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/styles/black.css') }}" rel="stylesheet" type="text/css" id="colorscheme" />
-    <link rel="stylesheet" href="{{ asset('assets/css/panel.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/metisMenu.css') }}" />
+    <link href="{{ asset('/plugins/AdminJhon/vendors/font-awesome-4.2.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/plugins/AdminJhon/css/styles/black.css') }}" rel="stylesheet" type="text/css" id="colorscheme" />
+    <link rel="stylesheet" href="{{ asset('/plugins/AdminJhon/css/panel.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/plugins/AdminJhon/css/metisMenu.css') }}" />
     
     <!-- end of global css -->
     <!--page level css-->
@@ -32,7 +32,7 @@
 <body class="skin-josh">
     <header class="header">
         <a href="{{ URL::to('admin/index') }}" class="logo">
-            <img src="{{ asset('assets/img/logo.png') }}" alt="logo">
+            <img src="{{ asset('/plugins/AdminJhon/img/logo.png') }}" alt="logo">
         </a>
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
@@ -887,17 +887,17 @@
         <i class="livicon" data-name="plane-up" data-size="18" data-loop="true" data-c="#fff" data-hc="white"></i>
     </a>
     <!-- global js -->
-    <script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('/plugins/AdminJhon/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
     @if (Request::is('admin/form_builder2') || Request::is('admin/gridmanager') || Request::is('admin/portlet_draggable'))
-        <script src="{{ asset('assets/vendors/form_builder1/js/jquery.ui.min.js') }}"></script>
+        <script src="{{ asset('/plugins/AdminJhon/vendors/form_builder1/js/jquery.ui.min.js') }}"></script>
     @endif
-    <script src="{{ asset('assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('/plugins/AdminJhon/js/bootstrap.min.js') }}" type="text/javascript"></script>
     <!--livicons-->
-    <script src="{{ asset('assets/vendors/livicons/minified/raphael-min.js') }}"></script>
-    <script src="{{ asset('assets/vendors/livicons/minified/livicons-1.4.min.js') }}"></script>
-    <script src="{{ asset('assets/js/josh.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('assets/js/metisMenu.js') }}" type="text/javascript"></script>
-    <script src="{{ asset('assets/vendors/holder-master/holder.js') }}"></script>
+    <script src="{{ asset('/plugins/AdminJhon/vendors/livicons/minified/raphael-min.js') }}"></script>
+    <script src="{{ asset('/plugins/AdminJhon/vendors/livicons/minified/livicons-1.4.min.js') }}"></script>
+    <script src="{{ asset('/plugins/AdminJhon/js/josh.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('/plugins/AdminJhon/js/metisMenu.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('/plugins/AdminJhon/vendors/holder-master/holder.js') }}"></script>
     <!-- end of global js -->
     <!-- begin page level js -->
     @yield('footer_scripts')

@@ -9,9 +9,9 @@ Edit User
 {{-- page level styles --}}
 @section('header_styles')
 <!--page level css -->
-<link rel="stylesheet" href="{{ asset('assets/vendors/wizard/jquery-steps/css/wizard.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/vendors/wizard/jquery-steps/css/jquery.steps.css') }}">
-<link href="{{ asset('assets/vendors/jasny-bootstrap/css/jasny-bootstrap.css') }}" rel="stylesheet" />
+<link rel="stylesheet" href="{{ asset('/plugins/AdminJhon/vendors/wizard/jquery-steps/css/wizard.css') }}">
+<link rel="stylesheet" href="{{ asset('/plugins/AdminJhon/vendors/wizard/jquery-steps/css/jquery.steps.css') }}">
+<link href="{{ asset('/plugins/AdminJhon/vendors/jasny-bootstrap/css/jasny-bootstrap.css') }}" rel="stylesheet" />
 <!--end of page level css-->
 @stop
 
@@ -261,8 +261,8 @@ Edit User
 
 {{-- page level scripts --}}
 @section('footer_scripts')
-    <script type="text/javascript" src="{{ asset('assets/vendors/wizard/jquery-steps/js/jquery.validate.min.js') }}"></script>
-    <script src="{{ asset('assets/vendors/wizard/jquery-steps/js/jquery.steps.js') }}"></script>
-    <script src="{{ asset('assets/vendors/jasny-bootstrap/js/jasny-bootstrap.js') }}"></script>
-    <script src="{{ asset('assets/js/pages/add_user.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/plugins/AdminJhon/vendors/wizard/jquery-steps/js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('/plugins/AdminJhon/vendors/wizard/jquery-steps/js/jquery.steps.js') }}"></script>
+    <script src="{{ asset('/plugins/AdminJhon/vendors/jasny-bootstrap/js/jasny-bootstrap.js') }}"></script>
+    <script src="{{ asset('/plugins/AdminJhon/js/pages/add_user.js') }}"></script>
 @stop

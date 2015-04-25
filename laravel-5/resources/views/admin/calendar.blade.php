@@ -8,8 +8,8 @@ Calendar
 
 {{-- page level styles --}}
 @section('header_styles')
-<link href="{{ asset('assets/vendors/fullcalendar/css/fullcalendar.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('assets/css/pages/calendar_custom.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/css/fullcalendar.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('/plugins/AdminJhon/css/pages/calendar_custom.css') }}" rel="stylesheet" type="text/css" />
 @stop
 
 
@@ -123,8 +123,8 @@ Calendar
 @stop
 
 @section('footer_scripts')
-<script src="{{ asset('assets/vendors/fullcalendar/fullcalendar.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('assets/vendors/fullcalendar/calendarcustom.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/fullcalendar.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/calendarcustom.min.js') }}" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function() {
      /* initialize the external events

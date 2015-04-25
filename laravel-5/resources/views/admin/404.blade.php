@@ -6,10 +6,10 @@
     <title>404 page | Josh Admin Template</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- global level js-->
-    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/plugins/AdminJhon/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- end of globallevel js-->
     <!-- page level styles-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/pages/404.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('/plugins/AdminJhon/css/pages/404.css') }}" />
     <!-- end of page level styles-->
 </head>
 
@@ -29,15 +29,15 @@
         </a>
     </div>
 <!-- global js -->
-<script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/AdminJhon/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script>
 <!-- Bootstrap -->
-<script src="{{ asset('assets/js/bootstrap.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/AdminJhon/js/bootstrap.min.js') }}" type="text/javascript"></script>
 <!--livicons-->
-<script src="{{ asset('assets/vendors/livicons/minified/raphael-min.js') }}"></script>
-<script src="{{ asset('assets/vendors/livicons/minified/livicons-1.4.min.js') }}"></script>
-<script src="{{ asset('assets/js/josh.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/AdminJhon/vendors/livicons/minified/raphael-min.js') }}"></script>
+<script src="{{ asset('/plugins/AdminJhon/vendors/livicons/minified/livicons-1.4.min.js') }}"></script>
+<script src="{{ asset('/plugins/AdminJhon/js/josh.js') }}" type="text/javascript"></script>
 <!-- end of global js -->
 <!-- begining of page level js-->
-<script src="{{ asset('assets/js/404.js') }}"></script>
+<script src="{{ asset('/plugins/AdminJhon/js/404.js') }}"></script>
 </body>
 </html>

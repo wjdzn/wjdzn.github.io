@@ -9,9 +9,9 @@ View User Details
 {{-- page level styles --}}
 @section('header_styles')
 <!--page level css -->
-<link href="{{ asset('assets/vendors/jasny-bootstrap/css/jasny-bootstrap.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('assets/vendors/x-editable/css/bootstrap-editable.css') }}" rel="stylesheet" type="text/css" />
-<link href="{{ asset('assets/css/pages/user_profile.css') }}" rel="stylesheet" type="text/css"/>
+<link href="{{ asset('/plugins/AdminJhon/vendors/jasny-bootstrap/css/jasny-bootstrap.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('/plugins/AdminJhon/vendors/x-editable/css/bootstrap-editable.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('/plugins/AdminJhon/css/pages/user_profile.css') }}" rel="stylesheet" type="text/css"/>
 <!--end of page level css-->
 @stop
 
@@ -238,5 +238,5 @@ View User Details
 {{-- page level scripts --}}
 @section('footer_scripts')
 <!-- Bootstrap WYSIHTML5 -->
-<script  src="{{ asset('assets/vendors/jasny-bootstrap/js/jasny-bootstrap.js') }}" type="text/javascript"></script>
+<script  src="{{ asset('/plugins/AdminJhon/vendors/jasny-bootstrap/js/jasny-bootstrap.js') }}" type="text/javascript"></script>
 @stop
