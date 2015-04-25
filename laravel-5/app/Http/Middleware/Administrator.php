@@ -1,26 +1,27 @@
 <?php namespace App\Http\Middleware;
 
 use Closure;
-use App\User;
+use Illuminate\Contracts\Auth\Guard;
+use App\Traits\HasRoleAndPermission;
 
 class Administrator {
 
 	/**
-	 * The User implementation.
+	 * The Guard implementation.
 	 *
-	 * @var User
+	 * @var Guard
 	 */
-	protected $user;
+	protected $auth;
 
 	/**
 	 * Create a new filter instance.
 	 *
-	 * @param  User  $auth
+	 * @param  Guard  $auth
 	 * @return void
 	 */
-	public function __construct(User $user)
+	public function __construct(Guard $auth)
 	{
-		$this->user = $user;
+		$this->auth = $auth;
 	}
 
 	/**
@@ -32,8 +33,8 @@ class Administrator {
 	 */
 	public function handle($request, Closure $next)
 	{
-        print_r($this->user);die();
-		if($this->user->is('admin'))
+        print_r($this->auth->user());die();
+		if($this->auth->user()->is('admin'))
 		    return $next($request);
         else
         {
