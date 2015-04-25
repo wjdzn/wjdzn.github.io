@@ -79,9 +79,6 @@ Calendar
                     <div class="input-group">
                         <input type="text" id="new-event" class="form-control" placeholder="Event">
                         <div class="input-group-btn">
-                            <textarea id="new-event-description" class="form-control">Description</textarea>
-                        </div>
-                        <div class="input-group-btn">
                             <button type="button" id="color-chooser-btn" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                                 Type
                                 <span class="caret"></span>
@@ -107,6 +104,7 @@ Calendar
                                 </li>
                             </ul>
                         </div>
+                        <textarea id="new-event-description" class="form-control">Description</textarea>
                         <!-- /btn-group --> </div>
                     <!-- /input-group --> </div>
                 <div class="modal-footer">
