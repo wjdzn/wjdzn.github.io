@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use App\Models\CalendarEvent;
+
 class AdminController extends Controller {
 
     /*
@@ -41,6 +43,17 @@ class AdminController extends Controller {
     public function calendar()
     {
         return view('admin.calendar');
+    }
+
+    /**
+     * Save an event in DB.
+     *
+     * @return Response
+     */
+    public function save_event()
+    {
+        $event = new CalendarEvent(Input::all());
+        $event->save();
     }
 
 }

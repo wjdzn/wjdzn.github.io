@@ -175,35 +175,36 @@ Calendar
                 day: 'day'
             },
             //Random events
-            events: [{
-                title: 'Team Out',
-                start: new Date(y, m, 2),
-                backgroundColor: "#F89A14"
-            }, {
-                title: 'Client Meeting',
-                start: new Date(y, m, d - 2),
-                end: new Date(y, m, d - 5),
-                backgroundColor: "#418BCA"
-            }, {
-                title: 'Repeating Event',
-                start: new Date(y, m, 6)
-            }, {
-                title: 'Birthday Party',
-                start: new Date(y, m, 12),
-                backgroundColor: "#6CC66C"
-            }, {
-                title: 'Product Seminar',
-                start: new Date(y, m, 16),
-                backgroundColor: "#A9B6BC"
-            }, {
-                title: 'Anniversary Celebrations',
-                start: new Date(y, m, 26),
-                backgroundColor: "#F89A14"
-            }, {
-                title: 'Client Meeting',
-                start: new Date(y, m, 10),
-                backgroundColor: "#67C5DF"
-            }],
+//            events: [{
+//                title: 'Team Out',
+//                start: new Date(y, m, 2),
+//                backgroundColor: "#F89A14"
+//            }, {
+//                title: 'Client Meeting',
+//                start: new Date(y, m, d - 2),
+//                end: new Date(y, m, d - 5),
+//                backgroundColor: "#418BCA"
+//            }, {
+//                title: 'Repeating Event',
+//                start: new Date(y, m, 6)
+//            }, {
+//                title: 'Birthday Party',
+//                start: new Date(y, m, 12),
+//                backgroundColor: "#6CC66C"
+//            }, {
+//                title: 'Product Seminar',
+//                start: new Date(y, m, 16),
+//                backgroundColor: "#A9B6BC"
+//            }, {
+//                title: 'Anniversary Celebrations',
+//                start: new Date(y, m, 26),
+//                backgroundColor: "#F89A14"
+//            }, {
+//                title: 'Client Meeting',
+//                start: new Date(y, m, 10),
+//                backgroundColor: "#67C5DF"
+//            }],
+            events:[],
             editable: true,
             droppable: true, // this allows things to be dropped onto the calendar !!!
             drop: function(date, allDay) { // this function is called when something is dropped
@@ -229,7 +230,7 @@ Calendar
                     // if so, remove the element from the "Draggable Events" list
                     $(this).remove();
                 }
-
+                alert('moment');
             }
         });
 
