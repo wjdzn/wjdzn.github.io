@@ -19,6 +19,10 @@ Route::get('home', 'HomeController@index');
 
 Route::get('cart', 'CartController@index');
 
+
+/* Admin Routes */
+Route::get('admin','AdminController@index');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
