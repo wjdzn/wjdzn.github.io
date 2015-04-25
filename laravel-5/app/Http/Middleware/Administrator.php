@@ -2,6 +2,7 @@
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
+use App\Traits\HasRoleAndPermission;
 
 class Administrator {
 
