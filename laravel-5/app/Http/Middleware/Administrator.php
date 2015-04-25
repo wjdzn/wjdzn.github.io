@@ -32,6 +32,7 @@ class Administrator {
 	 */
 	public function handle($request, Closure $next)
 	{
+        print_r($this->user);die();
 		if($this->user->is('admin'))
 		    return $next($request);
         else
