@@ -33,4 +33,14 @@ class AdminController extends Controller {
         return view('admin.index');
     }
 
+    /**
+     * Show the calendar to the user.
+     *
+     * @return Response
+     */
+    public function calendar()
+    {
+        return view('admin.calendar');
+    }
+
 }
