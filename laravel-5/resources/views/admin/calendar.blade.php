@@ -104,8 +104,8 @@ Calendar
                                 </li>
                             </ul>
                         </div>
-                        <textarea id="new-event-description" class="form-control">Description</textarea>
                         <!-- /btn-group --> </div>
+                    <textarea id="new-event-description" class="form-control">Description</textarea>
                     <!-- /input-group --> </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger pull-right" data-dismiss="modal">
