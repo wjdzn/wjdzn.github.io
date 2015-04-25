@@ -19,7 +19,7 @@ Calendar
     <h1>Calendar</h1>
     <ol class="breadcrumb">
         <li>
-            <a href="{{ route('admin') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
+            <a href="{{ route('/') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
                 Home
             </a>
         </li>
