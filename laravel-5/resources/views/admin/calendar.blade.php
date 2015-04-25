@@ -233,7 +233,7 @@ Calendar
                 var data={name: $(this).html,init_at:date, end_at:date}
                 $.ajax({
                     type: "POST",
-                    url: '{{route('admin.calendar.save')}}',
+                    url: "{{route('calendar/save')}}",
                     data: data,
                     success: function (retrib) {
 
