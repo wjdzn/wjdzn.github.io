@@ -895,7 +895,7 @@
     <!--livicons-->
     <script src="{{ asset('/plugins/AdminJhon/vendors/livicons/minified/raphael-min.js') }}"></script>
     <script src="{{ asset('/plugins/AdminJhon/vendors/livicons/minified/livicons-1.4.min.js') }}"></script>
-    {{--<script src="{{ asset('/plugins/AdminJhon/js/josh.js') }}" type="text/javascript"></script>--}}
+    <script src="{{ asset('/plugins/AdminJhon/js/josh.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/plugins/AdminJhon/js/metisMenu.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/plugins/AdminJhon/vendors/holder-master/holder.js') }}"></script>
     <!-- end of global js -->
