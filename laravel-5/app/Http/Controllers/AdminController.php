@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Models\CalendarEvent;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class AdminController extends Controller {
 
@@ -53,8 +53,8 @@ class AdminController extends Controller {
      */
     public function save_event()
     {
-        print_r(Request::all());
-        $event = new CalendarEvent(Request::all());
+        print_r(Input::all());
+        $event = new CalendarEvent(Input::all());
         print_r($event);
         $event->save();
     }
