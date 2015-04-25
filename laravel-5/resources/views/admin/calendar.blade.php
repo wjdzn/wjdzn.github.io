@@ -230,7 +230,7 @@ Calendar
                     // if so, remove the element from the "Draggable Events" list
                     $(this).remove();
                 }
-                alert('moment');
+                alert(date);
             }
         });
 
