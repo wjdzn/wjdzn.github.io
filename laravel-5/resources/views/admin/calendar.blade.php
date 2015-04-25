@@ -230,7 +230,7 @@ Calendar
                     // if so, remove the element from the "Draggable Events" list
                     $(this).remove();
                 }
-                var data={name: $(this).html,init_at:date, end_at:date}
+                var data={name: $(this).html(),init_at:date, end_at:date}
                 $.ajax({
                     type: "POST",
                     url: "{{route('calendar/save')}}",
