@@ -2,7 +2,7 @@
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
-use App\Traits\HasRoleAndPermission;
+use App\User;
 
 class Administrator {
 
@@ -33,7 +33,7 @@ class Administrator {
 	 */
 	public function handle($request, Closure $next)
 	{
-        print_r($this->auth->user());die();
+        print_r($this->auth->user()->is('admin'));die();
 		if($this->auth->user()->is('admin'))
 		    return $next($request);
         else
