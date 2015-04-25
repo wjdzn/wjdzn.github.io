@@ -52,8 +52,8 @@ class AdminController extends Controller {
      */
     public function save_event()
     {
-        print_r(Input::all());
-        $event = new CalendarEvent(Input::all());
+        print_r(Request::all());
+        $event = new CalendarEvent(Request::all());
         print_r($event);
         $event->save();
     }
