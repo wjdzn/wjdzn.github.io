@@ -55,8 +55,7 @@
     <div class="header_style">
         <div class="container">
             <div class="sixteen columns header_area">
-                <img src="images/2_corporate/logo.png" alt="">
-
+                {{ HTML::image('/plugins/corp/images/2_corporate/logo.png'); }}
                 <a href="#" class="yt_button"></a>
                 <a href="#" class="twitter_button"></a>
                 <a href="#" class="facebook_button"></a>
@@ -109,7 +108,8 @@
             <div class="sixteen columns">
 
                 <div class="four columns  alpha">
-                    <img src="images/2_corporate/1.png" alt="">
+                    {{ HTML::image('/plugins/corp/images/2_corporate/1.png'); }}
+                    images" alt="">
                     <div class="head_style">Calculator</div>
                     <div class="c_style">
                         The edges may be directed or undirected For example if the vertice represent people party.
@@ -117,7 +117,7 @@
                 </div>
 
                 <div class="four columns  ">
-                    <img src="images/2_corporate/2.png" alt="">
+                     {{ HTML::image('/plugins/corp/images/2_corporate/2.png" alt="">
                     <div class="head_style">Daily Mails</div>
                     <div class="c_style">
                         The edges may be directed or undirected For example if the vertice represent people party.
@@ -125,7 +125,7 @@
                 </div>
 
                 <div class="four columns  ">
-                    <img src="images/2_corporate/3.png" alt="">
+                     {{ HTML::image('/plugins/corp/images/2_corporate/3.png'); }}
                     <div class="head_style">Coffe Cup</div>
                     <div class="c_style">
                         The edges may be directed or undirected For example if the vertice represent people party.
@@ -133,7 +133,7 @@
                 </div>
 
                 <div class="four columns  omega">
-                    <img src="images/2_corporate/4.png" alt="">
+                     {{ HTML::image('/plugins/corp/images/2_corporate/4.png'); }}
                     <div class="head_style">Connection</div>
                     <div class="c_style">
                         The edges may be directed or undirected For example if the vertice represent people party.
@@ -159,7 +159,7 @@
                     <div class="t2_style">Our service is astonishingly thin and light.</div>
                     <div class="t3_style">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud.</div>
                 </div>
-                <span> <img src="images/2_corporate/promo-image.png" class="pub_st" alt=""></span>
+                <span>  {{ HTML::image('/plugins/corp/images/2_corporate/promo-image.png" class="pub_st'); }}</span>
             </div>
         </div><!-- container -->
     </div>
@@ -304,7 +304,7 @@
             <div class="sixteen columns">
                 <div class="LL1_style">Companies We Work With</div>
                 <div class="LL2_style">great words from great people</div>
-                <span> <img src="images/2_corporate/logos.png" class="logos" alt=""> </span>
+                <span>  {{ HTML::image('/plugins/corp/images/2_corporate/logos.png" class="logos'); }} </span>
             </div>
         </div><!-- container -->
     </div>
@@ -327,7 +327,7 @@
                 </p>
 
                 <div class="via_st">
-                    <img src="images/2_corporate/stars.original.png" alt="">
+                     {{ HTML::image('/plugins/corp/images/2_corporate/stars.original.png'); }}
                     <div class="top_3">via Unbounce.com</div>
                 </div>
 
