@@ -304,7 +304,7 @@
             <div class="sixteen columns">
                 <div class="LL1_style">Companies We Work With</div>
                 <div class="LL2_style">great words from great people</div>
-                <span>  {{ HTML::image('/plugins/corp/images/2_corporate/logos.png','logos', array('class' => 'logos') }} </span>
+                <span>  {{ HTML::image('/plugins/corp/images/2_corporate/logos.png','logos', array('class' => 'logos')) }} </span>
             </div>
         </div><!-- container -->
     </div>
