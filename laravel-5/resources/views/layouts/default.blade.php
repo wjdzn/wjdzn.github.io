@@ -109,7 +109,6 @@
 
                 <div class="four columns  alpha">
                     {!! HTML::image('/plugins/corp/images/2_corporate/1.png') !!}
-                    images" alt="">
                     <div class="head_style">Calculator</div>
                     <div class="c_style">
                         The edges may be directed or undirected For example if the vertice represent people party.
