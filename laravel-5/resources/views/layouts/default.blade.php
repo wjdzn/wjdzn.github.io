@@ -327,7 +327,7 @@
                 </p>
 
                 <div class="via_st">
-                     {{ HTML::image('/plugins/corp/images/2_corporate/stars.original.png') }}
+                     {{{ HTML::image('/plugins/corp/images/2_corporate/stars.original.png') }}}
                     <div class="top_3">via Unbounce.com</div>
                 </div>
 
