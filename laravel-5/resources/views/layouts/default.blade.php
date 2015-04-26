@@ -30,10 +30,10 @@
 
     <!-- Favicons
     ================================================== -->
-    <link rel="shortcut icon" href="{{ asset('/plugins/corp/images/favicon.ico) }}">
-    <link rel="apple-touch-icon" href="{{ asset('/plugins/corp/images/apple-touch-icon.png) }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('/plugins/corp/images/apple-touch-icon-72x72.png) }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('/plugins/corp/images/apple-touch-icon-114x114.png) }}">
+    <link rel="shortcut icon" href="{{ asset('/plugins/corp/images/favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ asset('/plugins/corp/images/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('/plugins/corp/images/apple-touch-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('/plugins/corp/images/apple-touch-icon-114x114.png') }}">
 
     <style type="text/css">
         iframe.c1 {border:none; overflow:hidden; height:20px;width:50px; }
