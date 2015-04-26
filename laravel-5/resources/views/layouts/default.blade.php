@@ -108,7 +108,7 @@
             <div class="sixteen columns">
 
                 <div class="four columns  alpha">
-                    {! HTML::image('/plugins/corp/images/2_corporate/1.png') !}
+                    {!! HTML::image('/plugins/corp/images/2_corporate/1.png') !!}
                     images" alt="">
                     <div class="head_style">Calculator</div>
                     <div class="c_style">
