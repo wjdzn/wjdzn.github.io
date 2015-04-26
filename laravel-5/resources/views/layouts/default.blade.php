@@ -159,7 +159,7 @@
                     <div class="t2_style">Our service is astonishingly thin and light.</div>
                     <div class="t3_style">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud.</div>
                 </div>
-                <span>  {!! HTML::image('/plugins/corp/images/2_corporate/promo-image.png" class="pub_st') }}</span>
+                <span>  {!! HTML::image('/plugins/corp/images/2_corporate/promo-image.png','',array( 'class' => 'pub_st')) !!}</span>
             </div>
         </div><!-- container -->
     </div>
@@ -304,7 +304,7 @@
             <div class="sixteen columns">
                 <div class="LL1_style">Companies We Work With</div>
                 <div class="LL2_style">great words from great people</div>
-                <span>  {!! HTML::image('/plugins/corp/images/2_corporate/logos.png','logos', array('class' => 'logos')) }} </span>
+                <span>  {!! HTML::image('/plugins/corp/images/2_corporate/logos.png','logos', array('class' => 'logos')) !!} </span>
             </div>
         </div><!-- container -->
     </div>
