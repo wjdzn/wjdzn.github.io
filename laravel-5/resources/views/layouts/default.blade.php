@@ -117,7 +117,7 @@
                 </div>
 
                 <div class="four columns  ">
-                     {{ HTML::image('/plugins/corp/images/2_corporate/2.png" alt="">
+                     {{ HTML::image('/plugins/corp/images/2_corporate/2.png') }}
                     <div class="head_style">Daily Mails</div>
                     <div class="c_style">
                         The edges may be directed or undirected For example if the vertice represent people party.
