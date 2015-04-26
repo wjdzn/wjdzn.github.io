@@ -108,7 +108,7 @@
             <div class="sixteen columns">
 
                 <div class="four columns  alpha">
-                    {{! HTML::image('/plugins/corp/images/2_corporate/1.png') !}}
+                    {{!! HTML::image('/plugins/corp/images/2_corporate/1.png') !!}}
                     images" alt="">
                     <div class="head_style">Calculator</div>
                     <div class="c_style">
@@ -304,7 +304,7 @@
             <div class="sixteen columns">
                 <div class="LL1_style">Companies We Work With</div>
                 <div class="LL2_style">great words from great people</div>
-                <span>  {{! HTML::image('/plugins/corp/images/2_corporate/logos.png" class="logos') !}} </span>
+                <span>  {{!! HTML::image('/plugins/corp/images/2_corporate/logos.png" class="logos') !!}} </span>
             </div>
         </div><!-- container -->
     </div>
