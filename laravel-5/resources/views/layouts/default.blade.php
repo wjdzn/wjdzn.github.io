@@ -297,7 +297,7 @@
 <!-- Part 7: #Partners -->
 
 
-<div class="pixfort_corporate_2">
+<div class="pixfortx_2">
 
     <div class="logos_style">
         <div class="container">
