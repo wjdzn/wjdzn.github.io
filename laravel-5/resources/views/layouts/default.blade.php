@@ -16,10 +16,24 @@
   ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <!-- CSS
+  ================================================== -->
+    <link href="{{ asset('/plugins/corp/stylesheets/base.css') }}" rel="stylesheet">
+    <link href="{{ asset('/plugins/corp/stylesheets/skeleton.css') }}" rel="stylesheet">
+    <link href="{{ asset('/plugins/corp/stylesheets/2_corporate.css') }}" rel="stylesheet">
+    <link href="{{ asset('/plugins/corp/stylesheets/layout_2.css') }}" rel="stylesheet">
+    <link href="{{ asset('/plugins/corp/stylesheets/box.css') }}" rel="stylesheet">
 
+    <!--[if lt IE 9]>
+    <script src="{{ asset('http://html5shim.googlecode.com/svn/trunk/html5.js') }}"></script>
+    <![endif]-->
 
     <!-- Favicons
     ================================================== -->
+    <link rel="shortcut icon" href="{{ asset('/plugins/corp/images/favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ asset('/plugins/corp/images/apple-touch-icon.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('/plugins/corp/images/apple-touch-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('/plugins/corp/images/apple-touch-icon-114x114.png') }}">
 
     <style type="text/css">
         iframe.c1 {border:none; overflow:hidden; height:20px;width:50px; }
