@@ -163,7 +163,6 @@ Calendar
         $.ajax({
             type: "POST",
             url: "{{url('calendar_get_events')}}",
-            data: data,
             success: function (retrib) {
                 var events = retrib;
                 $('#calendar').fullCalendar({
