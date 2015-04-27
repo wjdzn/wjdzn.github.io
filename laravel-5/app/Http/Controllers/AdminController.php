@@ -66,16 +66,16 @@ class AdminController extends Controller {
     public function events()
     {
         echo 1;
-        $events = CalendarEvent::all();
-        $result = "[";
-        $count=0;
-        foreach($events as $ev)
-        {
-            $result.=$count>0?",":"";
-            $result.="{title:'".$ev->name."',start:'".$ev->init_at."',end:'".$ev->end_at."',backgroundColor:'".$ev->backgroundcolor."'}";
-            $count++;
-        }
-        $result = "]";
-        return json_encode($result);
+//        $events = CalendarEvent::all();
+//        $result = "[";
+//        $count=0;
+//        foreach($events as $ev)
+//        {
+//            $result.=$count>0?",":"";
+//            $result.="{title:'".$ev->name."',start:'".$ev->init_at."',end:'".$ev->end_at."',backgroundColor:'".$ev->backgroundcolor."'}";
+//            $count++;
+//        }
+//        $result = "]";
+//        return json_encode($result);
     }
 }
