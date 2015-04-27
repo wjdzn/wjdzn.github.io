@@ -20,7 +20,7 @@ class CalendarEvent extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'description', 'init_at','end_at'];
+    protected $fillable = ['name', 'description', 'init_at','end_at','backgroundcolor'];
 
     /**
      * Create a new Eloquent model instance.
