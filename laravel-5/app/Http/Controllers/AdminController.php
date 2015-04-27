@@ -65,15 +65,16 @@ class AdminController extends Controller {
     public function events()
     {
         $events = CalendarEvent::all();
-        $result = '[';
+        $result = array();
         $count=0;
         foreach($events as $ev)
         {
-            $result.=$count>0?",":"";
-            $result.="{title:'".$ev->name."',start:'".$ev->init_at."',end:'".$ev->end_at."',backgroundColor:'".$ev->backgroundcolor."'}";
+            $result[$count]['title']=$ev->name;
+            $result[$count]['start']=$ev->init_at;
+            $result[$count]['end']=$ev->end_at;
+            $result[$count]['backgroundColor']=$ev->backgroundcolor;
             $count++;
         }
-        $result.= ']';
         echo  json_encode($result);
     }
 }
