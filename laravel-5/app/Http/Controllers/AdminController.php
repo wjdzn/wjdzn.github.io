@@ -70,12 +70,7 @@ class AdminController extends Controller {
         foreach($events as $ev)
         {
             $result.=$count>0?",":"";
-            $result.="{title:".$ev->name.",start:".$ev->init_at.",end:".$ev->end_at.",backgroundColor:".$ev->backgroundcolor."}";
-//            [{
-//                title: 'Team Out',
-//                start: new Date(y, m, 2),
-//                backgroundColor: "#F89A14"
-//            }
+            $result.="{title:'".$ev->name."',start:'".$ev->init_at."',end:'".$ev->end_at."',backgroundColor:'".$ev->backgroundcolor."'}";
             $count++;
         }
         $result = "]";
