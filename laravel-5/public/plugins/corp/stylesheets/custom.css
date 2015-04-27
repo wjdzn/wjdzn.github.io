@@ -5,6 +5,10 @@
         color: #fff;
         padding-top: 185px;
     }
+    .strapline {
+        color: #fff;
+        padding-top: 45px;
+    }
 }
 @media only screen and (max-width:979px) {
     .logotext {
@@ -12,6 +16,10 @@
         font-size: 64px;
         color: #fff;
         padding-top: 185px;
+    }
+    .strapline {
+        color: #fff;
+        padding-top: 45px;
     }
 }
 @media only screen and (max-width:767px) {
@@ -21,6 +29,10 @@
         color: #fff;
         padding-top: 185px;
     }
+    .strapline {
+        color: #fff;
+        padding-top: 45px;
+    }
 }
 @media only screen and (max-width:479px) {
     .logotext {
@@ -28,5 +40,9 @@
         font-size: 48px;
         color: #fff;
         padding-top: 185px;
+    }
+    .strapline {
+        color: #fff;
+        padding-top: 45px;
     }
 }

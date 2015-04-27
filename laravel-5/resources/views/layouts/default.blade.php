@@ -83,7 +83,7 @@
                     InventPalooza!
                 </div>
                 <div class="subtitle_style">
-                    <h3>Work smarter, work safer, work together.</h3><p>Join an alliance of independent inventors. Get your project in front of the Power Panel at InventPalooza 2015*</p>
+                    <h3 class="strapline">Work smarter, work safer, work together.</h3><p>Join an alliance of independent inventors. Get your project in front of the Power Panel at InventPalooza 2015*</p>
                 </div>
 
                 <div class="contact_style">
