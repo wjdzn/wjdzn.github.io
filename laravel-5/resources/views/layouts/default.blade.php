@@ -23,6 +23,7 @@
     <link href="{{ asset('/plugins/corp/stylesheets/2_corporate.css') }}" rel="stylesheet">
     <link href="{{ asset('/plugins/corp/stylesheets/layout_2.css') }}" rel="stylesheet">
     <link href="{{ asset('/plugins/corp/stylesheets/box.css') }}" rel="stylesheet">
+    <link href="{{ asset('/plugins/corp/stylesheets/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('http://fonts.googleapis.com/css?family=Knewave') }}" rel='stylesheet' type='text/css'>
     <!--[if lt IE 9]>
     <script src="{{ asset('http://html5shim.googlecode.com/svn/trunk/html5.js') }}"></script>
@@ -79,7 +80,7 @@
             <div class="sixteen columns context_style">
 
                 <div class="logotext">
-                    InventpPalooza
+                    InventPalooza!
                 </div>
                 <div class="subtitle_style">
                     More than 10 unique unbounce templates in one bundle isn't that awesome with a lot of features and great design brought to you by PixFort.
