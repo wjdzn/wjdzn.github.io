@@ -74,6 +74,6 @@ class AdminController extends Controller {
             $count++;
         }
         $result.= "]";
-        echo json_encode($result);
+        return json_encode($result);
     }
 }

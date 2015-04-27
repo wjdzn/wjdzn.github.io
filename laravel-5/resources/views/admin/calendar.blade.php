@@ -166,7 +166,7 @@ Calendar
             url: "{{route('calendar_events')}}",
             data: data,
             success: function (retrib) {
-                var events = retrib;
+                var events = $.parseJSON(retrib);
                 $('#calendar').fullCalendar({
                     header: {
                         left: 'prev,next today',
