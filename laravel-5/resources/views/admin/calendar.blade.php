@@ -163,7 +163,7 @@ Calendar
         var data={_token:  $('meta[name="csrf-token"]').attr('content')}
         $.ajax({
             type: "POST",
-            url: "{{url('calendar_events')}}",
+            url: "{{route('calendar_events')}}",
             data: data,
             success: function (retrib) {
                 var events = retrib;
