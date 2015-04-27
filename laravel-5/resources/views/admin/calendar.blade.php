@@ -1,8 +1,5 @@
 @extends('admin/layouts/default')
-<?php
-var_dump(getenv('APP_ENV'));
-        die();
-?>
+
 {{-- Page title --}}
 @section('title')
 Calendar
