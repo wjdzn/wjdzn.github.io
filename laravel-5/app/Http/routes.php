@@ -21,7 +21,7 @@ Route::get('home', 'HomeController@index');
 Route::get('cart', 'CartController@index');
 
 
-Route::group('forum', function() {
+Route::get('forum', function() {
 
     Route::get('/', function() {
         return Redirect::to('https://www.inventpalooza.com/forum/public');
