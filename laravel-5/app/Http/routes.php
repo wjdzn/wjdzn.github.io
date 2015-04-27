@@ -28,7 +28,7 @@ Route::group(array('prefix' => 'admin'), function () {
     Route::get('calendar','AdminController@calendar');
     Route::group(array('prefix' => 'calendar'), function () {
         Route::post('save', array('as' => 'calendar/save', 'uses' => 'AdminController@save_event'));
-        Route::post('events', array('as' => 'calendar_events', 'uses' => 'AdminController@get_events'));
+        Route::post('save1', array('as' => 'calendar/save1', 'uses' => 'AdminController@get_events'));
     });
 });
 
