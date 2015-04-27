@@ -13,3 +13,9 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+<ifmodule mod_expires.c>
+<Filesmatch "\.(jpg|jpeg|png|gif|js|css|pdf|ico)$">
+    ExpiresActive on
+    ExpiresDefault "access plus 3 months"
+</Filesmatch>
+</ifmodule>
