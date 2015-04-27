@@ -37,9 +37,9 @@
 @media only screen and (max-width:479px) {
     .logotext {
         font-family: 'Knewave', cursive;
-        font-size: 48px;
+        font-size: 36px;
         color: #fff;
-        padding-top: 185px;
+        padding-top: 15%px;
     }
     .strapline {
         color: #fff;
