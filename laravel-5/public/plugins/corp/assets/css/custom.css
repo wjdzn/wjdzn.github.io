@@ -1,0 +1,24 @@
+@media only screen and (min-width:1200px) {
+    .logotext {
+        font-family: 'Knewave', cursive;
+        font-size: 48px;
+    }
+}
+@media only screen and (max-width:979px) {
+    .logotext {
+        font-family: 'Knewave', cursive;
+        font-size: 48px;
+    }
+}
+@media only screen and (max-width:767px) {
+    .logotext {
+        font-family: 'Knewave', cursive;
+        font-size: 48px;
+    }
+}
+@media only screen and (max-width:479px) {
+    .logotext {
+        font-family: 'Knewave', cursive;
+        font-size: 48px;
+    }
+}
