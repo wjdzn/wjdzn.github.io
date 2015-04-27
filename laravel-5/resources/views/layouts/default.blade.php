@@ -56,7 +56,6 @@
     <div class="header_style">
         <div class="container">
             <div class="sixteen columns header_area">
-                {!! HTML::image('/plugins/corp/images/2_corporate/logo.png') !!}
                 <a href="#" class="yt_button"></a>
                 <a href="#" class="twitter_button"></a>
                 <a href="#" class="facebook_button"></a>
