@@ -1,0 +1,22 @@
+/*!
+ *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontKnewave';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.1.0');
+  /*src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');*/
+  /*font-weight: normal;*/
+  /*font-style: normal;*/
+}
+.paloozaLogo {
+  /*display: inline-block;*/
+  font-family: FontKnewave;
+  font-style: normal;
+  font-weight: normal;
+  /*line-height: 1;*/
+  /*-webkit-font-smoothing: antialiased;*/
+  /*-moz-osx-font-smoothing: grayscale;*/
+}
