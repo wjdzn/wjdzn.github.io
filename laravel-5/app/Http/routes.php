@@ -23,7 +23,7 @@ Route::get('cart', 'CartController@index');
 
 /* Admin Routes */
 Route::get('admin','AdminController@index');
-Route::get('calendar','AdminController@calendar');
+Route::get('admin/calendar','AdminController@calendar');
 Route::post('admin/calendar/events',array('as' => 'calendar_events', 'uses' => 'AdminController@events'));
 Route::post('admin/calendar/save',array('as' => 'calendar_save_event', 'uses' => 'AdminController@save_event'));
 
