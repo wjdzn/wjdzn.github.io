@@ -237,7 +237,7 @@ Calendar
                             // if so, remove the element from the "Draggable Events" list
                             $(this).remove();
                         }
-                        var data={name: $(this).html(),init_at:date.toJSON() , end_at:date.toJSON(),  _token:  $('meta[name="csrf-token"]').attr('content')}
+                        var data={name: $(this).html(),init_at:date.toJSON() , end_at:date.toJSON(),backgroundcolor:$(this).css("background-color"),  _token:  $('meta[name="csrf-token"]').attr('content')}
                         $.ajax({
                             type: "POST",
                             url: "{{route('calendar_save_event')}}",
