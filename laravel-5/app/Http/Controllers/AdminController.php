@@ -73,7 +73,7 @@ class AdminController extends Controller {
             $result.="{title:'".$ev->name."',start:'".$ev->init_at."',end:'".$ev->end_at."',backgroundColor:'".$ev->backgroundcolor."'}";
             $count++;
         }
-        $result = "]";
+        $result.= "]";
         echo json_encode($result);
     }
 }
