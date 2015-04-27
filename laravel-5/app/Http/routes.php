@@ -11,7 +11,7 @@
 |
 */
 
-//Route::get('main', 'MainController@index');
+Route::get('main', 'MainController@index');
 Route::get('/', 'WelcomeController@index');
 
 Route::get('calendar', 'WelcomeController@calendar');
