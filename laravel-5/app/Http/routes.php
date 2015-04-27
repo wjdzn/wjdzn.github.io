@@ -21,6 +21,14 @@ Route::get('home', 'HomeController@index');
 Route::get('cart', 'CartController@index');
 
 
+Route::group('forum', function() {
+
+    Route::get('/', function() {
+        return Redirect::to('https://www.inventpalooza.com/forum/public');
+    });
+
+});
+
 /* Admin Routes */
 Route::get('admin',array('as' => 'admin', 'uses' => 'AdminController@index'));
 Route::get('admin/calendar','AdminController@calendar');
