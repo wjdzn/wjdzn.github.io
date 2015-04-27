@@ -22,7 +22,7 @@ Route::get('cart', 'CartController@index');
 
 
 Route::get('forum', function() {
-    return Redirect::to('https://www.inventpalooza.com/forum/public');
+    return Redirect::to('http://www.inventpalooza.com/forum/public');
 });
 
 /* Admin Routes */
