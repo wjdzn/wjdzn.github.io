@@ -33,7 +33,8 @@ class Administrator {
 	 */
 	public function handle($request, Closure $next)
 	{
-        if($this->auth->user()->is('admin')==true)
+        $user = $this->auth->user();
+        if(isset($user) && $this->auth->user()->is('admin')==true)
 		    return $next($request);
         else
         {

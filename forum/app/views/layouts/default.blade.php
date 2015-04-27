@@ -30,12 +30,13 @@ if (Session::has('logged')) {
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{$settings->title}} - 
+        <title>{{$settings->title}} -
             @yield('title')
         </title>
         <meta name="description" content="{{$settings->description}}">
         <meta name="keywords" content="{{$settings->keywords}}">
         {{HTML::style('assets/css/font-awesome.css')}}
+        {{HTML::style('assets/css/inventPalooza.css')}}
         {{HTML::style('assets/css/ui-lightness/jquery-ui-1.10.4.css')}}
         @if(File::exists("assets/themes/".$settings->theme."/style.css") && File::exists("assets/themes/".$settings->theme."/custom.css"))
         {{HTML::style('assets/themes/'.$settings->theme.'/style.css')}}
@@ -60,7 +61,7 @@ if (Session::has('logged')) {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{URL::to('/')}}">{{$settings->title}}</a>
+                    <a class="navbar-brand paloozaLogo" href="{{URL::to('/')}}">{{$settings->title}}</a>
                 </div>
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav pull-left">

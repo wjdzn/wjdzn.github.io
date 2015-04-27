@@ -19,7 +19,7 @@ Calendar
     <h1>Calendar</h1>
     <ol class="breadcrumb">
         <li>
-            <a href="#"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
+            <a href="{{route('admin')}}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
                 Home
             </a>
         </li>
@@ -160,21 +160,28 @@ Calendar
         var d = date.getDate(),
             m = date.getMonth(),
             y = date.getFullYear();
-        $('#calendar').fullCalendar({
-            header: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'month,agendaWeek,agendaDay'
-            },
-            buttonText: {
-                prev: "<span class='fa fa-caret-left'></span>",
-                next: "<span class='fa fa-caret-right'></span>",
-                today: 'today',
-                month: 'month',
-                week: 'week',
-                day: 'day'
-            },
-            //Random events
+        var data={_token:  $('meta[name="csrf-token"]').attr('content')}
+        $.ajax({
+            type: "POST",
+            url: "{{route('calendar_events')}}",
+            data: data,
+            success: function (retrib) {
+                var events = $.parseJSON(retrib);
+                $('#calendar').fullCalendar({
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'month,agendaWeek,agendaDay'
+                    },
+                    buttonText: {
+                        prev: "<span class='fa fa-caret-left'></span>",
+                        next: "<span class='fa fa-caret-right'></span>",
+                        today: 'today',
+                        month: 'month',
+                        week: 'week',
+                        day: 'day'
+                    },
+                    //Random events
 //            events: [{
 //                title: 'Team Out',
 //                start: new Date(y, m, 2),
@@ -204,44 +211,50 @@ Calendar
 //                start: new Date(y, m, 10),
 //                backgroundColor: "#67C5DF"
 //            }],
-            events:[],
-            editable: true,
-            droppable: true, // this allows things to be dropped onto the calendar !!!
-            drop: function(date, allDay) { // this function is called when something is dropped
+                    events:events,
+                    editable: true,
+                    droppable: true, // this allows things to be dropped onto the calendar !!!
+                    drop: function(date, allDay) { // this function is called when something is dropped
 
-                // retrieve the dropped element's stored Event Object
-                var originalEventObject = $(this).data('eventObject');
+                        // retrieve the dropped element's stored Event Object
+                        var originalEventObject = $(this).data('eventObject');
 
-                // we need to copy it, so that multiple events don't have a reference to the same object
-                var copiedEventObject = $.extend({}, originalEventObject);
+                        // we need to copy it, so that multiple events don't have a reference to the same object
+                        var copiedEventObject = $.extend({}, originalEventObject);
 
-                // assign it the date that was reported
-                copiedEventObject.start = date;
-                copiedEventObject.allDay = allDay;
-                copiedEventObject.backgroundColor = $(this).css("background-color");
-                copiedEventObject.borderColor = $(this).css("border-color");
+                        // assign it the date that was reported
+                        copiedEventObject.start = date;
+                        copiedEventObject.allDay = allDay;
+                        copiedEventObject.backgroundColor = $(this).css("background-color");
+                        copiedEventObject.borderColor = $(this).css("border-color");
 
-                // render the event on the calendar
-                // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
-                $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+                        // render the event on the calendar
+                        // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+                        $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
 
-                // is the "remove after drop" checkbox checked?
-                if ($('#drop-remove').is(':checked')) {
-                    // if so, remove the element from the "Draggable Events" list
-                    $(this).remove();
-                }
-                var data={name: $(this).html(),init_at:date.toJSON() , end_at:date.toJSON(),  _token:  $('meta[name="csrf-token"]').attr('content')}
-                $.ajax({
-                    type: "POST",
-                    url: "{{route('calendar/save')}}",
-                    data: data,
-                    success: function (retrib) {
-
+                        // is the "remove after drop" checkbox checked?
+                        if ($('#drop-remove').is(':checked')) {
+                            // if so, remove the element from the "Draggable Events" list
+                            $(this).remove();
+                        }
+                        alert(allDay);
+                        var data={all_day:allDay?1:0,name: $(this).html(),init_at:date.toLocaleString() , end_at:date.toLocaleString(),backgroundcolor:$(this).css("background-color"),  _token:  $('meta[name="csrf-token"]').attr('content')}
+                        $.ajax({
+                            type: "POST",
+                            url: "{{route('calendar_save_event')}}",
+                            data: data,
+                            success: function (retrib) {
+                                if(retrib==2)
+                                {
+                                    $(this).remove();
+                                }
+                            }
+                        });
                     }
                 });
-                alert(date);
             }
         });
+
 
         /* ADDING EVENTS */
         var currColor = "#418BCA"; //default

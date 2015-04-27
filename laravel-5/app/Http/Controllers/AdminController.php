@@ -54,7 +54,46 @@ class AdminController extends Controller {
     public function save_event()
     {
         $event = new CalendarEvent(Input::all());
+        $eventsLikeThisByName = CalendarEvent::where('name','=',$event->name)->where('all_day','=','1')->get();
+        $init_date = strtotime($event->init_at);
+        $date = strtotime($init_date . ' - 1 day');
+        echo $date;
+        if(count($eventsLikeThisByName)>0)
+        {
+            foreach($eventsLikeThisByName as $ev)
+            {
+                $date_end = strtotime($ev->end_at);
+                echo " - ".$date_end;
+                if($date<=$date_end)
+                {
+                    $ev->end_at = $event->end_at;
+                    $ev->save();
+                    return 2;
+                }
+            }
+        }
         $event->save();
+        return 1;
     }
 
+    /**
+     * Get all events from DB and return it in json format.
+     *
+     * @return Response
+     */
+    public function events()
+    {
+        $events = CalendarEvent::all();
+        $result = array();
+        $count=0;
+        foreach($events as $ev)
+        {
+            $result[$count]['title']=$ev->name;
+            $result[$count]['start']=$ev->init_at;
+            $result[$count]['end']=$ev->end_at;
+            $result[$count]['backgroundColor']=$ev->backgroundcolor;
+            $count++;
+        }
+        echo  json_encode($result);
+    }
 }
