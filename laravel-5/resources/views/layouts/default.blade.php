@@ -465,14 +465,14 @@
 <!-- JavaScript
   ================================================== -->
 
-<script src="js-files/jquery-1.7.2.min.js" type="text/javascript"></script> <!-- jQuery -->
-<script src="js-files/jquery.easing.1.3.js" type="text/javascript"></script> <!-- jQuery easing -->
-<script type='text/javascript' src='js-files/jquery.common.min.js'></script>
-<script src="js-files/custom.js" type="text/javascript"></script>
+<script src="{{ asset('/plugins/corp/js-files/jquery-1.7.2.min.js') }}" type="text/javascript"></script> <!-- jQuery -->
+<script src="{{ asset('/plugins/corp/js-files/jquery.easing.1.3.js') }}" type="text/javascript"></script> <!-- jQuery easing -->
+<script type='text/javascript' src="{{ asset('/plugins/corp/js-files/jquery.common.min.js') }}"></script>
+<script src="{{ asset('/plugins/corp/js-files/custom.js') }}" type="text/javascript"></script>
 
-<script src="assets/js/smoothscroll.min.js" type="text/javascript"></script>
-<script src="assets/js/appear.min.js" type="text/javascript"></script>
-<script src="assets/js/animations.min.js" type="text/javascript"></script>
+<script src="{{ asset('/plugins/corp/assets/js/smoothscroll.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/corp/assets/js/appear.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/corp/assets/js/animations.min.js') }}" type="text/javascript"></script>
 
 <script>
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
