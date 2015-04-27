@@ -163,7 +163,7 @@ Calendar
         var data={_token:  $('meta[name="csrf-token"]').attr('content')}
         $.ajax({
             type: "POST",
-            url: "/{{url('events')}}",
+            url: "{{url('calendar_events')}}",
             data: data,
             success: function (retrib) {
                 var events = retrib;
@@ -240,7 +240,7 @@ Calendar
                         var data={name: $(this).html(),init_at:date.toJSON() , end_at:date.toJSON(),  _token:  $('meta[name="csrf-token"]').attr('content')}
                         $.ajax({
                             type: "POST",
-                            url: "/{{route('save_event')}}",
+                            url: "{{route('calendar_save_event')}}",
                             data: data,
                             success: function (retrib) {
 

@@ -23,14 +23,9 @@ Route::get('cart', 'CartController@index');
 
 /* Admin Routes */
 Route::get('admin','AdminController@index');
-Route::group(array('prefix' => 'admin'), function () {
-
-    Route::get('calendar','AdminController@calendar');
-    Route::group(array('prefix' => 'calendar'), function () {
-        Route::post('events',array('as' => 'events', 'uses' => 'AdminController@events'));
-        Route::post('save',array('as' => 'save_event', 'uses' => 'AdminController@save_event'));
-    });
-});
+Route::get('calendar','AdminController@calendar');
+Route::post('admin/calendar/events',array('as' => 'calendar_events', 'uses' => 'AdminController@events'));
+Route::post('admin/calendar/save',array('as' => 'calendar_save_event', 'uses' => 'AdminController@save_event'));
 
 
 Route::controllers([
