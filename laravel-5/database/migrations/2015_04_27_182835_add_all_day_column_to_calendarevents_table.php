@@ -14,6 +14,7 @@ class AddAllDayColumnToCalendareventsTable extends Migration {
 	{
 		Schema::table('calendar_events', function(Blueprint $table)
 		{
+            $table->dropColumn(array('all_day'));
             $table->boolean('all_day');
 		});
 	}
