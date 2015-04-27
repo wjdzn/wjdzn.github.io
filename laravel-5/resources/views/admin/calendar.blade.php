@@ -243,7 +243,10 @@ Calendar
                             url: "{{route('calendar_save_event')}}",
                             data: data,
                             success: function (retrib) {
-
+                                if(retrib==2)
+                                {
+                                    $(this).remove();
+                                }
                             }
                         });
                     }
