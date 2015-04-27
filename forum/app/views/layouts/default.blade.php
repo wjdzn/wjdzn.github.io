@@ -36,6 +36,7 @@ if (Session::has('logged')) {
         <meta name="description" content="{{$settings->description}}">
         <meta name="keywords" content="{{$settings->keywords}}">
         {{HTML::style('assets/css/font-awesome.css')}}
+        {{HTML::style('assets/css/inventPalooza.css')}}
         {{HTML::style('assets/css/ui-lightness/jquery-ui-1.10.4.css')}}
         @if(File::exists("assets/themes/".$settings->theme."/style.css") && File::exists("assets/themes/".$settings->theme."/custom.css"))
         {{HTML::style('assets/themes/'.$settings->theme.'/style.css')}}
