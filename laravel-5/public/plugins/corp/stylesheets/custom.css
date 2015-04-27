@@ -1,0 +1,48 @@
+@media only screen and (min-width:1200px) {
+    .logotext {
+        font-family: 'Knewave', cursive;
+        font-size: 80px;
+        color: #fff;
+        padding-top: 185px;
+    }
+    .strapline {
+        color: #fff;
+        padding-top: 4%;
+    }
+}
+@media only screen and (max-width:979px) {
+    .logotext {
+        font-family: 'Knewave', cursive;
+        font-size: 64px;
+        color: #fff;
+        padding-top: 185px;
+    }
+    .strapline {
+        color: #fff;
+        padding-top: 4%;
+    }
+}
+@media only screen and (max-width:767px) {
+    .logotext {
+        font-family: 'Knewave', cursive;
+        font-size: 48px;
+        color: #fff;
+        padding-top: 185px;
+    }
+    .strapline {
+        color: #fff;
+        padding-top: 4%;
+    }
+}
+@media only screen and (max-width:479px) {
+    .logotext {
+        font-family: 'Knewave', cursive;
+        font-size: 36px;
+        color: #fff;
+        padding-top: 15%px;
+    }
+    .strapline {
+        color: #fff;
+        padding-top: 4%;
+    }
+}
