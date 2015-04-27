@@ -162,7 +162,7 @@ Calendar
             y = date.getFullYear();
         $.ajax({
             type: "POST",
-            url: "{{route('calendar_get_events')}}",
+            url: "{{url('calendar_get_events')}}",
             data: data,
             success: function (retrib) {
                 var events = retrib;
