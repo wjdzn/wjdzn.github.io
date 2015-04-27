@@ -238,7 +238,7 @@ Calendar
                             $(this).remove();
                         }
                         alert(allDay);
-                        var data={all_day:allDay,name: $(this).html(),init_at:date.toJSON() , end_at:date.toJSON(),backgroundcolor:$(this).css("background-color"),  _token:  $('meta[name="csrf-token"]').attr('content')}
+                        var data={all_day:allDay?1:0,name: $(this).html(),init_at:date.toJSON() , end_at:date.toJSON(),backgroundcolor:$(this).css("background-color"),  _token:  $('meta[name="csrf-token"]').attr('content')}
                         $.ajax({
                             type: "POST",
                             url: "{{route('calendar_save_event')}}",
