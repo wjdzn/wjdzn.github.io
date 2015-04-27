@@ -53,7 +53,6 @@ class AdminController extends Controller {
      */
     public function save_event()
     {
-        echo 2;
         $event = new CalendarEvent(Input::all());
         $event->save();
     }
@@ -65,7 +64,6 @@ class AdminController extends Controller {
      */
     public function events()
     {
-        echo 1;
         $events = CalendarEvent::all();
         $result = "[";
         $count=0;
