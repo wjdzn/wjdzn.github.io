@@ -7,10 +7,10 @@
 @font-face {
   font-family: 'FontKnewave';
   src: url('http://fonts.googleapis.com/css?family=Knewave');
-  font-family: cursive;
-  font-style: italic;
-  font-weight: bold;
 }
 .paloozaLogo {
   font-family: FontKnewave;
+  font-family: cursive;
+  font-style: italic;
+  font-weight: bold;
 }
