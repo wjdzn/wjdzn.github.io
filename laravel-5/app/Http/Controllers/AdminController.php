@@ -65,7 +65,7 @@ class AdminController extends Controller {
     public function events()
     {
         $events = CalendarEvent::all();
-        $result = "[";
+        $result = '[';
         $count=0;
         foreach($events as $ev)
         {
@@ -73,7 +73,7 @@ class AdminController extends Controller {
             $result.="{title:'".$ev->name."',start:'".$ev->init_at."',end:'".$ev->end_at."',backgroundColor:'".$ev->backgroundcolor."'}";
             $count++;
         }
-        $result.= "]";
-        return $result;
+        $result.= ']';
+        return  $result;
     }
 }
