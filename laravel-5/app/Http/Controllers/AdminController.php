@@ -63,7 +63,7 @@ class AdminController extends Controller {
      *
      * @return Response
      */
-    public function get_events()
+    public function events()
     {
         echo 1;
         $events = CalendarEvent::all();
