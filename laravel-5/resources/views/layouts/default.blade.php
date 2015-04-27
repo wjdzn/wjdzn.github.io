@@ -83,15 +83,15 @@
                     InventPalooza!
                 </div>
                 <div class="subtitle_style">
-                    <h3>Work smarter, work safer, work together.</h3><p>Join an alliance of independent inventors. Get your project in front of the Power Panel at InventPalooza 2015</p>
+                    <h3>Work smarter, work safer, work together.</h3><p>Join an alliance of independent inventors. Get your project in front of the Power Panel at InventPalooza 2015*</p>
                 </div>
 
                 <div class="contact_style">
-                    <div class="contact_btn"> <a href="#">Contact us now</a> </div>
+                    <div class="contact_btn"> <a href="#">Join</a> </div>
                 </div>
 
 
-                <div class="note_st">*Note: Bundle ends in two weeks from now.</div>
+                <div class="note_st">*Qualification ends July X, 2015</div>
             </div>
         </div><!-- container -->
     </div>
