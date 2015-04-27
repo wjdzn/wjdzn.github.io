@@ -57,4 +57,28 @@ class AdminController extends Controller {
         $event->save();
     }
 
+    /**
+     * Get all events from DB and return it in json format.
+     *
+     * @return Response
+     */
+    public function get_events()
+    {
+        $events = CalendarEvent::all();
+        $result = "[";
+        $count=0;
+        foreach($events as $ev)
+        {
+            $result.=$count>0?",":"";
+            $result.="{title:".$ev->name.",start:".$ev->init_at.",end:".$ev->end_at.",backgroundColor:".$ev->backgroundcolor."}";
+//            [{
+//                title: 'Team Out',
+//                start: new Date(y, m, 2),
+//                backgroundColor: "#F89A14"
+//            }
+            $count++;
+        }
+        $result = "]";
+        return json_encode($result);
+    }
 }
