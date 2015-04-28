@@ -1,6 +1,6 @@
 <?php
 //The URL of your applicaiton. You must redirect your domain to the public folder of the script. If your folder is forumpro you need to reidrect to forumpro/public
-$conf_site_url = "http://inventpalooza.com";
+$conf_site_url = "http://myinventpalooza.com";
 //Database configuration
 $db_host = "localhost";
 $db_username= "userpalooza";
