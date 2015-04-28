@@ -11,7 +11,7 @@ $fb_appId = "";
 $fb_secret = "";
 //SMTP Mail configuration
 $smtp_host = "localhost"; // smtp.gmail.com is google's SMTP server you can add the address of your
-$smtp_username = "lalala"; // if the $smtp_host is smtp.gmail.com the username must be your google+/gmail account
-$smtp_password = "lalala"; // the password of smtp_username
+$smtp_username = ""; // if the $smtp_host is smtp.gmail.com the username must be your google+/gmail account
+$smtp_password = ""; // the password of smtp_username
 $smtp_port = 25; // The default port is 465 you can reconfigure it
 ?>
