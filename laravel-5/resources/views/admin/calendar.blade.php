@@ -183,6 +183,7 @@ Calendar
                     },
                     events:events,
                     eventClick: function(calEvent, jsEvent, view) {
+                        putClickEvent();
                     },
                     eventDrop: function(calEvent, jsEvent, view) {
                         var hours = typeof $(this).find('.fc-event-time').html()!== "undefined"?$(this).find('.fc-event-time').html().split('-'):'';
