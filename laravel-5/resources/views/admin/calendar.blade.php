@@ -183,14 +183,6 @@ Calendar
                     },
                     events:events,
                     eventClick: function(calEvent, jsEvent, view) {
-//                          Here go the code when someone click on an event div
-//                        alert('Event id: ' + calEvent.id);
-//                        alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-//                        alert('View: ' + view.name);
-//
-//                        // change the border color just for fun
-//                        $(this).css('border-color', 'red');
-
                     },
                     eventDrop: function(calEvent, jsEvent, view) {
                         var hours = typeof $(this).find('.fc-event-time').html()!== "undefined"?$(this).find('.fc-event-time').html().split('-'):'';
@@ -283,6 +275,7 @@ Calendar
                         });
                     }
                 });
+                putClickEvent();
             }
         });
         function putClickEvent()
