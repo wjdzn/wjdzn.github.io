@@ -60,15 +60,11 @@ class AdminController extends Controller {
         $event->init_at = $date_init;
         $event->end_at = $date_end;
         $eventsLikeThisByName = CalendarEvent::where('name','=',$event->name)->where('all_day','=','1')->get();
-        $date = new \DateTime($date_init);
-        $date->sub( new \DateInterval('P1D') );
         if(count($eventsLikeThisByName)>0)
         {
             foreach($eventsLikeThisByName as $ev)
             {
-                $date_end = date(strtotime($ev->end_at));
-                $date_end = new \DateTime($date_end);
-                if($ev->all_day && $date<=$date_end)
+                if($ev->all_day && strtotime($date_init)-strtotime($ev->end_at)<=86400)
                 {
                     $ev->end_at = $event->end_at;
                     $ev->save();
