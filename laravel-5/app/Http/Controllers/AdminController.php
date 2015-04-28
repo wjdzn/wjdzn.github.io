@@ -93,6 +93,7 @@ class AdminController extends Controller {
             $result[$count]['start']=$ev->init_at;
             $result[$count]['end']=$ev->end_at;
             $result[$count]['allDay']=$ev->all_day;
+            $result[$count]['forceEventDuration']=true;
             $result[$count]['backgroundColor']=$ev->backgroundcolor;
             $count++;
         }
