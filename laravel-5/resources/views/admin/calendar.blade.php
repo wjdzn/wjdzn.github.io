@@ -286,18 +286,16 @@ Calendar
         });
         function putClickEvent()
         {
-            $( ".fc-event-close" ).each(function( index ) {
-                $(this).unbind().click(function(e){
-                    var id=$(this).attr('data-id');
-                    $('#calendar').fullCalendar( 'removeEvents',id );
-                    var data = {id:id,_token:  $('meta[name="csrf-token"]').attr('content') };
-                    $.ajax({
-                        type: "POST",
-                        url: "{{route('calendar_delete_event')}}",
-                        data: data,
-                        success: function (retrib) {
-                        }
-                    });
+            $( ".fc-event-close" ).unbind().click(function(e){
+                var id=$(this).attr('data-id');
+                $('#calendar').fullCalendar( 'removeEvents',id );
+                var data = {id:id,_token:  $('meta[name="csrf-token"]').attr('content') };
+                $.ajax({
+                    type: "POST",
+                    url: "{{route('calendar_delete_event')}}",
+                    data: data,
+                    success: function (retrib) {
+                    }
                 });
             });
         }
