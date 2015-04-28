@@ -217,7 +217,7 @@ Calendar
                                 retrib = $.parseJSON(retrib);
                                 if(retrib==2)
                                 {
-                                    copiedEventObject.remove();
+                                    $(copiedEventObject).remove();
                                 }
                             }
                         });
