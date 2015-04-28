@@ -205,6 +205,7 @@ Calendar
                             url: "{{route('calendar_update_event')}}",
                             data: data,
                             success: function (retrib) {
+                                putClickEvent();
                             }
                         });
                     },
@@ -221,6 +222,7 @@ Calendar
                             url: "{{route('calendar_update_event')}}",
                             data: data,
                             success: function (retrib) {
+                                putClickEvent();
                             }
                         });
                     },
@@ -250,7 +252,6 @@ Calendar
                             // if so, remove the element from the "Draggable Events" list
                             $(this).remove();
                         }
-                        alert(allDay);
                         var data={all_day:allDay?1:0,name: $(this).html(),init_at:date.toDateString() , end_at:date.toDateString(),backgroundcolor:$(this).css("background-color"),  _token:  $('meta[name="csrf-token"]').attr('content')}
                         $.ajax({
                             type: "POST",
@@ -296,6 +297,7 @@ Calendar
                         url: "{{route('calendar_delete_event')}}",
                         data: data,
                         success: function (retrib) {
+                            putClickEvent();
                         }
                     });
                 });
