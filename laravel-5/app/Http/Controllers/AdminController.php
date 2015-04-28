@@ -63,7 +63,7 @@ class AdminController extends Controller {
         {
             foreach($eventsLikeThisByName as $ev)
             {
-                $date_end = \DateTime($ev->end_at);//strtotime($ev->end_at);
+                $date_end = new \DateTime($ev->end_at);//strtotime($ev->end_at);
                 if($ev->all_day && $date<=$date_end)
                 {
                     $ev->end_at = $event->end_at;
