@@ -193,12 +193,12 @@ Calendar
 
                     },
                     eventDrop: function(calEvent, jsEvent, view) {
-                        var hours = $(this).find('.fc-event-time').html().split('-') ;
-                        var init = hours[0].trim();
+                        var hours = $(this).find('.fc-event-time').html().length>0?$(this).find('.fc-event-time').html().split('-'):'';
+                        var init =hours.length>0? hours[0].trim():calEvent.start.toTimeString();
                         var end = hours.length>1?hours[1].trim():
-                                (parseInt(hours[0].trim().split(":")[0])+2)+":00";
-                        var start = calEvent.start.toDateString()+init;
-                        var end = calEvent.start.toDateString()+end;
+                        (parseInt(init.split(":")[0])+2)+":00";
+                        var start = calEvent.start.toDateString()+" "+init;
+                        var end = calEvent.start.toDateString()+" "+end;
                         var data = {id:calEvent.id,init_at:start,end_at:end,all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
                         $.ajax({
                             type: "POST",
@@ -209,12 +209,12 @@ Calendar
                         });
                     },
                     eventResizeStop:function(calEvent, jsEvent, view) {
-                        var hours = $(this).find('.fc-event-time').html().split('-') ;
-                        var init = hours[0].trim();
+                        var hours = $(this).find('.fc-event-time').html().length>0?$(this).find('.fc-event-time').html().split('-'):'';
+                        var init =hours.length>0? hours[0].trim():calEvent.start.toTimeString();
                         var end = hours.length>1?hours[1].trim():
-                        (parseInt(hours[0].trim().split(":")[0])+2)+":00";
-                        var start = calEvent.start.toDateString()+init;
-                        var end = calEvent.start.toDateString()+end;
+                        (parseInt(init.split(":")[0])+2)+":00";
+                        var start = calEvent.start.toDateString()+" "+init;
+                        var end = calEvent.start.toDateString()+" "+end;
                         var data = {id:calEvent.id,init_at:start,end_at:end,all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
                         $.ajax({
                             type: "POST",
