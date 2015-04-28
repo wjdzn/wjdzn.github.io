@@ -10,8 +10,8 @@ class Friendship extends Eloquent
     {
         $acc_1 = e($acc_1);
         $acc_2 = e($acc_2);
-        $check1 = Self::where('acc_1', $acc_1)->where('acc_2', $acc_2)->where('status', 1)->count();
-        $check2 = Self::where('acc_1', $acc_2)->where('acc_2', $acc_1)->where('status', 1)->count();
+        $check1 = self::where('acc_1', $acc_1)->where('acc_2', $acc_2)->where('status', 1)->count();
+        $check2 = self::where('acc_1', $acc_2)->where('acc_2', $acc_1)->where('status', 1)->count();
         if ($check1 > 0 || $check2 > 0) {
             return true;
         } else {
@@ -23,8 +23,8 @@ class Friendship extends Eloquent
     {
         $acc_1 = e($acc_1);
         $acc_2 = e($acc_2);
-        $check1 = Self::where('acc_1', $acc_1)->where('acc_2', $acc_2)->count();
-        $check2 = Self::where('acc_1', $acc_2)->where('acc_2', $acc_1)->count();
+        $check1 = self::where('acc_1', $acc_1)->where('acc_2', $acc_2)->count();
+        $check2 = self::where('acc_1', $acc_2)->where('acc_2', $acc_1)->count();
         if ($check1 > 0 || $check2 > 0) {
             return true;
         } else {
@@ -36,14 +36,14 @@ class Friendship extends Eloquent
     {
         $acc_1 = e($acc_1);
         $acc_2 = e($acc_2);
-        if (!Self::exists($acc_1, $acc_2)) {
+        if (!self::exists($acc_1, $acc_2)) {
             return false;
         } else {
-            if (Self::where('acc_1', $acc_1)->where('acc_2', $acc_2)->count() > 0) {
-                Self::where('acc_1', $acc_1)->where('acc_2', $acc_2)->delete();
+            if (self::where('acc_1', $acc_1)->where('acc_2', $acc_2)->count() > 0) {
+                self::where('acc_1', $acc_1)->where('acc_2', $acc_2)->delete();
             } else {
-                if (Self::where('acc_1', $acc_2)->where('acc_2', $acc_1)->count() > 0) {
-                    Self::where('acc_1', $acc_2)->where('acc_2', $acc_1)->delete();
+                if (self::where('acc_1', $acc_2)->where('acc_2', $acc_1)->count() > 0) {
+                    self::where('acc_1', $acc_2)->where('acc_2', $acc_1)->delete();
                 }
             }
         }
