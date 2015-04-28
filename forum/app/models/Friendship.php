@@ -36,7 +36,7 @@ class Friendship extends Eloquent
     {
         $acc_1 = e($acc_1);
         $acc_2 = e($acc_2);
-        if (!Self::exists($acc_1, $acc_2)) {
+        if (!self::exists($acc_1, $acc_2)) {
             return false;
         } else {
             if (self::where('acc_1', $acc_1)->where('acc_2', $acc_2)->count() > 0) {
