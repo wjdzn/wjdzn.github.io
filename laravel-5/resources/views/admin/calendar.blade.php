@@ -193,7 +193,7 @@ Calendar
 
                     },
                     eventDrop: function(calEvent, jsEvent, view) {
-                        var data = {id:calEvent.id,init_at:calEvent.start.toDateString(),end_at:calEvent.end.toDateString(),all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
+                        var data = {id:calEvent.id,init_at:calEvent.start.toDateString(),end_at:calEvent.start.toDateString(),all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
                         $.ajax({
                             type: "POST",
                             url: "{{route('calendar_update_event')}}",
