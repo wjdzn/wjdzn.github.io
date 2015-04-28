@@ -193,15 +193,25 @@ Calendar
 
                     },
                     eventDragStop: function(calEvent, jsEvent, view) {
-//                          Here go the code when someone click on an event div
-//                        alert('Event id: ' + calEvent.id);
-//                        alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-//                        alert('View: ' + view.name);
-//
-//                        // change the border color just for fun
-//                        $(this).css('border-color', 'red');
-                        alert('here');
+                        var data = {id:calEvent.id,init_at:calEvent.start,end_at:calEvent.end,all_day:calEvent.allDay };
+                        $.ajax({
+                            type: "POST",
+                            url: "{{route('calendar_update_event')}}",
+                            data: data,
+                            success: function (retrib) {
+                            }
+                        });
                     },
+                    eventResizeStop:function(calEvent, jsEvent, view) {
+                        var data = {id:calEvent.id,init_at:calEvent.start,end_at:calEvent.end,all_day:calEvent.allDay };
+                        $.ajax({
+                            type: "POST",
+                            url: "{{route('calendar_update_event')}}",
+                            data: data,
+                            success: function (retrib) {
+                            }
+                        });
+                    }
                     editable: true,
                     droppable: true, // this allows things to be dropped onto the calendar !!!
                     drop: function(date, allDay) { // this function is called when something is dropped
