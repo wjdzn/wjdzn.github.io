@@ -68,12 +68,12 @@ class AdminController extends Controller {
                 {
                     $ev->end_at = $event->end_at;
                     $ev->save();
-                    return 2;
+                    return $ev->id;
                 }
             }
         }
         $event->save();
-        return 1;
+        return $ev->id;
     }
 
     /**
@@ -114,6 +114,17 @@ class AdminController extends Controller {
         $current_event->end_at = $date_end;
         $current_event->all_day = Input::get('all_day');
         $current_event->save();
+        return 1;
+    }
+    /**
+     * Delete an event from id
+     *
+     * @return Response
+     */
+    public function delete_event()
+    {
+        $current_event = CalendarEvent::find(Input::get('id'));
+        $current_event->delete();
         return 1;
     }
 }

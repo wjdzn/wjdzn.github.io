@@ -239,6 +239,7 @@ Calendar
                         copiedEventObject.allDay = allDay;
                         copiedEventObject.backgroundColor = $(this).css("background-color");
                         copiedEventObject.borderColor = $(this).css("border-color");
+                        copiedEventObject.id = -1;
 
                         // render the event on the calendar
                         // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
@@ -257,17 +258,51 @@ Calendar
                             data: data,
                             success: function (retrib) {
                                 retrib = $.parseJSON(retrib);
+                                var event = $('#calendar').fullCalendar( 'clientEvents',retrib);
+                                if(event.length>0)
+                                {
+                                    $('#calendar').fullCalendar( 'removeEvents',-1);
+                                    event[0].end = date;
+                                    $('#calendar').fullCalendar('updateEvent', event[0]);
+                                }
+                                else
+                                {
+                                    event =  $('#calendar').fullCalendar( 'clientEvents',-1);
+                                    event[0].id = retrib;
+                                    $('#calendar').fullCalendar('updateEvent', event);
+                                }
+
                                 if(retrib==2)
                                 {
                                     $(copiedEventObject).remove();
                                 }
+                                $('.fc-event-close').click(function(e){
+                                    var id=$(this).attr('data-id');
+                                    $('#calendar').fullCalendar( 'removeEvents',id );
+                                    var data = {id:id,_token:  $('meta[name="csrf-token"]').attr('content') };
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "{{route('calendar_delete_event')}}",
+                                        data: data,
+                                        success: function (retrib) {
+                                        }
+                                    });
+                                });
                             }
                         });
                     }
                 });
                 $('.fc-event-close').click(function(e){
                    var id=$(this).attr('data-id');
-                    alert(id);
+                    $('#calendar').fullCalendar( 'removeEvents',id );
+                    var data = {id:id,_token:  $('meta[name="csrf-token"]').attr('content') };
+                    $.ajax({
+                        type: "POST",
+                        url: "{{route('calendar_delete_event')}}",
+                        data: data,
+                        success: function (retrib) {
+                        }
+                    });
                 });
             }
         });

@@ -31,6 +31,7 @@ Route::get('admin/calendar','AdminController@calendar');
 Route::post('admin/calendar/events',array('as' => 'calendar_events', 'uses' => 'AdminController@events'));
 Route::post('admin/calendar/save',array('as' => 'calendar_save_event', 'uses' => 'AdminController@save_event'));
 Route::post('admin/calendar/update',array('as' => 'calendar_update_event', 'uses' => 'AdminController@update_event'));
+Route::post('admin/calendar/delete',array('as' => 'calendar_delete_event', 'uses' => 'AdminController@delete_event'));
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
