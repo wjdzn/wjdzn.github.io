@@ -193,7 +193,7 @@ Calendar
 
                     },
                     eventDrop: function(calEvent, jsEvent, view) {
-                        var hours = $(this).find('.fc-event-time').html().split('-');
+                        var hours = $(this).find('.fc-event-time').html().split('-') ;
                         var init = hours[0].trim();
                         var end = hours.length>1?hours[1].trim():
                                 (parseInt(hours[0].trim().split(":")[0])+2)+":00";
