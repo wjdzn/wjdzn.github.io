@@ -192,7 +192,7 @@ Calendar
 //                        $(this).css('border-color', 'red');
 
                     },
-                    eventDragStop: function(calEvent, jsEvent, view) {
+                    eventDrop: function(calEvent, jsEvent, view) {
                         var data = {id:calEvent.id,init_at:calEvent.start.toDateString(),end_at:calEvent.end.toDateString(),all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
                         $.ajax({
                             type: "POST",
