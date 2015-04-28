@@ -302,8 +302,12 @@ a.fc-event,
     height: 100%;
     overflow: hidden;
 }
-
-.fc-event-time,
+.fc-event-close{
+    margin-top: -3px;
+    float: left;
+    margin-right: 3px;
+}
+.fc-event-time,.fc-event-close,
 .fc-event-title {
     padding: 0 1px;
 }
@@ -430,7 +434,7 @@ table.fc-border-separate {
 
 /* event styles */
 
-.fc-grid .fc-event-time {
+.fc-grid .fc-event-time .fc-event-close {
     font-weight: bold;
 }
 
@@ -556,7 +560,7 @@ table.fc-border-separate {
     border-bottom-right-radius: 3px;
 }
 
-.fc-event-vert .fc-event-time {
+.fc-event-vert .fc-event-time  .fc-event-close{
     white-space: nowrap;
     font-size: 10px;
 }
