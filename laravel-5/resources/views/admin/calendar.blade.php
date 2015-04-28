@@ -182,6 +182,16 @@ Calendar
                         day: 'day'
                     },
                     events:events,
+                    eventClick: function(calEvent, jsEvent, view) {
+
+                        alert('Event id: ' + calEvent.id);
+                        alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+                        alert('View: ' + view.name);
+
+                        // change the border color just for fun
+                        $(this).css('border-color', 'red');
+
+                    },
                     editable: true,
                     droppable: true, // this allows things to be dropped onto the calendar !!!
                     drop: function(date, allDay) { // this function is called when something is dropped
