@@ -73,7 +73,7 @@ class AdminController extends Controller {
             }
         }
         $event->save();
-        return $ev->id;
+        return $event->id;
     }
 
     /**
