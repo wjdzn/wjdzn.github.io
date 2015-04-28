@@ -194,7 +194,7 @@ Calendar
                     },
                     eventDrop: function(calEvent, jsEvent, view) {
                         var hours = typeof $(this).find('.fc-event-time').html()!== "undefined"?$(this).find('.fc-event-time').html().split('-'):'';
-                        var init =hours.length>0? hours[0].trim():calEvent.start.toTimeString();
+                        var init =hours.length>0? hours[0].trim():calEvent.start.toLocaleTimeString();
                         var end = hours.length>1?hours[1].trim():
                         (parseInt(init.split(":")[0])+2)+":00";
                         var start = calEvent.start.toDateString()+" "+init;
@@ -210,7 +210,7 @@ Calendar
                     },
                     eventResizeStop:function(calEvent, jsEvent, view) {
                         var hours = typeof $(this).find('.fc-event-time').html()!== "undefined"?$(this).find('.fc-event-time').html().split('-'):'';
-                        var init =hours.length>0? hours[0].trim():calEvent.start.toTimeString();
+                        var init =hours.length>0? hours[0].trim():calEvent.start.toLocaleTimeString();
                         var end = hours.length>1?hours[1].trim():
                         (parseInt(init.split(":")[0])+2)+":00";
                         var start = calEvent.start.toDateString()+" "+init;
