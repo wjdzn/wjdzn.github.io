@@ -54,7 +54,7 @@ class User extends Eloquent
 
     public static function isMuted($email)
     {
-        $user = Self::where('email', $email)->first();
+        $user = self::where('email', $email)->first();
         if ($user != null) {
             $mute = Mute::where('user_id', $user->id)->where('muted_to', '>', time())->count();
             if ($mute > 0) {
@@ -69,7 +69,7 @@ class User extends Eloquent
 
     public static function isOnline($email)
     {
-        $user = Self::where('email', $email)->first();
+        $user = self::where('email', $email)->first();
         if ($user != null) {
             if ($user->last_seen > time() - 900) {
                 return true;
