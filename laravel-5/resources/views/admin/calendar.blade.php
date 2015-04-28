@@ -265,6 +265,7 @@ Calendar
                                     events =  $('#calendar').fullCalendar( 'clientEvents',-1);
                                     var event = events[0];
                                     event.id = retrib;
+                                    event._id = retrib;
                                     $(event).attr('data-id',retrib);
                                     $('#calendar').fullCalendar('updateEvent', event);
                                 }
