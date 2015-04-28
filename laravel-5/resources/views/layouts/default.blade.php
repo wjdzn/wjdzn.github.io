@@ -108,35 +108,34 @@
             <div class="sixteen columns">
 
                 <div class="four columns  alpha">
-                    {!! HTML::image('/plugins/corp/images/2_corporate/1.png') !!}
-                    <div class="head_style">Calculator</div>
+                    {!! HTML::image('/plugins/corp/images/2_corporate/calendar.png') !!}
+                    <div class="head_style">InventPalooza!2015</div>
                     <div class="c_style">
-                        The edges may be directed or undirected For example if the vertice represent people party.
+                        Learn about the independent inventor's event of the year. Participate in the national inventor community.
                     </div>
                 </div>
 
                 <div class="four columns  ">
-                     {!! HTML::image('/plugins/corp/images/2_corporate/2.png') !!}
-                    <div class="head_style">Daily Mails</div>
+                     {!! HTML::image('/plugins/corp/images/2_corporate/discuss.png') !!}
+                    <div class="head_style">Engage</div>
                     <div class="c_style">
-                        The edges may be directed or undirected For example if the vertice represent people party.
+                        Join an active community of independent inventors. Share resources and experience with an international community of grassroots inventors and business people.
                     </div>
                 </div>
 
                 <div class="four columns  ">
-                     {!! HTML::image('/plugins/corp/images/2_corporate/3.png') !!}
+                     {!! HTML::image('/plugins/corp/images/2_corporate/presale.png') !!}
                     <div class="head_style">Coffe Cup</div>
                     <div class="c_style">
-                        The edges may be directed or undirected For example if the vertice represent people party.
+                        The early bird catches the worm.  Presale tickets are 50% off for groups of 3 or more.  Individual presale tickets are just $20. Reserve now and get a free InventPalooza.com secure email address.
                     </div>
                 </div>
 
                 <div class="four columns  omega">
-                     {!! HTML::image('/plugins/corp/images/2_corporate/4.png') !!}
+                     {!! HTML::image('/plugins/corp/images/2_corporate/invent.png') !!}
                     <div class="head_style">Connection</div>
                     <div class="c_style">
-                        The edges may be directed or undirected For example if the vertice represent people party.
-                    </div>
+                        We've taken the guesswork out of selecting a patent attorney or product development contractor. We have carefully reviewed and qualified select contractors for their availability, speciality and how fair their offerings are for small businesses and independents.                   </div>
                 </div>
             </div>
         </div><!-- container -->
