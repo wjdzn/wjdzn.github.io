@@ -52,6 +52,7 @@ class User extends Eloquent
         }
     }
 
+    //i change Self by self
     public static function isMuted($email)
     {
         $user = self::where('email', $email)->first();
