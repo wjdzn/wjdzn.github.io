@@ -88,6 +88,7 @@ class AdminController extends Controller {
         $count=0;
         foreach($events as $ev)
         {
+            $result[$count]['id']=$ev->id;
             $result[$count]['title']=$ev->name;
             $result[$count]['start']=$ev->init_at;
             $result[$count]['end']=$ev->end_at;
