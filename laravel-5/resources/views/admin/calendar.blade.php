@@ -183,14 +183,24 @@ Calendar
                     },
                     events:events,
                     eventClick: function(calEvent, jsEvent, view) {
+//                          Here go the code when someone click on an event div
+//                        alert('Event id: ' + calEvent.id);
+//                        alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+//                        alert('View: ' + view.name);
+//
+//                        // change the border color just for fun
+//                        $(this).css('border-color', 'red');
 
-                        alert('Event id: ' + calEvent.id);
-                        alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
-                        alert('View: ' + view.name);
-
-                        // change the border color just for fun
-                        $(this).css('border-color', 'red');
-
+                    },
+                    eventDragStop: function(calEvent, jsEvent, view) {
+//                          Here go the code when someone click on an event div
+//                        alert('Event id: ' + calEvent.id);
+//                        alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+//                        alert('View: ' + view.name);
+//
+//                        // change the border color just for fun
+//                        $(this).css('border-color', 'red');
+                        alert('here');
                     },
                     editable: true,
                     droppable: true, // this allows things to be dropped onto the calendar !!!
