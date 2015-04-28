@@ -193,7 +193,7 @@ Calendar
 
                     },
                     eventDrop: function(calEvent, jsEvent, view) {
-                        var hours = $(this).find('.fc-event-time').html().length>0?$(this).find('.fc-event-time').html().split('-'):'';
+                        var hours = typeof $(this).find('.fc-event-time').html()!== "undefined"?$(this).find('.fc-event-time').html().split('-'):'';
                         var init =hours.length>0? hours[0].trim():calEvent.start.toTimeString();
                         var end = hours.length>1?hours[1].trim():
                         (parseInt(init.split(":")[0])+2)+":00";
@@ -209,7 +209,7 @@ Calendar
                         });
                     },
                     eventResizeStop:function(calEvent, jsEvent, view) {
-                        var hours = $(this).find('.fc-event-time').html().length>0?$(this).find('.fc-event-time').html().split('-'):'';
+                        var hours = typeof $(this).find('.fc-event-time').html()!== "undefined"?$(this).find('.fc-event-time').html().split('-'):'';
                         var init =hours.length>0? hours[0].trim():calEvent.start.toTimeString();
                         var end = hours.length>1?hours[1].trim():
                         (parseInt(init.split(":")[0])+2)+":00";
