@@ -197,7 +197,7 @@ Calendar
                         var init =hours.length>0? hours[0].trim():calEvent.start.toLocaleTimeString();
                         var end = hours.length>1?hours[1].trim():
                         (parseInt(init.split(":")[0])+2)+":00";
-                        var start = calEvent.start.toDateString()+" "+init;
+                        var start = calEvent.start.toDateString()+" "+($('#calendar').fullCalendar('getView').name=="month"?calEvent.start.toDateString():init);
                         var end =calEvent.end !== null?calEvent.end.toDateString()+" "+end:calEvent.start.toDateString()+" "+end;
                         var data = {id:calEvent.id,init_at:start,end_at:end,all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
                         $.ajax({
@@ -213,7 +213,7 @@ Calendar
                         var init =hours.length>0? hours[0].trim():calEvent.start.toLocaleTimeString();
                         var end = hours.length>1?hours[1].trim():
                         (parseInt(init.split(":")[0])+2)+":00";
-                        var start = calEvent.start.toDateString()+" "+init;
+                        var start = calEvent.start.toDateString()+" "+($('#calendar').fullCalendar('getView').name=="month"?calEvent.start.toDateString():init);
                         var end =calEvent.end !== null?calEvent.end.toDateString()+" "+end:calEvent.start.toDateString()+" "+end;
                         var data = {id:calEvent.id,init_at:start,end_at:end,all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
                         $.ajax({
