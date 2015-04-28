@@ -252,19 +252,21 @@ Calendar
                             data: data,
                             success: function (retrib) {
                                 retrib = $.parseJSON(retrib);
-                                var event = $('#calendar').fullCalendar( 'clientEvents',retrib);
-                                if(event.length>0)
+                                var events = $('#calendar').fullCalendar( 'clientEvents',retrib);
+                                if(events.length>0)
                                 {
+                                    var event = events[0];
                                     $('#calendar').fullCalendar( 'removeEvents',-1);
-                                    event[0].end = date;
-                                    $('#calendar').fullCalendar('updateEvent', event[0]);
+                                    event.end = date;
+                                    $('#calendar').fullCalendar('updateEvent', event);
                                 }
                                 else
                                 {
-                                    event =  $('#calendar').fullCalendar( 'clientEvents',-1);
-                                    event[0].id = retrib;
-                                    $(event[0]).attr('data-id',retrib);
-                                    $('#calendar').fullCalendar('updateEvent', event[0]);
+                                    events =  $('#calendar').fullCalendar( 'clientEvents',-1);
+                                    var event = events[0];
+                                    event.id = retrib;
+                                    $(event).attr('data-id',retrib);
+                                    $('#calendar').fullCalendar('updateEvent', event);
                                 }
                                 putClickEvent();
                             }
