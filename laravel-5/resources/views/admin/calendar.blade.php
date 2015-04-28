@@ -264,12 +264,7 @@ Calendar
                                     event =  $('#calendar').fullCalendar( 'clientEvents',-1);
                                     event[0].id = retrib;
                                     $(event[0]).attr('data-id',retrib);
-                                    $('#calendar').fullCalendar('updateEvent', event);
-                                }
-
-                                if(retrib==2)
-                                {
-                                    $(copiedEventObject).remove();
+                                    $('#calendar').fullCalendar('updateEvent', event[0]);
                                 }
                                 putClickEvent();
                             }
