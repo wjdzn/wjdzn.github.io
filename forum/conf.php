@@ -10,8 +10,8 @@ $db_name = "palooza";
 $fb_appId = "";
 $fb_secret = "";
 //SMTP Mail configuration
-$smtp_host = "smtp.gmail.com"; // smtp.gmail.com is google's SMTP server you can add the address of your
-$smtp_username = "alain.lpa87@gmail.com"; // if the $smtp_host is smtp.gmail.com the username must be your google+/gmail account
-$smtp_password = ""; // the password of smtp_username
-$smtp_port = 587; // The default port is 465 you can reconfigure it
+$smtp_host = "smtpout.secureserver.net"; // smtp.gmail.com is google's SMTP server you can add the address of your
+$smtp_username = "andre@ownmyinvention.com"; // if the $smtp_host is smtp.gmail.com the username must be your google+/gmail account
+$smtp_password = "Patent77872"; // the password of smtp_username
+$smtp_port = 25; // The default port is 465 you can reconfigure it
 ?>
