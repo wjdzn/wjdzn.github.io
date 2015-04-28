@@ -54,8 +54,8 @@ class AdminController extends Controller {
     public function save_event()
     {
         $event = new CalendarEvent(Input::all());
-        $event->init_at = new \DateTime("YYYY:mm:dd hh:mm:ss",strtotime( Input::get('init_at')));// Input::get('init_at');
-        $event->end_at =  new \DateTime("YYYY:mm:dd hh:mm:ss",strtotime( Input::get('end_at')));
+        $event->init_at = \date_create_from_format("YYYY:mm:dd hh:mm:ss",strtotime( Input::get('init_at')));// Input::get('init_at');
+        $event->end_at =  \date_create_from_format("YYYY:mm:dd hh:mm:ss",strtotime( Input::get('end_at')));
         $eventsLikeThisByName = CalendarEvent::where('name','=',$event->name)->where('all_day','=','1')->get();
         $date = new \DateTime($event->init_at);// strtotime($init_date . ' - 1 day');
         $date->sub( new \DateInterval('P1D') );
