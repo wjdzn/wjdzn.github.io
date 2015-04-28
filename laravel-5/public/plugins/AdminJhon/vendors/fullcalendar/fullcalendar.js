@@ -5349,7 +5349,7 @@ function DayEventRenderer() {
 				"left:" + segment.left + "px;" +
 				skinCss +
 				"'" +
-			">" +
+			">" +"><span class='fc-event-close' data-id='"+event.id+"'>x</span>"+
 			"<div class='fc-event-inner'>";
 		if (!event.allDay && segment.isStart) {
 			html +=
