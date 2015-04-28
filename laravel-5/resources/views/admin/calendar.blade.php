@@ -181,36 +181,6 @@ Calendar
                         week: 'week',
                         day: 'day'
                     },
-                    //Random events
-//            events: [{
-//                title: 'Team Out',
-//                start: new Date(y, m, 2),
-//                backgroundColor: "#F89A14"
-//            }, {
-//                title: 'Client Meeting',
-//                start: new Date(y, m, d - 2),
-//                end: new Date(y, m, d - 5),
-//                backgroundColor: "#418BCA"
-//            }, {
-//                title: 'Repeating Event',
-//                start: new Date(y, m, 6)
-//            }, {
-//                title: 'Birthday Party',
-//                start: new Date(y, m, 12),
-//                backgroundColor: "#6CC66C"
-//            }, {
-//                title: 'Product Seminar',
-//                start: new Date(y, m, 16),
-//                backgroundColor: "#A9B6BC"
-//            }, {
-//                title: 'Anniversary Celebrations',
-//                start: new Date(y, m, 26),
-//                backgroundColor: "#F89A14"
-//            }, {
-//                title: 'Client Meeting',
-//                start: new Date(y, m, 10),
-//                backgroundColor: "#67C5DF"
-//            }],
                     events:events,
                     editable: true,
                     droppable: true, // this allows things to be dropped onto the calendar !!!
@@ -238,15 +208,16 @@ Calendar
                             $(this).remove();
                         }
                         alert(allDay);
-                        var data={all_day:allDay?1:0,name: $(this).html(),init_at:date.toLocaleString() , end_at:date.toLocaleString(),backgroundcolor:$(this).css("background-color"),  _token:  $('meta[name="csrf-token"]').attr('content')}
+                        var data={all_day:allDay?1:0,name: $(this).html(),init_at:date.toDateString() , end_at:date.toDateString(),backgroundcolor:$(this).css("background-color"),  _token:  $('meta[name="csrf-token"]').attr('content')}
                         $.ajax({
                             type: "POST",
                             url: "{{route('calendar_save_event')}}",
                             data: data,
                             success: function (retrib) {
+                                retrib = $.parseJSON(retrib);
                                 if(retrib==2)
                                 {
-                                    $(this).remove();
+                                    $(copiedEventObject).remove();
                                 }
                             }
                         });
