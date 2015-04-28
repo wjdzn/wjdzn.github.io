@@ -55,8 +55,8 @@ class AdminController extends Controller {
     {
         $event = new CalendarEvent(Input::all());
 
-        $date_init=date('Y:m:d h:i:s',date(strtotime(Input::get('init_at'))));
-        $date_end =date('Y:m:d h:i:s',date(strtotime(Input::get('end_at'))));
+        $date_init=date('Y:m:d h:i:s',strtotime(date(strtotime(Input::get('init_at')))));
+        $date_end =date('Y:m:d h:i:s',strtotime(date(strtotime(Input::get('end_at')))));
         $event->init_at = $date_init;
         $event->end_at = $date_end;
         $eventsLikeThisByName = CalendarEvent::where('name','=',$event->name)->where('all_day','=','1')->get();
