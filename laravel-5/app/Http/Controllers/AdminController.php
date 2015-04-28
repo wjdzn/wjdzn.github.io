@@ -97,4 +97,21 @@ class AdminController extends Controller {
         }
         echo  json_encode($result);
     }
+
+    /**
+     * Update an event(right now only start and end date and all_day) from id
+     *
+     * @return Response
+     */
+    public function update_event()
+    {
+        $current_event = CalendarEvent::find(Input::get('id'));
+        $date_init=new \DateTime(date('Y:m:d h:i:s',strtotime(Input::get('init_at'))));
+        $date_end =new \DateTime(date('Y:m:d h:i:s',strtotime(Input::get('end_at'))));
+        $current_event->init_at = $date_init;
+        $current_event->end_at = $date_end;
+        $current_event->all_day = Input::get('all_day');
+        $current_event->save();
+        return 1;
+    }
 }
