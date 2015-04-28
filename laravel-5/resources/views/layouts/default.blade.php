@@ -108,7 +108,7 @@
             <div class="sixteen columns">
 
                 <div class="four columns  alpha">
-                    {!! HTML::image('/plugins/corp/images/2_corporate/1.png') !!}
+                    {!! HTML::image('/plugins/corp/images/2_corporate/calendar.png') !!}
                     <div class="head_style">Calculator</div>
                     <div class="c_style">
                         The edges may be directed or undirected For example if the vertice represent people party.
@@ -116,7 +116,7 @@
                 </div>
 
                 <div class="four columns  ">
-                     {!! HTML::image('/plugins/corp/images/2_corporate/2.png') !!}
+                     {!! HTML::image('/plugins/corp/images/2_corporate/discuss.png') !!}
                     <div class="head_style">Daily Mails</div>
                     <div class="c_style">
                         The edges may be directed or undirected For example if the vertice represent people party.
@@ -124,7 +124,7 @@
                 </div>
 
                 <div class="four columns  ">
-                     {!! HTML::image('/plugins/corp/images/2_corporate/3.png') !!}
+                     {!! HTML::image('/plugins/corp/images/2_corporate/presale.png') !!}
                     <div class="head_style">Coffe Cup</div>
                     <div class="c_style">
                         The edges may be directed or undirected For example if the vertice represent people party.
@@ -132,7 +132,7 @@
                 </div>
 
                 <div class="four columns  omega">
-                     {!! HTML::image('/plugins/corp/images/2_corporate/4.png') !!}
+                     {!! HTML::image('/plugins/corp/images/2_corporate/invent.png') !!}
                     <div class="head_style">Connection</div>
                     <div class="c_style">
                         The edges may be directed or undirected For example if the vertice represent people party.
