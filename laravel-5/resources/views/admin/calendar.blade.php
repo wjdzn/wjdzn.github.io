@@ -193,7 +193,7 @@ Calendar
 
                     },
                     eventDrop: function(calEvent, jsEvent, view) {
-                        var data = {id:calEvent.id,init_at:calEvent.start.toDateString(),end_at:calEvent.start.toDateString(),all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
+                        var data = {id:calEvent.id,init_at:calEvent.start.toLocaleDateString()+" "+calEvent.start.toLocaleTimeString(),end_at:calEvent.start.toLocaleDateString()+" "+calEvent.start.toLocaleTimeString(),all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
                         $.ajax({
                             type: "POST",
                             url: "{{route('calendar_update_event')}}",
@@ -203,7 +203,7 @@ Calendar
                         });
                     },
                     eventResizeStop:function(calEvent, jsEvent, view) {
-                        var data = {id:calEvent.id,init_at:calEvent.start.toDateString(),end_at:calEvent.end.toDateString(),all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
+                        var data = {id:calEvent.id,init_at:calEvent.start.toLocaleDateString()+" "+calEvent.start.toLocaleTimeString(),end_at:calEvent.end.toLocaleDateString()+" "+calEvent.end.toLocaleTimeString(),all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
                         $.ajax({
                             type: "POST",
                             url: "{{route('calendar_update_event')}}",
