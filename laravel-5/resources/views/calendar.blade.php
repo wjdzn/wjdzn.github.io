@@ -1,3 +1,11 @@
+<?php
+print_r( time());
+$date=date(strtotime("5/4/2015 5:00:00"));
+print_r(date('Y:m:d h:i:s', $date));
+print_r(date_create_from_format("y:m:d h:i:s",strtotime(date('m/d/Y h:i:s a', time()))));
+die();
+?>
+
 <html>
 	<head>
 		<title>Laravel</title>
