@@ -265,6 +265,10 @@ Calendar
                         });
                     }
                 });
+                $('.fc-event-close').click(function(e){
+                   var id=$(this).attr('data-id');
+                    alert(id);
+                });
             }
         });
 
