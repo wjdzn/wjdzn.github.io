@@ -277,41 +277,30 @@ Calendar
                                 {
                                     $(copiedEventObject).remove();
                                 }
-                                $( ".fc-event-close" ).each(function( index ) {
-                                    $(this).click(function(e){
-                                        var id=$(this).attr('data-id');
-                                        $('#calendar').fullCalendar( 'removeEvents',id );
-                                        var data = {id:id,_token:  $('meta[name="csrf-token"]').attr('content') };
-                                        $.ajax({
-                                            type: "POST",
-                                            url: "{{route('calendar_delete_event')}}",
-                                            data: data,
-                                            success: function (retrib) {
-                                            }
-                                        });
-                                    });
-                                });
+                                putClickEvent();
                             }
                         });
                     }
                 });
-                $( ".fc-event-close" ).each(function( index ) {
-                    $(this).click(function(e){
-                        var id=$(this).attr('data-id');
-                        $('#calendar').fullCalendar( 'removeEvents',id );
-                        var data = {id:id,_token:  $('meta[name="csrf-token"]').attr('content') };
-                        $.ajax({
-                            type: "POST",
-                            url: "{{route('calendar_delete_event')}}",
-                            data: data,
-                            success: function (retrib) {
-                            }
-                        });
-                    });
-                });
             }
         });
-
+        function putClickEvent()
+        {
+            $( ".fc-event-close" ).each(function( index ) {
+                $(this).unbind().click(function(e){
+                    var id=$(this).attr('data-id');
+                    $('#calendar').fullCalendar( 'removeEvents',id );
+                    var data = {id:id,_token:  $('meta[name="csrf-token"]').attr('content') };
+                    $.ajax({
+                        type: "POST",
+                        url: "{{route('calendar_delete_event')}}",
+                        data: data,
+                        success: function (retrib) {
+                        }
+                    });
+                });
+            });
+        }
 
         /* ADDING EVENTS */
         var currColor = "#418BCA"; //default
@@ -353,6 +342,7 @@ Calendar
             //Remove event from text input
             $("#new-event").val("");
         });
+        putClickEvent();
     });
     </script>
 @stop
