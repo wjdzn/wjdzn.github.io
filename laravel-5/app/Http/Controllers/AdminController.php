@@ -54,8 +54,8 @@ class AdminController extends Controller {
     public function save_event()
     {
         $event = new CalendarEvent(Input::all());
-        $date_init=date('Y:m:d h:i:s',strtotime(Input::get('init_at')));
-        $date_end =date('Y:m:d h:i:s',strtotime(Input::get('end_at')));
+        $date_init=new \DateTime(date('Y:m:d h:i:s',strtotime(Input::get('init_at'))));
+        $date_end =new \DateTime(date('Y:m:d h:i:s',strtotime(Input::get('end_at'))));
         $event->init_at = $date_init;
         $event->end_at = $date_end;
         $eventsLikeThisByName = CalendarEvent::where('name','=',$event->name)->where('all_day','=','1')->get();
@@ -63,10 +63,10 @@ class AdminController extends Controller {
         {
             foreach($eventsLikeThisByName as $ev)
             {
-                $date_end_ev =date('Y:m:d h:i:s',strtotime($ev->end_at));
+                $date_end_ev =new \DateTime(date('Y:m:d h:i:s',strtotime($ev->end_at)));
                 print_r($date_init);
                 print_r($date_end_ev);
-                if($ev->all_day && $date_init-$date_end_ev<=1 && $date_init-$date_end_ev>=0)
+                if($ev->all_day && $date_init->diff($date_end_ev)->days<=1)
                 {
                     $ev->end_at = $event->end_at;
                     $ev->save();
