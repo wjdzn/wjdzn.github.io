@@ -64,9 +64,9 @@ class AdminController extends Controller {
         {
             foreach($eventsLikeThisByName as $ev)
             {
-                $date_end =strtotime($ev->end_at);
-                echo $date_init_stro."-".$date_end.":". $date_init_stro-$date_end." | ";
-                if($ev->all_day && $date_init_stro-$date_end<=86400000)
+                $date_end_stro =strtotime($ev->end_at);
+                echo ($date_init_stro."-".$date_end_stro.":". $date_init_stro-$date_end_stro." | ");
+                if($ev->all_day && $date_init_stro-$date_end_stro<=86400000)
                 {
                     $ev->end_at = $event->end_at;
                     $ev->save();
