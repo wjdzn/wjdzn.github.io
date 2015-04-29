@@ -23,7 +23,7 @@
     <link href="{{ asset('/plugins/AdminJhon/css/styles/black.css') }}" rel="stylesheet" type="text/css" id="colorscheme" />
     <link rel="stylesheet" href="{{ asset('/plugins/AdminJhon/css/panel.css') }}" />
     <link rel="stylesheet" href="{{ asset('/plugins/AdminJhon/css/metisMenu.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/plugins/corp/stylesheets/custom.css') }}" />
+    <link rel="stylesheet" href="{{ asset('/plugins/AdminJhon/css/custom.css') }}" />
     
     <!-- end of global css -->
     <!--page level css-->
