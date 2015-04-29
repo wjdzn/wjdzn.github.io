@@ -222,7 +222,7 @@ Dashboard
                         Calendar
                     </h4>
                     <span class="pull-right">
-                        <a href="{{url('admin/calendar')}}"><i class="glyphicon glyphicon-edit clickable"></i></a>
+                        <a href="{{url('admin/calendar')}}"><i class="glyphicon glyphicon-edit"></i></a>
                         <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
                         <i class="glyphicon glyphicon-remove removepanel clickable"></i>
                     </span>

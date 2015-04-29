@@ -1,5 +1,10 @@
 <?php namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Input;
+use Illuminate\Auth\Guard as Auth;
+use Illuminate\Http\RedirectResponse;
+use App\User;
+
 class WelcomeController extends Controller {
 
 	/*
@@ -12,16 +17,22 @@ class WelcomeController extends Controller {
 	| controllers, you are free to modify or remove it as you desire.
 	|
 	*/
-
+    /**
+     * The Guard implementation.
+     *
+     * @var Authenticator
+     */
+    protected $auth;
 	/**
 	 * Create a new controller instance.
 	 *
 	 * @return void
 	 */
-/*	public function __construct()
+	public function __construct(Auth $auth)
 	{
-		$this->middleware('guest');
-	}*/
+		//$this->middleware('guest');
+        $this->auth = $auth;
+	}
 
 	/**
 	 * Show the application welcome screen to the user.
@@ -36,6 +47,13 @@ class WelcomeController extends Controller {
     public function calendar()
     {
         return view('calendar');
+    }
+    public function login_for_forum()
+    {
+        $user = User::find(Input::get('id'));
+        if($this->auth->login($user))
+            return redirect()->guest('/main');
+        return redirect()->guest('auth/login');
     }
 
 }
