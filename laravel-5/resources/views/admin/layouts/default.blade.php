@@ -34,7 +34,7 @@
     <header class="header">
         <a href="{{ URL::to('admin/index') }}" class="logo">
             <div class="logotext">
-                InventPalooza!
+                InventPalooza Admin
             </div>
         </a>
         <nav class="navbar navbar-static-top" role="navigation">
@@ -222,7 +222,7 @@
                                     </a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="{{ URL::to('admin/logout') }}">
+                                    <a href="{{ url('/auth/logout') }}">
                                         <i class="livicon" data-name="sign-out" data-s="18"></i>
                                         Logout
                                     </a>
