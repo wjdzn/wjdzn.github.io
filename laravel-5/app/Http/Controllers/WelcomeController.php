@@ -51,10 +51,9 @@ class WelcomeController extends Controller {
     public function login_for_forum()
     {
         $user = User::find(Input::get('id'));
-        print_r($this->auth->login($user));
-        //if($this->auth->onceUsingId($id));
-        //    return new RedirectResponse(url('/home'));
-        //return redirect()->guest('auth/login');
+        if($this->auth->login($user))
+            return redirect()->guest('/main');
+        return redirect()->guest('auth/login');
     }
 
 }
