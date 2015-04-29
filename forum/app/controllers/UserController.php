@@ -65,7 +65,7 @@ class UserController extends BaseController
 
                         //insert Laravel-5 table;
                         $pass = e(Input::get('password'));
-                        DB::insert('insert into users (name,email,created_at,updated_at,password_text) values (?, ?, ?, ?, ?)', array($name,$email,'NOW()','NOW()',$pass));
+                        DB::insert("insert into users (name,email,created_at,updated_at,password_text) values ('$name', '$email', NOW(), NOW(), '$pass')");
                         $results = DB::select('select id from users where email = ?', array($email));
 
                         $user = User::where('email', e(Input::get('email')))->first();
@@ -77,7 +77,7 @@ class UserController extends BaseController
                             $message->to(Input::get('email'), Input::get('first_name') . " " . Input::get('surname'))
                                     ->subject(Lang::get('messages.activate_your_account'));
                         });
-                        return Redirect::to('login')->with('success', $results[id]);//Lang::get('messages.register_success_you_must_active_your_account')
+                        return Redirect::to('login')->with('success', $results['id']);//Lang::get('messages.register_success_you_must_active_your_account')
                     } else {
                         $email = e(Input::get('email'));
                         $name = e(Input::get('first_name'));
@@ -94,7 +94,7 @@ class UserController extends BaseController
 
                         //insert Laravel-5 table;
                         $pass = e(Input::get('password'));
-                        DB::insert('insert into users (name,email,created_at,updated_at,password_text) values (?, ?, ?, ?, ?)', array($name,$email,'NOW()','NOW()',$pass));
+                        DB::insert("insert into users (name,email,created_at,updated_at,password_text) values ('$name', '$email', NOW(), NOW(), '$pass')");
                         $results = DB::select('select id from users where email = ?', array($email));
 
                         $user = User::where('email', e(Input::get('email')))->first();
