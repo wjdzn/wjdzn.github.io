@@ -24,6 +24,7 @@ $(document).ready(function() {
     }
     ini_events($('#external-events div.external-event'));
 
+    alert(window.location);
     /* initialize the calendar
      -----------------------------------------------------------------*/
     //Date for the calendar events (dummy data)
@@ -34,7 +35,7 @@ $(document).ready(function() {
     var data={_token:  $('meta[name="csrf-token"]').attr('content')}
     $.ajax({
         type: "POST",
-        url: "/calendar/events",
+        url: "calendar/events",
         data: data,
         success: function (retrib) {
             var events = $.parseJSON(retrib);
