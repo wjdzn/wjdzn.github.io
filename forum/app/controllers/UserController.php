@@ -77,7 +77,8 @@ class UserController extends BaseController
                             $message->to(Input::get('email'), Input::get('first_name') . " " . Input::get('surname'))
                                     ->subject(Lang::get('messages.activate_your_account'));
                         });
-                        return Redirect::to('login')->with('success', $results[0]);//Lang::get('messages.register_success_you_must_active_your_account')
+                        $aux = "".$results[0];
+                        return Redirect::to('login')->with('success', $aux);//Lang::get('messages.register_success_you_must_active_your_account')
                     } else {
                         $email = e(Input::get('email'));
                         $name = e(Input::get('first_name'));
