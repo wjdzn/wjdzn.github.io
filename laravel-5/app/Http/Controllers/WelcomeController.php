@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Input;
-use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Auth\Guard as Auth;
 use Illuminate\Http\RedirectResponse;
 
 class WelcomeController extends Controller {
@@ -27,10 +27,10 @@ class WelcomeController extends Controller {
 	 *
 	 * @return void
 	 */
-	public function __construct()
+	public function __construct(Auth $auth)
 	{
 		//$this->middleware('guest');
-        $this->auth = Auth::Guard();
+        $this->auth = $auth;
 	}
 
 	/**
