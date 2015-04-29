@@ -3,7 +3,7 @@ $temp = explode('/', storage_path());
 $aux="";
 for($i=0;$i<count($temp)-2;$i++)
     $aux = strlen($aux)>0?"/".$temp[$i]:$temp[$i];
-$aux.="/inventpalooza/forum/app/storage/sessions";
+$aux.="/forum/app/storage/sessions";
 return [
 
 	/*
