@@ -14,6 +14,15 @@ class UserController extends BaseController
         return Redirect::to('/');
     }
 
+    private function file_get_contents_curl($url) {
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //Set curl to return the data instead of printing it to the browser.
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_exec($ch);
+        curl_close($ch);
+    }
+
     public function create()
     {
         global $smtp_username;
@@ -78,19 +87,8 @@ class UserController extends BaseController
                         });
 
                         //call post Laravel-5
-                        $url = 'http://inventpalooza.com/laravel-5/public/update_from_forum';
-                        $data = array('email' => $email);
-                        $options = array(
-                            'http' => array(
-                                'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-                                'method'  => 'POST',
-                                'content' => http_build_query($data),
-                            ),
-                        );
-                        $context  = stream_context_create($options);
-                        $result = file_get_contents($url, false, $context);
-
-                        var_dump($result);
+                        $url = 'http://inventpalooza.com/laravel-5/public/update_from_forum?email='.$email;
+                        $this->file_get_contents_curl($url);
 
                         return Redirect::to('login')->with('success', Lang::get('messages.register_success_you_must_active_your_account'));
                     } else {
