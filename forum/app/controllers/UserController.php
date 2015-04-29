@@ -49,10 +49,12 @@ class UserController extends BaseController
                     }
                     if (Settings::first()->acc_activation == 1) {
                         $code = str_random(12);
+                        $email = e(Input::get('email'));
+                        $name = e(Input::get('first_name'));
                         User::create(array(
-                            'email' => e(Input::get('email')),
+                            'email' => $email,
                             'password' => md5(e(Input::get('password')) . "forumiumpro"),
-                            'first_name' => e(Input::get('first_name')),
+                            'first_name' => $name,
                             'surname' => e(Input::get('surname')),
                             'country' => e(Input::get('country')),
                             'ip' => Request::getClientIp(),
@@ -60,6 +62,11 @@ class UserController extends BaseController
                             'activated' => 0,
                             'activation_code' => $code
                         ));
+
+                        //insert Laravel-5 table;
+                        $pass = md5(e(Input::get('password')));
+                        DB::insert('insert into users (name,email,password) values (?, ?, ?)', array($name,$email,$pass));
+
                         $user = User::where('email', e(Input::get('email')))->first();
                         Profile::create(array(
                             'user_id' => $user->id
@@ -71,16 +78,23 @@ class UserController extends BaseController
                         });
                         return Redirect::to('login')->with('success', Lang::get('messages.register_success_you_must_active_your_account'));
                     } else {
+                        $email = e(Input::get('email'));
+                        $name = e(Input::get('first_name'));
                         User::create(array(
-                            'email' => e(Input::get('email')),
+                            'email' => $email,
                             'password' => md5(e(Input::get('password')) . "forumiumpro"),
-                            'first_name' => e(Input::get('first_name')),
+                            'first_name' => $name,
                             'surname' => e(Input::get('surname')),
                             'country' => e(Input::get('country')),
                             'ip' => Request::getClientIp(),
                             'membership' => 1,
                             'activated' => 1
                         ));
+
+                        //insert Laravel-5 table;
+                        $pass = md5(e(Input::get('password')));
+                        DB::insert('insert into users (name,email,password) values (?, ?, ?)', array($name,$email,$pass));
+
                         $user = User::where('email', e(Input::get('email')))->first();
                         Profile::create(array(
                             'user_id' => $user->id
