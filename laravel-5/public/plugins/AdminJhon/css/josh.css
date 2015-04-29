@@ -152,7 +152,7 @@ h6,
 }
 /* All images should be responsive */
 img {
-  max-width: 100%important;
+  max-width: 100% !important;
 }
 .sort-highlight {
   background: #f4f4f4;
@@ -1255,7 +1255,7 @@ body > .header .navbar .sidebar-toggle {
 }
 .skin-josh .treeview-menu > li > a{
   color: #fff;
-  background#e1e1e1:
+  background: #e1e1e1;
 }
 .skin-josh .treeview-menu > li > a:hover {
 	color:#333;
