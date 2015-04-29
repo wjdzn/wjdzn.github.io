@@ -258,5 +258,4 @@ td{width:100%}
 .fork-me{position:fixed;*position:absolute;top:0;right:0;width:40px;height:40px;overflow:hidden;text-indent:100%;white-space:nowrap;background:#28545b url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAnElEQVR4XqVSgQmEMAyszw/gCI7wK7iBblBHcISfxG6gG/gjuIGO0A3ygaYQCCG2HhweF+6aShsAcDcBJBpuvlwFagqGJwUf5EL6kgV2eEe2yIgc9QI73CMPs8AOywI7nHDSzCxYxcnJ6+hrFnQkJrb2nGclP3Fj+vf0IUV1AgCZHiS86lOObxD4qqSD5mtXmAq1e2fB3vqXact3f/JmXumJlVq1AAAAAElFTkSuQmCC") 50% no-repeat;*background-image:url("ie/icon-fork.png");}
 .fork-me:hover{background-color:#1f7f5c}
 .skin dt,.fork-me{-webkit-transition:background-color .2s;-moz-transition:background-color .2s;-ms-transition:background-color .2s;-o-transition:background-color .2s;transition:background-color .2s}
-.logotext {font-family: 'Knewave', cursive;font-size: 35px;color: #fff;
-}
+
