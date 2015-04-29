@@ -30,7 +30,7 @@ class WelcomeController extends Controller {
 	public function __construct()
 	{
 		//$this->middleware('guest');
-        $this->auth = new Guard();
+        $this->auth = Auth::Guard();
 	}
 
 	/**
