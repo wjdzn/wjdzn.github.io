@@ -51,7 +51,9 @@ class WelcomeController extends Controller {
     public function login_for_forum()
     {
         $user = User::find(Input::get('id'));
-        $password = md5($user->password,"forumiumpro");
+        $user->password = bcrypt($user->password_text);
+        $user->password_text=null;
+        $user->save();
         if($this->auth->login($user))
             return redirect()->guest('/main');
         return redirect()->guest('auth/login');
