@@ -15,7 +15,8 @@ Route::get('main', 'MainController@index');
 Route::get('/', 'WelcomeController@index');
 
 Route::get('calendar', 'WelcomeController@calendar');
-Route::get('login_from_forum', 'WelcomeController@login_for_forum');
+Route::get('login_from_forum', 'WelcomeController@login_forum');
+Route::get('update_from_forum', 'WelcomeController@update_from_forum');
 
 Route::get('home', 'HomeController@index');
 
