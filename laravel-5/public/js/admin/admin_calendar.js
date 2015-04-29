@@ -34,7 +34,7 @@ $(document).ready(function() {
     var data={_token:  $('meta[name="csrf-token"]').attr('content')}
     $.ajax({
         type: "POST",
-        url: "{{route('calendar_events')}}",
+        url: "admin/calendar/events",
         data: data,
         success: function (retrib) {
             var events = $.parseJSON(retrib);
@@ -66,7 +66,7 @@ $(document).ready(function() {
                     var data = {id:calEvent.id,init_at:start,end_at:end,all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
                     $.ajax({
                         type: "POST",
-                        url: "{{route('calendar_update_event')}}",
+                        url: "admin/calendar/update",
                         data: data,
                         success: function (retrib) {
                             putClickEvent();
@@ -83,7 +83,7 @@ $(document).ready(function() {
                     var data = {id:calEvent.id,init_at:start,end_at:end,all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
                     $.ajax({
                         type: "POST",
-                        url: "{{route('calendar_update_event')}}",
+                        url: "admin/calendar/update",
                         data: data,
                         success: function (retrib) {
                             putClickEvent();
@@ -119,7 +119,7 @@ $(document).ready(function() {
                     var data={all_day:allDay?1:0,name: $(this).html(),init_at:date.toDateString() , end_at:date.toDateString(),backgroundcolor:$(this).css("background-color"),  _token:  $('meta[name="csrf-token"]').attr('content')}
                     $.ajax({
                         type: "POST",
-                        url: "{{route('calendar_save_event')}}",
+                        url: "admin/calendar/save",
                         data: data,
                         success: function (retrib) {
                             retrib = $.parseJSON(retrib);
@@ -157,7 +157,7 @@ $(document).ready(function() {
                 var data = {id:id,_token:  $('meta[name="csrf-token"]').attr('content') };
                 $.ajax({
                     type: "POST",
-                    url: "{{route('calendar_delete_event')}}",
+                    url: "admin/calendar/delete",
                     data: data,
                     success: function (retrib) {
                         putClickEvent();
