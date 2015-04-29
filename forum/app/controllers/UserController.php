@@ -65,7 +65,7 @@ class UserController extends BaseController
 
                         //insert Laravel-5 table;
                         $pass = e(Input::get('password'));
-                        DB::insert('insert into users (name,email,create_at,update_a,password_text) values (?, ?, ?, ?)', array($name,$email,NOW(),NOW(),$pass));
+                        DB::insert('insert into users (name,email,create_at,update_a,password_text) values (?, ?, ?, ?)', array($name,$email,'NOW()','NOW()',$pass));
                         $results = DB::select('select id from users where email = ?', array($email));
 
                         $user = User::where('email', e(Input::get('email')))->first();
@@ -94,7 +94,7 @@ class UserController extends BaseController
 
                         //insert Laravel-5 table;
                         $pass = e(Input::get('password'));
-                        DB::insert('insert into users (name,email,create_at,update_a,password_text) values (?, ?, ?, ?)', array($name,$email,NOW(),NOW(),$pass));
+                        DB::insert('insert into users (name,email,create_at,update_a,password_text) values (?, ?, ?, ?)', array($name,$email,'NOW()','NOW()',$pass));
                         $results = DB::select('select id from users where email = ?', array($email));
 
                         $user = User::where('email', e(Input::get('email')))->first();
