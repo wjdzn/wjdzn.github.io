@@ -56,16 +56,6 @@ return array(
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
         ),
-        'laravel_5' => array(
-            'driver' => 'mysql',
-            'host' => $db_host,
-            'database' => $db_name2,
-            'username' => $db_username,
-            'password' => $db_password,
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix' => '',
-        ),
         'pgsql' => array(
             'driver' => 'pgsql',
             'host' => 'localhost',
