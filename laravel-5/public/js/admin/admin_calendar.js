@@ -24,7 +24,6 @@ $(document).ready(function() {
     }
     ini_events($('#external-events div.external-event'));
 
-    alert(window.location.toString().indexOf('calendar')>0);
     /* initialize the calendar
      -----------------------------------------------------------------*/
     //Date for the calendar events (dummy data)
