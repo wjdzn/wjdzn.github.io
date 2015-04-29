@@ -6,6 +6,8 @@ $db_host = "localhost";
 $db_username= "userpalooza";
 $db_password = "Patent77872";
 $db_name = "palooza";
+//second database
+$db_name2 = "laravel_5";
 //Facebook API configuration
 $fb_appId = "";
 $fb_secret = "";
