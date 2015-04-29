@@ -24,7 +24,7 @@ $(document).ready(function() {
     }
     ini_events($('#external-events div.external-event'));
 
-    alert(window.location.indexOf('calendar')>0);
+    alert(window.location.toString().indexOf('calendar')>0);
     /* initialize the calendar
      -----------------------------------------------------------------*/
     //Date for the calendar events (dummy data)
@@ -35,7 +35,7 @@ $(document).ready(function() {
     var data={_token:  $('meta[name="csrf-token"]').attr('content')}
     $.ajax({
         type: "POST",
-        url: (window.location.indexOf('calendar')>0?"":"admin/")+"calendar/events",
+        url: (window.location.toString().indexOf('calendar')>0?"":"admin/")+"calendar/events",
         data: data,
         success: function (retrib) {
             var events = $.parseJSON(retrib);
@@ -67,7 +67,7 @@ $(document).ready(function() {
                     var data = {id:calEvent.id,init_at:start,end_at:end,all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
                     $.ajax({
                         type: "POST",
-                        url: (window.location.indexOf('calendar')>0?"":"admin/")+"calendar/update",
+                        url: (window.location.toString().indexOf('calendar')>0?"":"admin/")+"calendar/update",
                         data: data,
                         success: function (retrib) {
                             putClickEvent();
@@ -84,7 +84,7 @@ $(document).ready(function() {
                     var data = {id:calEvent.id,init_at:start,end_at:end,all_day:calEvent.allDay,_token:  $('meta[name="csrf-token"]').attr('content') };
                     $.ajax({
                         type: "POST",
-                        url: (window.location.indexOf('calendar')>0?"":"admin/")+"calendar/update",
+                        url: (window.location.toString().indexOf('calendar')>0?"":"admin/")+"calendar/update",
                         data: data,
                         success: function (retrib) {
                             putClickEvent();
@@ -120,7 +120,7 @@ $(document).ready(function() {
                     var data={all_day:allDay?1:0,name: $(this).html(),init_at:date.toDateString() , end_at:date.toDateString(),backgroundcolor:$(this).css("background-color"),  _token:  $('meta[name="csrf-token"]').attr('content')}
                     $.ajax({
                         type: "POST",
-                        url: (window.location.indexOf('calendar')>0?"":"admin/")+"calendar/save",
+                        url: (window.location.toString().indexOf('calendar')>0?"":"admin/")+"calendar/save",
                         data: data,
                         success: function (retrib) {
                             retrib = $.parseJSON(retrib);
@@ -158,7 +158,7 @@ $(document).ready(function() {
                 var data = {id:id,_token:  $('meta[name="csrf-token"]').attr('content') };
                 $.ajax({
                     type: "POST",
-                    url: (window.location.indexOf('calendar')>0?"":"admin/")+"calendar/delete",
+                    url: (window.location.toString().indexOf('calendar')>0?"":"admin/")+"calendar/delete",
                     data: data,
                     success: function (retrib) {
                         putClickEvent();
