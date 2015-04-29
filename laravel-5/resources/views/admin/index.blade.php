@@ -222,6 +222,7 @@ Dashboard
                         Calendar
                     </h4>
                     <span class="pull-right">
+                        <a href="{{url('admin/calendar')}}"><i class="glyphicon glyphicon-edit clickable"></i></a>
                         <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
                         <i class="glyphicon glyphicon-remove removepanel clickable"></i>
                     </span>
@@ -514,9 +515,6 @@ Dashboard
 <!-- EASY PIE CHART JS -->
 <script src="{{ asset('/plugins/AdminJhon/vendors/charts/easypiechart.min.js') }}"></script>
 <script src="{{ asset('/plugins/AdminJhon/vendors/charts/jquery.easypiechart.min.js') }}"></script>
-<!--for calendar-->
-<script src="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/fullcalendar.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/calendarcustom.min.js') }}" type="text/javascript"></script>
 <!--   Realtime Server Load  -->
 <script src="{{ asset('/plugins/AdminJhon/vendors/charts/jquery.flot.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('/plugins/AdminJhon/vendors/charts/jquery.flot.resize.min.js') }}" type="text/javascript"></script>
@@ -527,6 +525,7 @@ Dashboard
 <script src="{{ asset('/plugins/AdminJhon/vendors/jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
 <script src="{{ asset('/plugins/AdminJhon/vendors/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
 <script src="{{ asset('/plugins/AdminJhon/js/dashboard.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/js/admin/admin_calendar.js') }}" type="text/javascript"></script>
 <!-- end of page level js -->
 <script type="text/javascript">
 $(document).ready(function() {

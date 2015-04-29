@@ -33,7 +33,9 @@
 <body class="skin-josh">
     <header class="header">
         <a href="{{ URL::to('admin/index') }}" class="logo">
-            <img src="{{ asset('/plugins/AdminJhon/img/logo.png') }}" alt="logo">
+            <div class="logotext">
+                InventPalooza Admin
+            </div>
         </a>
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
@@ -220,7 +222,7 @@
                                     </a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="{{ URL::to('admin/logout') }}">
+                                    <a href="{{ url('/auth/logout') }}">
                                         <i class="livicon" data-name="sign-out" data-s="18"></i>
                                         Logout
                                     </a>
@@ -899,6 +901,8 @@
     <script src="{{ asset('/plugins/AdminJhon/js/josh.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/plugins/AdminJhon/js/metisMenu.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/plugins/AdminJhon/vendors/holder-master/holder.js') }}"></script>
+    <script src="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/fullcalendar.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/calendarcustom.min.js') }}" type="text/javascript"></script>
     <!-- end of global js -->
     <!-- begin page level js -->
     @yield('footer_scripts')
