@@ -33,7 +33,9 @@
 <body class="skin-josh">
     <header class="header">
         <a href="{{ URL::to('admin/index') }}" class="logo">
-            <img src="{{ asset('/plugins/AdminJhon/img/logo.png') }}" alt="logo">
+            <div class="logotext">
+                InventPalooza!
+            </div>
         </a>
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
