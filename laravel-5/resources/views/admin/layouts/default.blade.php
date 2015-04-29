@@ -901,6 +901,8 @@
     <script src="{{ asset('/plugins/AdminJhon/js/josh.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/plugins/AdminJhon/js/metisMenu.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/plugins/AdminJhon/vendors/holder-master/holder.js') }}"></script>
+    <script src="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/fullcalendar.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/calendarcustom.min.js') }}" type="text/javascript"></script>
     <!-- end of global js -->
     <!-- begin page level js -->
     @yield('footer_scripts')
