@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Input;
 use Illuminate\Auth\Guard as Auth;
 use Illuminate\Http\RedirectResponse;
+use App\User;
 
 class WelcomeController extends Controller {
 
@@ -49,9 +50,8 @@ class WelcomeController extends Controller {
     }
     public function login_for_forum()
     {
-        $request = Input::all();
-        print_r($request);
-        print_r($this->auth->attempt($request));
+        $user = User::find(Input::get('id'));
+        print_r($this->auth->login($user));
         //if($this->auth->onceUsingId($id));
         //    return new RedirectResponse(url('/home'));
         //return redirect()->guest('auth/login');
