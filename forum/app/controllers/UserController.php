@@ -64,7 +64,7 @@ class UserController extends BaseController
                         ));
 
                         //insert Laravel-5 table;
-                        $pass = \bcrypt(e(Input::get('password')));
+                        $pass = md5(e(Input::get('password')));
                         DB::insert('insert into users (name,email,password) values (?, ?)', array($name,$email,$pass));
 
                         $user = User::where('email', e(Input::get('email')))->first();
@@ -92,7 +92,7 @@ class UserController extends BaseController
                         ));
 
                         //insert Laravel-5 table;
-                        $pass = bcrypt(e(Input::get('password')));
+                        $pass = md5(e(Input::get('password')));
                         DB::insert('insert into users (name,email,password) values (?, ?)', array($name,$email,$pass));
 
                         $user = User::where('email', e(Input::get('email')))->first();
