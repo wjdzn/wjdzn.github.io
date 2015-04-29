@@ -48,16 +48,21 @@ class WelcomeController extends Controller {
     {
         return view('calendar');
     }
-    public function login_for_forum()
+    public function update_from_forum()
     {
         $user = User::find(Input::get('id'));
         $user->password = bcrypt($user->password_text);
         $user->password_text=null;
         $user->save();
+
+
+    }
+    public function login_forum()
+    {
+        $user = User::find(Input::get('id'));
         if($this->auth->login($user))
             return redirect()->guest('/main');
         return redirect()->guest('auth/login');
-
     }
 
 }
