@@ -1,5 +1,9 @@
 <?php
-
+$temp = explode('/', storage_path());
+$aux="";
+for($i=0;$i<count($temp)-2;$i++)
+    $aux = strlen($aux)>0?"/".$temp[$i]:$temp[$i];
+$aux.="/forum/app/storage/sessions";
 return [
 
 	/*
@@ -56,8 +60,7 @@ return [
 	| location may be specified. This is only needed for file sessions.
 	|
 	*/
-
-	'files' => storage_path().'/framework/sessions',
+	'files' => $aux,
 
 	/*
 	|--------------------------------------------------------------------------
