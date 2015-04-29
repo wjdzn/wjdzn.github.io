@@ -34,7 +34,7 @@ $(document).ready(function() {
     var data={_token:  $('meta[name="csrf-token"]').attr('content')}
     $.ajax({
         type: "POST",
-        url: "calendar/events",
+        url: "/calendar/events",
         data: data,
         success: function (retrib) {
             var events = $.parseJSON(retrib);
