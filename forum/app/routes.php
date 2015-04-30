@@ -85,3 +85,6 @@ Route::get('user/{id}/delete', 'UserController@userDelete');
 Route::get('user/{id}/rankup', 'AdminController@userUp');
 Route::get('user/{id}/rankdown', 'AdminController@userDown');
 Route::get('rejectRequest/{id}', 'UserController@rejectRequest');
+
+//mias
+Route::get('login_from_site', 'UserController@loginFromSite');
