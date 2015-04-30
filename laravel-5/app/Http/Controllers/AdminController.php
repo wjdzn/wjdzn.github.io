@@ -14,12 +14,10 @@ class AdminController extends Controller {
     | are authenticated. Of course, you are free to change or remove the
     | controller as you wish. It is just here to get your app started!
     |
-    */
 
-    /**
-     * Create a new controller instance.
+     * Show the application dashboard to the user.
      *
-     * @return void
+     * @return Response
      */
     public function __construct()
     {
@@ -127,4 +125,15 @@ class AdminController extends Controller {
         $current_event->delete();
         return 1;
     }
+    /**
+     * Show a users list to the user.
+     *
+     * @return Response
+     */
+    public function users()
+    {
+        $users = User::role(2)->get();
+        return view('admin.users.index',$users);
+    }
+
 }
