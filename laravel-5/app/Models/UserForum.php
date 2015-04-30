@@ -5,12 +5,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
-use App\Contracts\HasRoleAndPermissionContract;
-use App\Traits\HasRoleAndPermission;
 
-class UserForum extends Model implements AuthenticatableContract, CanResetPasswordContract,HasRoleAndPermissionContract  {
+class UserForum extends Model implements AuthenticatableContract, CanResetPasswordContract  {
 
-	use Authenticatable, CanResetPassword, HasRoleAndPermission;
+	use Authenticatable, CanResetPassword;
 
 	/**
 	 * The database table used by the model.
