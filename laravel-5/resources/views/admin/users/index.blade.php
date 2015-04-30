@@ -19,8 +19,8 @@ Users List
     <h1>Users</h1>
     <ol class="breadcrumb">
         <li>
-            <a href="{{ route('dashboard') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
-                Dashboard
+            <a href="{{ route('admin') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
+                Home
             </a>
         </li>
         <li>Users</li>
@@ -43,10 +43,8 @@ Users List
                     <thead>
                         <tr class="filters">
                             <th>ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
+                            <th>Name</th>
                             <th>User E-mail</th>
-                            <th>Status</th>
                             <th>Created At</th>
                             <th>Actions</th>
                         </tr>
@@ -55,27 +53,24 @@ Users List
                     @foreach ($users as $user)
                     	<tr>
                             <td>{{{ $user->id }}}</td>
-                    		<td>{{{ $user->first_name }}}</td>
-            				<td>{{{ $user->last_name }}}</td>
+                    		<td>{{{ $user->name }}}</td>
             				<td>{{{ $user->email }}}</td>
-            				<td>
-            					@if($user->activated)
-            						Activated
-            					@else
-            						Pending
-            					@endif
-            				</td>
+            				{{--<td>--}}
+            					{{--@if($user->activated)--}}
+            						{{--Activated--}}
+            					{{--@else--}}
+            						{{--Pending--}}
+            					{{--@endif--}}
+            				{{--</td>--}}
             				<td>{{{ $user->created_at->diffForHumans() }}}</td>
             				<td>
-                                <a href="{{ route('users.show', $user->id) }}"><i class="livicon" data-name="info" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="view user"></i></a>
+                                {{--<a href="{{ route('users.show', $user->id) }}"><i class="livicon" data-name="info" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="view user"></i></a>--}}
 
-                                <a href="{{ route('users.update', $user->id) }}"><i class="livicon" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="update user"></i></a>
-                                
-                                @if ((Sentry::getUser()->id != $user->id) && ($user->id != 1))	
-                					<a href="{{ route('confirm-delete/user', $user->id) }}" data-toggle="modal" data-target="#delete_confirm"><i class="livicon" data-name="user-remove" data-size="18" data-loop="true" data-c="#f56954" data-hc="#f56954" title="delete user"></i></a>
-                				@endif
+                                <a href="{{ route('user_update', $user->id) }}"><i class="livicon" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="update user"></i></a>
 
-                                
+                                {{--@if ((Sentry::getUser()->id != $user->id) && ($user->id != 1))	--}}
+                					{{--<a href="{{ route('confirm-delete/user', $user->id) }}" data-toggle="modal" data-target="#delete_confirm"><i class="livicon" data-name="user-remove" data-size="18" data-loop="true" data-c="#f56954" data-hc="#f56954" title="delete user"></i></a>--}}
+                				{{--@endif--}}
                             </td>
             			</tr>
                     @endforeach
