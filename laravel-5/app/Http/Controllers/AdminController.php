@@ -275,7 +275,7 @@ class AdminController extends Controller {
                 $success = Lang::get('users/message.success.update');
 
                 // Redirect to the user page
-                return Redirect::route('users.update', $id)->with('success', $success);
+                return redirect()->guest('users.update', $id)->with('success', $success);
             }
 
             // Prepare the error message
@@ -285,7 +285,7 @@ class AdminController extends Controller {
         }
 
         // Redirect to the user page
-        return Redirect::route('users.update', $id)->withInput()->with('error', $error);
+        return redirect()->guest('users.update', $id)->withInput()->with('error', $error);
     }
 
 }
