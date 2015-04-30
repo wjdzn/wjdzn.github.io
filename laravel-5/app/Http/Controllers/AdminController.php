@@ -133,7 +133,7 @@ class AdminController extends Controller {
      */
     public function users()
     {
-        $users = User::role(2)->get();
+        $users = User::role('subscriber')->get();
         return view('admin.users.index',array('users' => $users));
     }
 

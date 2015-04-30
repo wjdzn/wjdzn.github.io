@@ -43,10 +43,8 @@ Users List
                     <thead>
                         <tr class="filters">
                             <th>ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
+                            <th>Name</th>
                             <th>User E-mail</th>
-                            <th>Status</th>
                             <th>Created At</th>
                             <th>Actions</th>
                         </tr>
