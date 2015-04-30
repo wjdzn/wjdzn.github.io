@@ -58,7 +58,7 @@ class WelcomeController extends Controller {
     }
     public function login_forum()
     {
-        $user = User::where('email','LIKE',Input::get('email'))->get();
+        $user = User::where('email','LIKE',Input::get('email'))->first();
         if($this->auth->login($user))
             return redirect()->guest('/');
         return redirect()->guest('auth/login');
