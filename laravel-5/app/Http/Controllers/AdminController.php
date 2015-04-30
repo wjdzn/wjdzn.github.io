@@ -7,6 +7,7 @@ use App\User;
 use App\Models\UserForum;
 use PhpSpec\Exception\Exception;
 use Illuminate\Support\Facades\Lang;
+use Illuminate\Http\RedirectResponse;
 
 class AdminController extends Controller {
 
