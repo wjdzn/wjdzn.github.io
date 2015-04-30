@@ -217,14 +217,14 @@ Edit User
                                     <p class="text-danger"><strong>Be careful with group selection, if you give admin access.. they can access admin section</strong></p>
                                     <div class="form-group">
                                         <label for="group" class="col-sm-2 control-label">Group *</label>
-                                        <div class="col-sm-10">
-                                            <select class="form-control " title="Select group..." name="groups[]" id="groups" required>
-                                                <option value="">Select</option>
-                                                @foreach($roles as $role)
-                                                    <option value="{{{ $role->id }}}" {{($user_local->is($role) ? ' selected="selected"' : '') }}>{{ $role->name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
+                                        {{--<div class="col-sm-10">--}}
+                                            {{--<select class="form-control " title="Select group..." name="groups[]" id="groups" required>--}}
+                                                {{--<option value="">Select</option>--}}
+                                                {{--@foreach($roles as $role)--}}
+                                                    {{--<option value="{{{ $role->id }}}" {{($user_local->is($role) ? ' selected="selected"' : '') }}>{{ $role->name }}</option>--}}
+                                                {{--@endforeach--}}
+                                            {{--</select>--}}
+                                        {{--</div>--}}
                                     </div>
 
                                     <div class="form-group">
