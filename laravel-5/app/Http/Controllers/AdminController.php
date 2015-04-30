@@ -145,7 +145,7 @@ class AdminController extends Controller {
             // Get the user information
             $user = UserForum::where('email',$email)->first();
             $user_local = User::where('email',$email)->first();
-            // Get a list of all the available groups
+             // Get a list of all the available groups
             $roles = Role::all();
         }
         catch (Exception $e)
