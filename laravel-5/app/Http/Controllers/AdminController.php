@@ -2,6 +2,7 @@
 
 use App\Models\CalendarEvent;
 use Illuminate\Support\Facades\Input;
+use App\User;
 
 class AdminController extends Controller {
 
