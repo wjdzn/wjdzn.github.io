@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Input;
 use App\User;
 use App\Models\UserForum;
 use PhpSpec\Exception\Exception;
+use Illuminate\Support\Facades\Lang;
 
 class AdminController extends Controller {
 
