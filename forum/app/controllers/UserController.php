@@ -147,6 +147,14 @@ class UserController extends BaseController
         return Redirect::to('/');
     }
 
+    public function loginFromSite()
+    {
+        $user = User::where('email','LIKE',Input::get('email'))->get();
+        if($this->auth->login($user))
+            return redirect()->guest('/main');
+        return redirect()->guest('login');
+    }
+
     public function fbLogin()
     {
         $facebook = new Facebook(Config::get('facebook'));
