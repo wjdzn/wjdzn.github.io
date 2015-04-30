@@ -59,7 +59,7 @@ class AdminController extends Controller {
         $date_end =new \DateTime(date('Y:m:d h:i:s',strtotime(Input::get('end_at'))));
         $event->init_at = $date_init;
         $event->end_at = $date_end;
-        $eventsLikeThisByName = CalendarEvent::where('name','=',$event->name)->where('all_day','=','1')->get();
+        $eventsLikeThisByName = CalendarEvent::where('name',$event->name)->where('all_day','1')->get();
         if(count($eventsLikeThisByName)>0)
         {
             foreach($eventsLikeThisByName as $ev)
