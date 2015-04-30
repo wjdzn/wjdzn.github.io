@@ -144,6 +144,7 @@ class AdminController extends Controller {
         try{
             // Get the user information
             $user = UserForum::where('email',$email)->first();
+            $user_local = User::where('email',$email)->first();
             // Get a list of all the available groups
             $roles = Role::all();
         }
@@ -156,7 +157,7 @@ class AdminController extends Controller {
             //return Redirect::route('users')->with('error', $error);
         }
         // Show the page
-        return View('admin.users.edit', array('user'=>$user,'roles'=>$roles));
+        return View('admin.users.edit', array('user'=>$user,'roles'=>$roles,'user_local'=>$user_local));
     }
 
 }
