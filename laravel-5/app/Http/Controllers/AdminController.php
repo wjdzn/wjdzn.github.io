@@ -147,7 +147,13 @@ class AdminController extends Controller {
             $user_local = User::where('email',$email)->first();
              // Get a list of all the available groups
             $roles = Role::all();
-            $name = $user->first_name;
+            if(!isset($user))
+            {
+                $error = Lang::get('users/message.user_not_found', compact('id'));
+
+                // Redirect to the user management page
+                return Redirect::route('admin/users')->with('error', $error);
+            }
         }
         catch (Exception $e)
         {
