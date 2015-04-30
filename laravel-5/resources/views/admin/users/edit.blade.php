@@ -36,7 +36,7 @@ Edit User
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title"> <i class="livicon" data-name="users" data-size="16" data-c="#fff" data-hc="#fff" data-loop="true"></i>
-                        Editing user : {{ $user->name}}
+                        Editing user : {{ $user->first_name}}
                     </h3>
                     <span class="pull-right clickable">
                         <i class="glyphicon glyphicon-chevron-up"></i>
