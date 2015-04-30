@@ -210,13 +210,13 @@ Edit User
 
                                 
                                 <!-- fourth tab -->
-                                <h1>User Group</h1>
+                                <h1>Role</h1>
 
                                 <section>
 
                                     <p class="text-danger"><strong>Be careful with group selection, if you give admin access.. they can access admin section</strong></p>
                                     <div class="form-group">
-                                        <label for="group" class="col-sm-2 control-label">Group *</label>
+                                        <label for="group" class="col-sm-2 control-label">Rol *</label>
                                         <div class="col-sm-10">
                                             <select class="form-control " title="Select group..." name="groups[]" id="groups" required>
                                                 <option value="">Select</option>

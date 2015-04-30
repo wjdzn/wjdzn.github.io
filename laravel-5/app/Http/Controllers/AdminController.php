@@ -151,10 +151,10 @@ class AdminController extends Controller {
         catch (Exception $e)
         {
             // Prepare the error message
-            //$error = Lang::get('users/message.user_not_found', compact('id'));
+            $error = Lang::get('users/message.user_not_found', compact('id'));
 
             // Redirect to the user management page
-            //return Redirect::route('users')->with('error', $error);
+            return Redirect::route('admin/users')->with('error', $error);
         }
         // Show the page
         return View('admin.users.edit', array('user'=>$user,'roles'=>$roles,'user_local'=>$user_local));
