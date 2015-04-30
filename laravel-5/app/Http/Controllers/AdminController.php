@@ -154,7 +154,7 @@ class AdminController extends Controller {
                 $error = Lang::get('users/message.user_not_found', compact('id'));
 
                 // Redirect to the user management page
-                return Redirect::route('admin/users')->with('error', $error);
+                return redirect()->guest('admin/users')->with('error', $error);
             }
         }
         catch (Exception $e)
@@ -163,7 +163,7 @@ class AdminController extends Controller {
             $error = Lang::get('users/message.user_not_found', compact('id'));
 
             // Redirect to the user management page
-            return Redirect::route('admin/users')->with('error', $error);
+            return redirect()->guest('admin/users')->with('error', $error);
         }
         // Show the page
         return View('admin.users.edit', array('user'=>$user,'roles'=>$roles,'user_local'=>$user_local));
