@@ -1,8 +1,10 @@
 <?php namespace App\Http\Controllers;
 
 use App\Models\CalendarEvent;
+use Bican\Roles\Models\Role;
 use Illuminate\Support\Facades\Input;
 use App\User;
+use PhpSpec\Exception\Exception;
 
 class AdminController extends Controller {
 
@@ -135,6 +137,25 @@ class AdminController extends Controller {
     {
         $users = User::role('subscriber')->get();
         return view('admin.users.index',array('users' => $users));
+    }
+    public function update_user($id = null)
+    {
+        try{
+            // Get the user information
+            $user = User::find($id);
+            // Get a list of all the available groups
+            $roles = Role::all();
+        }
+        catch (Exception $e)
+        {
+            // Prepare the error message
+            //$error = Lang::get('users/message.user_not_found', compact('id'));
+
+            // Redirect to the user management page
+            //return Redirect::route('users')->with('error', $error);
+        }
+        // Show the page
+        return View('admin.users.edit', array('user'=>$user,'roles'=>$roles));
     }
 
 }
