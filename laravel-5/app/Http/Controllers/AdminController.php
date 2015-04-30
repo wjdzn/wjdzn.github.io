@@ -4,6 +4,7 @@ use App\Models\CalendarEvent;
 use Bican\Roles\Models\Role;
 use Illuminate\Support\Facades\Input;
 use App\User;
+use App\Models\UserForum;
 use PhpSpec\Exception\Exception;
 
 class AdminController extends Controller {
@@ -138,11 +139,11 @@ class AdminController extends Controller {
         $users = User::role('subscriber')->get();
         return view('admin.users.index',array('users' => $users));
     }
-    public function update_user($id = null)
+    public function update_user($email = null)
     {
         try{
             // Get the user information
-            $user = User::find($id);
+            $user = UserForum::where('email',$email)->first();
             // Get a list of all the available groups
             $roles = Role::all();
         }
