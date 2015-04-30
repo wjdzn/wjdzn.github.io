@@ -55,8 +55,6 @@ class WelcomeController extends Controller {
         $user->password = bcrypt($user->password_text);
         $user->password_text=null;
         $user->save();
-
-
     }
     public function login_forum()
     {

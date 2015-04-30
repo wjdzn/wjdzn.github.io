@@ -137,81 +137,6 @@ Dashboard
         </div>
     </div>
     <!--/row-->
-    <div class="row ">
-        <div class="col-md-8 col-sm-6">
-            <div class="panel panel-border">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        <i class="livicon" data-name="dashboard" data-size="20" data-loop="true" data-c="#F89A14" data-hc="#F89A14"></i>
-                        Realtime Server Load
-                        <small>- Load on the Server</small>
-                    </h3>
-                </div>
-                <div class="panel-body">
-                    <div id="realtimechart" style="height:330px;"></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <div class="panel blue_gradiant_bg">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        <i class="livicon" data-name="linechart" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-                        Server Stats
-                        <small class="white-text">- Monthly Report</small>
-                    </h3>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="sparkline-chart">
-                                <div class="number" id="sparkline_bar"></div>
-                                <h3 class="title">Network</h3>
-                            </div>
-                        </div>
-                        <div class="margin-bottom-10 visible-sm"></div>
-                        <div class="margin-bottom-10 visible-sm"></div>
-                        <div class="col-sm-6">
-                            <div class="sparkline-chart">
-                                <div class="number" id="sparkline_line"></div>
-                                <h3 class="title">Load Rate</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- BEGIN Percentage monitor -->
-            <div class="panel green_gradiante_bg ">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        <i class="livicon" data-name="spinner-six" data-size="16" data-loop="false" data-c="#fff" data-hc="white"></i>
-                        Result vs Target
-                    </h3>
-                </div>
-                <div class="panel-body nopadmar">
-                    <div class="row">
-                        <div class="col-sm-6 text-center">
-                            <h4 class="small-heading">Sales</h4>
-                            <span class="chart cir chart-widget-pie widget-easy-pie-1" data-percent="45">
-                                <span class="percent">45</span>
-                                <canvas height="110" width="110"></canvas>
-                            </span>
-                        </div>
-                        <!-- /.col-sm-4 -->
-
-                        <!-- /.col-sm-4 -->
-                        <div class="col-sm-6 text-center">
-                            <h4 class="small-heading">Reach</h4>
-                            <span class="chart cir chart-widget-pie widget-easy-pie-3" data-percent="25">
-                                <span class="percent">25</span>
-                                <canvas height="110" width="110"></canvas>
-                            </span>
-                        </div>
-                        <!-- /.col-sm-4 --> </div>
-                    <!-- /.row --> </div>
-                <!-- /.panel-body --> </div>
-            <!-- END BEGIN Percentage monitor--> </div>
-    </div>
     <div class="clearfix"></div>
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -515,9 +440,6 @@ Dashboard
 <!-- EASY PIE CHART JS -->
 <script src="{{ asset('/plugins/AdminJhon/vendors/charts/easypiechart.min.js') }}"></script>
 <script src="{{ asset('/plugins/AdminJhon/vendors/charts/jquery.easypiechart.min.js') }}"></script>
-<!--   Realtime Server Load  -->
-<script src="{{ asset('/plugins/AdminJhon/vendors/charts/jquery.flot.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('/plugins/AdminJhon/vendors/charts/jquery.flot.resize.min.js') }}" type="text/javascript"></script>
 <!--Sparkline Chart-->
 <script src="{{ asset('/plugins/AdminJhon/vendors/charts/jquery.sparkline.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/plugins/AdminJhon/vendors/countUp/countUp.js') }}"></script>
