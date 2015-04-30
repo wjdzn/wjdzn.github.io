@@ -22,8 +22,8 @@ Edit User
     <h1>Edit user</h1>
     <ol class="breadcrumb">
         <li>
-            <a href="{{ route('dashboard') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
-                Dashboard
+            <a href="{{ route('admin') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
+                Home
             </a>
         </li>
         <li>Users</li>
@@ -36,7 +36,7 @@ Edit User
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title"> <i class="livicon" data-name="users" data-size="16" data-c="#fff" data-hc="#fff" data-loop="true"></i>
-                        Editing user : {{{ $user->first_name}}} {{{ $user->last_name}}}
+                        Editing user : {{ $user->name}}
                     </h3>
                     <span class="pull-right clickable">
                         <i class="glyphicon glyphicon-chevron-up"></i>
@@ -46,8 +46,7 @@ Edit User
 
                     <!-- errors -->
                     <div class="has-error">
-                        {!! $errors->first('first_name', '<span class="help-block">:message</span>') !!}
-                        {!! $errors->first('last_name', '<span class="help-block">:message</span>') !!}
+                        {!! $errors->first('name', '<span class="help-block">:message</span>') !!}
                         {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
                         {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
                         {!! $errors->first('password_confirm', '<span class="help-block">:message</span>') !!}
@@ -76,7 +75,7 @@ Edit User
                                             <input id="first_name" name="first_name" type="text" placeholder="First Name" class="form-control required" value="{{{ Input::old('first_name', $user->first_name) }}}" />
                                         </div>
                                     </div>
-                                
+
                                     <div class="form-group">
                                         <label for="last_name" class="col-sm-2 control-label">Last Name *</label>
                                         <div class="col-sm-10">
