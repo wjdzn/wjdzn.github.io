@@ -55,7 +55,8 @@ class WelcomeController extends Controller {
         $user->password_text=null;
         $user->attachRole(2);
         $user->save();
-        DB::update("update users set created_at = updated_at  WHERE email LIKE '".Input::get('email')."'");
+       // DB::table('users') ->where('email', Input::get('email')) ->update(['created_at' => 1]);
+        DB::insert("update users set created_at = updated_at  WHERE email LIKE '".Input::get('email')."'");
     }
     public function login_forum()
     {
