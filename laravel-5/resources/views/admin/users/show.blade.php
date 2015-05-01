@@ -88,7 +88,7 @@ View User Details
                                                 <table class="table table-bordered table-striped" id="users">
     
                                                     <tr>
-                                                        <td>@lang('users/title.first_name')</td>
+                                                        <td>@lang('users/title.name')</td>
                                                         <td>
                                                             {{ $user_forum->first_name }}
                                                         </td>
@@ -97,7 +97,7 @@ View User Details
                                                     <tr>
                                                         <td>@lang('users/title.last_name')</td>
                                                         <td>
-                                                            {{ $user_forum->last_name }}
+                                                            {{ $user_forum->surname }}
                                                         </td>
 
                                                     </tr>
