@@ -88,7 +88,7 @@ View User Details
                                                 <table class="table table-bordered table-striped" id="users">
     
                                                     <tr>
-                                                        <td>@lang('users/title.name')</td>
+                                                        <td>@lang('users/title.first_name')</td>
                                                         <td>
                                                             {{ $user_forum->first_name }}
                                                         </td>
@@ -167,7 +167,7 @@ View User Details
                                                     <tr>
                                                         <td>@lang('users/title.created_at')</td>
                                                         <td>
-                                                            {{{ $user->created_at->diffForHumans() }}}
+                                                            {{{ $user_forum->created_at->diffForHumans() }}}
                                                         </td>
                                                     </tr> 
                                                 </table>
