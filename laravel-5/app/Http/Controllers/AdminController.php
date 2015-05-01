@@ -287,6 +287,17 @@ class AdminController extends Controller {
         // Redirect to the user page
         return redirect()->guest('users.update', $id)->withInput()->with('error', $error);
     }
+    /**
+     * Delete Confirm
+     *
+     * @param   int   $id
+     * @return  View
+     */
+    public function getModalDelete($email = null)
+    {
+        $confirm_route = route('user_delete',['email' => $email]);
+        return View('admin.layouts.modal_confirmation', array("model"=>"users","confirm_route"=>$confirm_route,"email"=>$email));
+    }
     public function delete_user($email = null)
     {
         $user_forum = UserForum::where('email',$email)->first();
