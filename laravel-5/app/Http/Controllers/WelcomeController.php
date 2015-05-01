@@ -50,10 +50,10 @@ class WelcomeController extends Controller {
     }
     public function update_from_forum()
     {
-        $users = User::where('email','LIKE',Input::get('email'))->get();
-        $user = $users[0];
+        $user = User::where('email','LIKE',Input::get('email'))->first();
         $user->password = bcrypt($user->password_text);
         $user->password_text=null;
+        $user->attachRole(2);
         $user->save();
     }
     public function login_forum()
