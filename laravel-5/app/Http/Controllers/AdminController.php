@@ -323,8 +323,7 @@ class AdminController extends Controller {
     }
     public function product_new()
     {
-        $products = Product::all();
-        return view('admin.products.index',array('products' => $products));
+        return view('admin.products.create');
     }
 
 }
