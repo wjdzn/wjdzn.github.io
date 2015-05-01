@@ -35,7 +35,6 @@ Users List
 <section class="content paddingleft_right15">
     <div class="row">
         <div class="panel panel-primary ">
-            <a href="{{ route('product_new') }}"><i class="livicon" data-name="new" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="create product"></i>Create new product</a>
             <button class="btn btn-primary btn-create" onclick="window.location='{{route("product_new")}}'">Create new product</button>
             <div class="panel-heading">
                 <h4 class="panel-title"> <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
