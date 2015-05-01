@@ -55,7 +55,6 @@ class WelcomeController extends Controller {
         $user->password_text=null;
         $user->attachRole(2);
         $user->save();
-        $user_forum = UserForum::where('email',Input::get('email'))->first();
     }
     public function login_forum()
     {
