@@ -1,10 +1,8 @@
 <?php namespace App\Models;
 
-use App\Traits\RoleTrait;
-use App\Traits\SlugableTrait;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Database\Eloquent\Model;
-use App\Contracts\RoleContract;
+
 
 class Product extends Model
 {

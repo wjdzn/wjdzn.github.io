@@ -5,6 +5,7 @@ use Bican\Roles\Models\Role;
 use Illuminate\Support\Facades\Input;
 use App\User;
 use App\Models\UserForum;
+use App\Models\Product;
 use PhpSpec\Exception\Exception;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Http\RedirectResponse;
@@ -314,6 +315,11 @@ class AdminController extends Controller {
         $user_local = User::find($id);
         $forum_user = UserForum::where('email',$user_local->email)->first();
         return View('admin.users.show', array("user_forum"=>$forum_user,"user_local"=>$user_local));
+    }
+    public function products()
+    {
+        $products = Product::all();
+        return view('admin.products.index',array('products' => $products));
     }
 
 }

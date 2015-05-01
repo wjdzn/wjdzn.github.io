@@ -31,6 +31,7 @@ Route::get('forum', function() {
 Route::get('admin',array('as' => 'admin', 'uses' => 'AdminController@index'));
 Route::get('admin/calendar','AdminController@calendar');
 Route::get('admin/users','AdminController@users');
+Route::get('admin/products','AdminController@products');
 /*Routes with calendar*/
 Route::post('admin/calendar/events',array('as' => 'calendar_events', 'uses' => 'AdminController@events'));
 Route::post('admin/calendar/save',array('as' => 'calendar_save_event', 'uses' => 'AdminController@save_event'));
@@ -42,6 +43,8 @@ Route::get('admin/users/{email}/edit',array('as' => 'user_update', 'uses' => 'Ad
 Route::post('admin/users/{email}/edit',array('as' => 'user_update', 'uses' => 'AdminController@post_update_user'));
 Route::get('admin/users/{email}/confirm_delete',array('as' => 'user_confirme_delete', 'uses' => 'AdminController@getModalDelete'));
 Route::get('admin/users/{email}/delete',array('as' => 'user_delete', 'uses' => 'AdminController@delete_user'));
+/*Routes with products*/
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
