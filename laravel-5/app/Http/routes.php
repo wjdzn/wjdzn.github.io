@@ -39,7 +39,7 @@ Route::post('admin/calendar/delete',array('as' => 'calendar_delete_event', 'uses
 /*Routes with user*/
 Route::get('admin/users/{email}/edit',array('as' => 'user_update', 'uses' => 'AdminController@update_user'));
 Route::post('admin/users/{email}/edit',array('as' => 'user_update', 'uses' => 'AdminController@post_update_user'));
-
+Route::get('admin/users/{email}/delete',array('as' => 'user_delete', 'uses' => 'AdminController@delete_user'));
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

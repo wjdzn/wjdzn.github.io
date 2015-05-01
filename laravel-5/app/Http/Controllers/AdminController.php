@@ -287,5 +287,12 @@ class AdminController extends Controller {
         // Redirect to the user page
         return redirect()->guest('users.update', $id)->withInput()->with('error', $error);
     }
+    public function delete_user($email = null)
+    {
+        $user_forum = UserForum::where('email',$email)->first();
+        $user_local = User::where('email',$email)->first();
+        $user_forum->delete();
+        $user_local->delete();
+    }
 
 }
