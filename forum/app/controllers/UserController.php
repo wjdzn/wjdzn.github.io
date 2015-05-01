@@ -113,6 +113,10 @@ class UserController extends BaseController
                         Profile::create(array(
                             'user_id' => $user->id
                         ));
+                        //call post Laravel-5
+                        $url = 'http://inventpalooza.com/laravel-5/public/update_from_forum?email='.$email;
+                        $this->file_get_contents_curl($url);
+
                         return Redirect::to('login')->with('success', Lang::get('messages.register_success'));
                     }
                 }
