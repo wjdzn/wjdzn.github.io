@@ -23,8 +23,11 @@ Users List
                 Home
             </a>
         </li>
-        <li>Users</li>
-        <li class="active">Users</li>
+        <li class="active">
+            <a href="{{ url('admin/users') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
+                Users
+            </a>
+        </li>
     </ol>
 </section>
 

@@ -26,7 +26,11 @@ Edit User
                 Home
             </a>
         </li>
-        <li>Users</li>
+        <li>
+            <a href="{{ url('admin/users') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
+                Users
+            </a>
+        </li>
         <li class="active">Add New User</li>
     </ol>
 </section>

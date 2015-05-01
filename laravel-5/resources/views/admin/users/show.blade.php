@@ -27,7 +27,7 @@ View User Details
             </a>
         </li>
         <li>
-            <a href="{{ route('admin/users') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
+            <a href="{{ url('admin/users') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
                 Users
             </a>
         </li>
