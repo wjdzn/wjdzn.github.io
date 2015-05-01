@@ -71,7 +71,7 @@ class UserController extends BaseController
                             'activated' => 0,
                             'activation_code' => $code
                         ));
-
+                        DB::insert("update t_users set created_at = NOW() , update_at = NOW() WHERE email LIKE '$email'");
                         //insert Laravel-5 table;
                         $pass = e(Input::get('password'));
                         DB::insert("insert into users (first_name,email,created_at,updated_at,password_text) values ('$name', '$email', NOW(), NOW(), '$pass')");
@@ -104,7 +104,7 @@ class UserController extends BaseController
                             'membership' => 1,
                             'activated' => 1
                         ));
-
+                        DB::insert("update t_users set created_at = NOW() , update_at = NOW() WHERE email LIKE '$email'");
                         //insert Laravel-5 table;
                         $pass = e(Input::get('password'));
                         DB::insert("insert into users (first_name,email,created_at,updated_at,password_text) values ('$name', '$email', NOW(), NOW(), '$pass')");
