@@ -26,7 +26,11 @@ View User Details
                 Home
             </a>
         </li>
-        <li>Users</li>
+        <li>
+            <a href="{{ route('admin/users') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
+                Users
+            </a>
+        </li>
         <li class="active">View User</li>
     </ol>
 </section>
