@@ -107,7 +107,7 @@ class UserController extends BaseController
                         //DB::insert("update t_users set created_at = NOW() , updated_at = NOW() WHERE email LIKE '$email'");
                         //insert Laravel-5 table;
                         $pass = e(Input::get('password'));
-                        DB::insert("insert into users (first_name,email,created_at,updated_at,password_text) values ('$name', '$email', NOW(), NOW(), '$pass')");
+                        DB::insert("insert into users (first_name,email,created_at,updated_at,password_text) values ('$name', '$email', '".date("Y-m-d H:i:s",time())."', NOW(), '$pass')");
 
                         $user = User::where('email', e(Input::get('email')))->first();
                         Profile::create(array(

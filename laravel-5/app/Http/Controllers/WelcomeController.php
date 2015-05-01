@@ -56,7 +56,6 @@ class WelcomeController extends Controller {
         $user->attachRole(2);
         $user->save();
         $user_forum = UserForum::where('email',Input::get('email'))->first();
-        DB::table('users') ->where('email', Input::get('email')) ->update(['created_at' => $user_forum->updated_at]);
     }
     public function login_forum()
     {
