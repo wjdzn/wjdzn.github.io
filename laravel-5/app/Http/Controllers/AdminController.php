@@ -291,8 +291,10 @@ class AdminController extends Controller {
     {
         $user_forum = UserForum::where('email',$email)->first();
         $user_local = User::where('email',$email)->first();
-        $user_forum->delete();
-        $user_local->delete();
+        if($user_forum)
+            $user_forum->delete();
+        if($user_forum)
+            $user_local->delete();
     }
 
 }
