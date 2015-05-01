@@ -309,5 +309,11 @@ class AdminController extends Controller {
         $success = Lang::get('users/message.success.delete');
         return redirect()->guest('admin/users')->with('success', $success);
     }
+    public function show_user($id = null)
+    {
+        $user_local = User::find($id);
+        $forum_user = UserForum::where('email',$user_local->email);
+        return View('admin.users.show', array("user_forum"=>$forum_user,"user_local"=>$user_local));
+    }
 
 }

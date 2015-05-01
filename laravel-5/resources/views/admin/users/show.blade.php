@@ -22,8 +22,8 @@ View User Details
     <h1>View User</h1>
     <ol class="breadcrumb">
         <li>
-            <a href="{{ route('dashboard') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
-                Dashboard
+            <a href="{{ route('admin') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
+                Home
             </a>
         </li>
         <li>Users</li>
@@ -45,12 +45,12 @@ View User Details
                         Change Password
                     </a>
                 </li>
-                <li>
-                    <a href="{{ URL::to('admin/user_profile') }}" >
-                        <i class="livicon" data-name="gift" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>
-                        Advanced User Profile
-                    </a>
-                </li>
+                {{--<li>--}}
+                    {{--<a href="{{ URL::to('admin/user_profile') }}" >--}}
+                        {{--<i class="livicon" data-name="gift" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>--}}
+                        {{--Advanced User Profile--}}
+                    {{--</a>--}}
+                {{--</li>--}}
 
             </ul>
             <div  class="tab-content mar-top">
@@ -65,21 +65,21 @@ View User Details
 
                                 </div>
                                 <div class="panel-body">
-                                    <div class="col-md-4">
-                                        <h4 class="text-primary"> Profile Pic</h4>
-                                        <div class="img-file"> 
-                                            @if($user->pic)
-                                                <img src="{{{ url('/').'/uploads/users/'.$user->pic }}}" alt="profile pic" class="img-max">
-                                            @else
-                                                <img src="http://placehold.it/200x200" alt="profile pic">
-                                            @endif   
-                                        </div>
-                                        <hr>
-                                        <div>
-                                            <h4 class="text-primary">Bio</h4>
-                                            <div>{{ nl2br($user->bio)}}</div>
-                                        </div>
-                                    </div>
+                                    {{--<div class="col-md-4">--}}
+                                        {{--<h4 class="text-primary"> Profile Pic</h4>--}}
+                                        {{--<div class="img-file"> --}}
+                                            {{--@if($user->pic)--}}
+                                                {{--<img src="{{{ url('/').'/uploads/users/'.$user->pic }}}" alt="profile pic" class="img-max">--}}
+                                            {{--@else--}}
+                                                {{--<img src="http://placehold.it/200x200" alt="profile pic">--}}
+                                            {{--@endif   --}}
+                                        {{--</div>--}}
+                                        {{--<hr>--}}
+                                        {{--<div>--}}
+                                            {{--<h4 class="text-primary">Bio</h4>--}}
+                                            {{--<div>{{ nl2br($user->bio)}}</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
                                     <div class="col-md-8">
                                         <div class="panel-body">
                                             <div class="table-responsive">
@@ -90,80 +90,80 @@ View User Details
                                                     <tr>
                                                         <td>@lang('users/title.first_name')</td>
                                                         <td>
-                                                            {{ $user->first_name }}
+                                                            {{ $user_forum->first_name }}
                                                         </td>
 
                                                     </tr>
                                                     <tr>
                                                         <td>@lang('users/title.last_name')</td>
                                                         <td>
-                                                            {{ $user->last_name }}
+                                                            {{ $user_forum->last_name }}
                                                         </td>
 
                                                     </tr>
                                                     <tr>
                                                         <td>@lang('users/title.email')</td>
                                                         <td>
-                                                            {{ $user->email }}
+                                                            {{ $user_forum->email }}
                                                         </td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>
-                                                            @lang('users/title.gender')
-                                                        </td>
-                                                        <td>
-                                                                {{ $user->gender }}
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>@lang('users/title.dob')</td>
-                                                        <td>
-                                                                {{ $user->dob }}
-                                                        </td>
-                                                    </tr>
+                                                    {{--<tr>--}}
+                                                        {{--<td>--}}
+                                                            {{--@lang('users/title.gender')--}}
+                                                        {{--</td>--}}
+                                                        {{--<td>--}}
+                                                                {{--{{ $user->gender }}--}}
+                                                        {{--</td>--}}
+                                                    {{--</tr>--}}
+                                                    {{--<tr>--}}
+                                                        {{--<td>@lang('users/title.dob')</td>--}}
+                                                        {{--<td>--}}
+                                                                {{--{{ $user->dob }}--}}
+                                                        {{--</td>--}}
+                                                    {{--</tr>--}}
                                                     <tr>
                                                         <td>@lang('users/title.country')</td>
                                                         <td>
-                                                            {{ $user->country }}
+                                                            {{ $user_forum->country }}
                                                         </td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>@lang('users/title.state')</td>
-                                                        <td>
-                                                            {{ $user->state }}
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>@lang('users/title.city')</td>
-                                                        <td>
-                                                            {{ $user->city }}
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>@lang('users/title.address')</td>
-                                                        <td>
-                                                            {{ $user->address }}
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>@lang('users/title.postal')</td>
-                                                        <td>
-                                                            {{ $user->postal }}
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>@lang('users/title.status')</td>
-                                                        <td>
-                                                        
-                                                            @if($user->deleted_at)
-                                                                Deleted
-                                                            @elseif($user->activated)
-                                                                Activated
-                                                            @else
-                                                                Pending
-                                                            @endif
-                                                        </td>
-                                                    </tr>
+                                                    {{--<tr>--}}
+                                                        {{--<td>@lang('users/title.state')</td>--}}
+                                                        {{--<td>--}}
+                                                            {{--{{ $user->state }}--}}
+                                                        {{--</td>--}}
+                                                    {{--</tr>--}}
+                                                    {{--<tr>--}}
+                                                        {{--<td>@lang('users/title.city')</td>--}}
+                                                        {{--<td>--}}
+                                                            {{--{{ $user->city }}--}}
+                                                        {{--</td>--}}
+                                                    {{--</tr>--}}
+                                                    {{--<tr>--}}
+                                                        {{--<td>@lang('users/title.address')</td>--}}
+                                                        {{--<td>--}}
+                                                            {{--{{ $user->address }}--}}
+                                                        {{--</td>--}}
+                                                    {{--</tr>--}}
+                                                    {{--<tr>--}}
+                                                        {{--<td>@lang('users/title.postal')</td>--}}
+                                                        {{--<td>--}}
+                                                            {{--{{ $user->postal }}--}}
+                                                        {{--</td>--}}
+                                                    {{--</tr>--}}
+                                                    {{--<tr>--}}
+                                                        {{--<td>@lang('users/title.status')</td>--}}
+                                                        {{--<td>--}}
+                                                        {{----}}
+                                                            {{--@if($user->deleted_at)--}}
+                                                                {{--Deleted--}}
+                                                            {{--@elseif($user->activated)--}}
+                                                                {{--Activated--}}
+                                                            {{--@else--}}
+                                                                {{--Pending--}}
+                                                            {{--@endif--}}
+                                                        {{--</td>--}}
+                                                    {{--</tr>--}}
                                                     <tr>
                                                         <td>@lang('users/title.created_at')</td>
                                                         <td>
