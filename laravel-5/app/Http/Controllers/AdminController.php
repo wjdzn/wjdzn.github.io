@@ -306,6 +306,8 @@ class AdminController extends Controller {
             $user_forum->delete();
         if($user_forum)
             $user_local->delete();
+        $success = Lang::get('users/message.success.delete');
+        return redirect()->guest('admin/users')->with('success', $success);
     }
 
 }
