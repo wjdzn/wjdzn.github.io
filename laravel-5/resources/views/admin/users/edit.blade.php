@@ -27,7 +27,7 @@ Edit User
             </a>
         </li>
         <li>
-            <a href="{{ url('admin/users') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
+            <a href="{{ url('admin/users') }}">
                 Users
             </a>
         </li>
