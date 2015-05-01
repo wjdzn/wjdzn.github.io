@@ -6,21 +6,21 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Database\Eloquent\Model;
 use App\Contracts\RoleContract;
 
-class CalendarEvent extends Model
+class Product extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'calendar_events';
+    protected $table = 'product';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['name', 'description', 'init_at','end_at','backgroundcolor','all_day'];
+    protected $fillable = ['name', 'description', 'price','stock_amount','tax_value','image','valid_at','link'];
 
     /**
      * Create a new Eloquent model instance.
@@ -31,5 +31,6 @@ class CalendarEvent extends Model
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
+
     }
 }
