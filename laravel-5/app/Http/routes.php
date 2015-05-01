@@ -44,7 +44,7 @@ Route::post('admin/users/{email}/edit',array('as' => 'user_update', 'uses' => 'A
 Route::get('admin/users/{email}/confirm_delete',array('as' => 'user_confirme_delete', 'uses' => 'AdminController@getModalDelete'));
 Route::get('admin/users/{email}/delete',array('as' => 'user_delete', 'uses' => 'AdminController@delete_user'));
 /*Routes with products*/
-
+Route::get('admin/products/new',array('as' => 'product_new', 'uses' => 'AdminController@product_new'));
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

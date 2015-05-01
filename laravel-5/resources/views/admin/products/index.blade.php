@@ -41,6 +41,7 @@ Users List
                 </h4>
             </div>
             <br />
+            <a href="{{ route('product_new') }}"><i class="livicon" data-name="new" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="create product"></i></a>
             <div class="panel-body">
                 <table class="table table-bordered " id="table">
                     <thead>
@@ -78,9 +79,7 @@ Users List
             				{{--</td>--}}
             				<td>{{{ $user->created_at->diffForHumans() }}}</td>
             				<td>
-
-                                <a href="{{ route('user_show', $product->id) }}"><i class="livicon" data-name="new" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="create product"></i></a>
-                                <a href="{{ route('user_show', $product->id) }}"><i class="livicon" data-name="info" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="view product"></i></a>
+                               <a href="{{ route('user_show', $product->id) }}"><i class="livicon" data-name="info" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="view product"></i></a>
                                 <a href="{{ route('user_update', $product->id) }}"><i class="livicon" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="update product"></i></a>
                                 <a href="{{ route('user_confirme_delete', $product->id) }}" data-toggle="modal" data-target="#delete_confirm"><i class="livicon" data-name="product-remove" data-size="18" data-loop="true" data-c="#f56954" data-hc="#f56954" title="delete product"></i></a>
                             </td>

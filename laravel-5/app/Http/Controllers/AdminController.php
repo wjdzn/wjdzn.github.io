@@ -321,5 +321,10 @@ class AdminController extends Controller {
         $products = Product::all();
         return view('admin.products.index',array('products' => $products));
     }
+    public function product_new()
+    {
+        $products = Product::all();
+        return view('admin.products.index',array('products' => $products));
+    }
 
 }
