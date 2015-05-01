@@ -159,7 +159,7 @@ var data = [], totalPoints = 300;
     demo.start();
     var demo = new countUp("myTargetElement3", 24.02, 5000, 0, 6, options);
     demo.start();
-    var demo = new countUp("myTargetElement4", -5000, 8000, 0, 6, options);
+    var demo = new countUp("myTargetElement4", 1254, 8000, 0, 6, options);
     demo.start();
     var demo = new countUp("myTargetElement1.1", 1254, 98000, 0, 6, options);
     demo.start();
