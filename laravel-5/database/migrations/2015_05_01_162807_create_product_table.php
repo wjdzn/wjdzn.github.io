@@ -23,7 +23,6 @@ class CreateProductTable extends Migration {
             $table->string('image')->nullable();
             $table->string('link')->nullable();
             $table->timestamp('valid_at');
-            $table->string('link');
             $table->timestamps();
 		});
 	}
