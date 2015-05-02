@@ -328,6 +328,10 @@ class AdminController extends Controller {
     public function save_product()
     {
         $product_new = new Product(Input::all());
+        $file = Input::file('file');
+        $fileName = $file->getClientOriginalName();
+        $file->move(public_path().'/uploads', $fileName);
+        $product_new->image = "/uploads/".$fileName;
         $product_new->save();
         $products = Product::all();
         return view('admin.products.index',array('products' => $products));

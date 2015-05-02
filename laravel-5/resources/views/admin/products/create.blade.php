@@ -118,6 +118,12 @@ Add Product
                                             <input id="link" name="link" type="text" placeholder="External Link" class="form-control" value="{{{ Input::old('link') }}}" />
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="file" class="col-sm-2 control-label">Image</label>
+                                        <div class="col-sm-10">
+                                            <input id="file" name="file" type="file" placeholder="Image" class="form-control" value="{{{ Input::old('file') }}}" />
+                                        </div>
+                                    </div>
 
                                     <p>(*) Mandatory</p>
 
