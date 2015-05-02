@@ -102,7 +102,7 @@ View Product Details
                                                     <tr>
                                                         <td>@lang('products/title.image')</td>
                                                         <td>
-                                                            {{ $product->image }}
+                                                           <img src="{{ $product->image }}">
                                                         </td>
                                                     </tr>
                                                     @endif
