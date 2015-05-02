@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-Users List
+Products List
 @parent
 @stop
 
@@ -47,7 +47,7 @@ Users List
                     <thead>
                         <tr class="filters">
                             <th>ID</th>
-                            <th>IMG</th
+                            <th>IMG</th>
                             <th>Name</th>
                             <th>Description</th>
                             <th>Price</th>
@@ -77,7 +77,7 @@ Users List
             						{{--Pending--}}
             					{{--@endif--}}
             				{{--</td>--}}
-            				<td>{{{ $user->created_at->diffForHumans() }}}</td>
+            				<td>{{{ $product->created_at->diffForHumans() }}}</td>
             				<td>
                                <a href="{{ route('user_show', $product->id) }}"><i class="livicon" data-name="info" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="view product"></i></a>
                                 <a href="{{ route('user_update', $product->id) }}"><i class="livicon" data-name="edit" data-size="18" data-loop="true" data-c="#428BCA" data-hc="#428BCA" title="update product"></i></a>
