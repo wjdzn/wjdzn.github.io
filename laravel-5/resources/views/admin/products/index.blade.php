@@ -55,6 +55,7 @@ Products List
                             <th>Tax</th>
                             <th>Ext Link</th>
                             <th>Valid at</th>
+                            <th>Create at</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
