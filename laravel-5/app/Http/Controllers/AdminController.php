@@ -325,7 +325,7 @@ class AdminController extends Controller {
     {
         return view('admin.products.create');
     }
-    public function create_product()
+    public function save_product()
     {
         $product_new = new Product(Input::all());
         $product_new->save();
