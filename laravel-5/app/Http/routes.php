@@ -49,6 +49,9 @@ Route::post('admin/products/new',array('as' => 'product_new', 'uses' => 'AdminCo
 Route::get('admin/products/{id}/confirm_delete',array('as' => 'product_confirm_delete', 'uses' => 'AdminController@getModalDeleteProduct'));
 Route::get('admin/products/{id}/delete',array('as'=>'product_delete','uses' => 'AdminController@delete_product'));
 Route::get('admin/products/{id}/show',array('as'=>'product_show','uses'=>'AdminController@show_product'));
+Route::get('admin/products/{id}/edit',array('as' => 'product_update', 'uses' => 'AdminController@update_product'));
+Route::post('admin/products/{id}/edit',array('as' => 'product_update', 'uses' => 'AdminController@post_update_product'));
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

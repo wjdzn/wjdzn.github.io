@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-Edit User
+Edit Product
 @parent
 @stop
 
@@ -19,7 +19,7 @@ Edit User
 {{-- Page content --}}
 @section('content')
 <section class="content-header">
-    <h1>Edit user</h1>
+    <h1>Edit product</h1>
     <ol class="breadcrumb">
         <li>
             <a href="{{ route('admin') }}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
@@ -27,11 +27,11 @@ Edit User
             </a>
         </li>
         <li>
-            <a href="{{ url('admin/users') }}">
-                Users
+            <a href="{{ url('admin/products') }}">
+                Products
             </a>
         </li>
-        <li class="active">Add New User</li>
+        <li class="active">Update Product</li>
     </ol>
 </section>
 <section class="content">
@@ -40,7 +40,7 @@ Edit User
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title"> <i class="livicon" data-name="users" data-size="16" data-c="#fff" data-hc="#fff" data-loop="true"></i>
-                        Editing user : {{ $user->first_name}}
+                        Editing product : {{ $product->name}}
                     </h3>
                     <span class="pull-right clickable">
                         <i class="glyphicon glyphicon-chevron-up"></i>
@@ -64,184 +64,61 @@ Edit User
                         <div class="col-md-12">
 
                             <!-- BEGIN FORM WIZARD WITH VALIDATION -->
-                            <form class="form-wizard form-horizontal" action="" method="POST" id="wizard" enctype="multipart/form-data">
+                            <form class="form-wizard form-horizontal" action="{{ route('product_update') }}" method="POST" id="wizard" enctype="multipart/form-data">
                                 <!-- CSRF Token -->
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-
                                 <!-- first tab -->
-                                <h1>User Profile</h1>
-
+                                <h1>Product Profile</h1>
                                 <section>
                                 
                                     <div class="form-group">
-                                        <label for="first_name" class="col-sm-2 control-label">First Name *</label>
+                                        <label for="name" class="col-sm-2 control-label">Name *</label>
                                         <div class="col-sm-10">
-                                            <input id="first_name" name="first_name" type="text" placeholder="First Name" class="form-control required" value="{{{ Input::old('first_name', $user->first_name) }}}" />
+                                            <input id="name" name="name" type="text" placeholder="Name" class="form-control required" value="{{{ Input::old('name', $product->name) }}}" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description" class="col-sm-2 control-label">Description</label>
+                                        <div class="col-sm-10">
+                                            <textarea name="description" id="description" class="form-control" rows="4">{{{ Input::old('description', $product->description) }}}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="price" class="col-sm-2 control-label">Price *</label>
+                                        <div class="col-sm-10">
+                                            <input id="price" name="price" type="text" placeholder="Price" class="form-control required" value="{{{ Input::old('price', $product->price) }}}" />
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="last_name" class="col-sm-2 control-label">Last Name *</label>
+                                        <label for="stock_amount" class="col-sm-2 control-label">Stock Amount *</label>
                                         <div class="col-sm-10">
-                                            <input id="last_name" name="last_name" type="text" placeholder="Last Name" class="form-control required" value="{{{ Input::old('last_name', $user->surname) }}}" />
+                                            <input id="stock_amount" name="stock_amount" type="number" placeholder="Stock Amount" class="form-control required" value="{{{ Input::old('stock_amount', $product->stock_amount) }}}" />
                                         </div>
                                     </div>
-                                
                                     <div class="form-group">
-                                        <label for="email" class="col-sm-2 control-label">Email *</label>
+                                        <label for="tax_value" class="col-sm-2 control-label">Tax</label>
                                         <div class="col-sm-10">
-                                            <input id="email" name="email" placeholder="E-Mail" type="text" class="form-control required email" value="{{{ Input::old('email', $user->email) }}}" />
+                                            <input id="tax_value" name="tax_value" type="number" placeholder="Taxes" class="form-control" value="{{{ Input::old('tax_value', $product->tax_value) }}}" />
                                         </div>
                                     </div>
-                                
+
                                     <div class="form-group">
-                                        <p class="text-warning">If you don't want to change password... please leave them empty</p>
-                                        <label for="password" class="col-sm-2 control-label">Password *</label>
+                                        <label for="valid_at" class="col-sm-2 control-label">Valid At</label>
                                         <div class="col-sm-10">
-                                            <input id="password" name="password" type="password" placeholder="Password" class="form-control" value="{{{ Input::old('password') }}}" />
+                                            <input id="valid_at" name="valid_at" type="text" placeholder="Valid At" class="form-control" data-mask="9999-99-99" value="{{{ Input::old('valid_at', $product->valid_at) }}}"  placeholder="yyyy-mm-dd"/>
                                         </div>
                                     </div>
-                                
                                     <div class="form-group">
-                                        <label for="password_confirm" class="col-sm-2 control-label">Confirm Password *</label>
+                                        <label for="link" class="col-sm-2 control-label">External Link</label>
                                         <div class="col-sm-10">
-                                            <input id="password_confirm" name="password_confirm" type="password" placeholder="Confirm Password " class="form-control" value="{{{ Input::old('password_confirm') }}}" />
+                                            <input id="link" name="link" type="text" placeholder="External Link" class="form-control" value="{{{ Input::old('link', $product->link) }}}" />
                                         </div>
                                     </div>
                                     
                                     <p>(*) Mandatory</p>
                                 
                                 </section>
-
-                                <!-- second tab -->
-                                <h1>Bio</h1>
-
-                                <section>
-
-                                    
-
-                                   {{--<div class="form-group">--}}
-                                        {{--<label for="pic" class="col-sm-2 control-label">Profile picture</label>--}}
-                                        {{--<div class="col-sm-10">--}}
-                                            {{--<div class="fileinput fileinput-new" data-provides="fileinput">--}}
-                                                {{--<div class="fileinput-new thumbnail" style="width: 200px; height: 200px;">--}}
-                                                    {{--@if($user->pic)--}}
-                                                        {{--<img src="{{{ url('/').'/uploads/users/'.$user->pic }}}" alt="profile pic">--}}
-                                                    {{--@else--}}
-                                                        {{--<img src="http://placehold.it/200x200" alt="profile pic">--}}
-                                                    {{--@endif--}}
-                                                {{--</div>--}}
-                                                {{--<div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 200px;"></div>--}}
-                                                {{--<div>--}}
-                                                    {{--<span class="btn btn-default btn-file">--}}
-                                                        {{--<span class="fileinput-new">Select image</span>--}}
-                                                        {{--<span class="fileinput-exists">Change</span>--}}
-                                                        {{--<input id="pic" name="pic" type="file" class="form-control" />--}}
-                                                    {{--</span>--}}
-                                                    {{--<a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-
-                                    
-
-                                    
-
-                                    {{--<div class="form-group">--}}
-                                        {{--<label for="bio" class="col-sm-2 control-label">Bio <small>(brief intro)</small></label>--}}
-                                        {{--<div class="col-sm-10">--}}
-                                            {{--<textarea name="bio" id="bio" class="form-control" rows="4">{!! Input::old('bio', $user->bio) !!}</textarea>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                
-                                </section>
-
-                                <!-- third tab -->
-                                <h1>Address</h1>
-                                <section>
-
-                                    {{--<div class="form-group">--}}
-                                        {{--<label for="email" class="col-sm-2 control-label">Gender</label>--}}
-                                        {{--<div class="col-sm-10">--}}
-                                            {{--<select class="form-control" title="Select Gender..." name="gender">--}}
-                                                {{--<option value="">Select</option>--}}
-                                                {{--<option value="male" @if($user->gender === 'male') selected="selected" @endif >MALE</option>--}}
-                                                {{--<option value="female" @if($user->gender === 'female') selected="selected" @endif >FEMALE</option>--}}
-                                                {{--<option value="other" @if($user->gender === 'other') selected="selected" @endif >OTHER</option>--}}
-
-                                            {{--</select>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                    
-                                    {{--<div class="form-group">--}}
-                                        {{--<label for="country" class="col-sm-2 control-label">Country</label>--}}
-                                        {{--<div class="col-sm-10">--}}
-                                            {{--{!! Form::select('country', $countries,Input::old('country',$user->country),array('class' => 'form-control')) !!}--}}
-
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="form-group">--}}
-                                        {{--<label for="state" class="col-sm-2 control-label">State</label>--}}
-                                        {{--<div class="col-sm-10">--}}
-                                            {{--<input id="state" name="state" type="text" class="form-control" value="{{{ Input::old('state', $user->state) }}}" />--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-
-                                    <div class="form-group">
-                                        <label for="city" class="col-sm-2 control-label">City</label>
-                                        <div class="col-sm-10">
-                                            <input id="city" name="city" type="text" class="form-control" value="{{{ Input::old('city', $user->city) }}}" />
-                                        </div>
-                                    </div>
-
-                                    {{--<div class="form-group">--}}
-                                        {{--<label for="address" class="col-sm-2 control-label">Address</label>--}}
-                                        {{--<div class="col-sm-10">--}}
-                                            {{--<input id="address" name="address" type="text" class="form-control" value="{{{ Input::old('address', $user->address) }}}" />--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-
-                                    {{--<div class="form-group">--}}
-                                        {{--<label for="postal" class="col-sm-2 control-label">Postal/zip</label>--}}
-                                        {{--<div class="col-sm-10">--}}
-                                            {{--<input id="postal" name="postal" type="text" class="form-control" value="{{{ Input::old('postal', $user->postal) }}}" />--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                    
-                                </section>
-
-                                
-                                <!-- fourth tab -->
-                                <h1>Role</h1>
-
-                                <section>
-
-                                    <p class="text-danger"><strong>Be careful with group selection, if you give admin access.. they can access admin section</strong></p>
-                                    <div class="form-group">
-                                        <label for="group" class="col-sm-2 control-label">Rol *</label>
-                                        <div class="col-sm-10">
-                                            <select class="form-control " title="Select group..." name="groups[]" id="groups" required>
-                                                <option value="">Select</option>
-                                                @foreach($roles as $role)
-                                                    <option value="{{{ $role->id }}}" {{($user_local->is($role) ? ' selected="selected"' : '') }}>{{ $role->name }}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    {{--<div class="form-group">--}}
-                                        {{--<label for="activate" class="col-sm-2 control-label"> Activate User</label>--}}
-                                        {{--<div class="col-sm-10">--}}
-                                            {{--<input id="activate" name="activate" type="checkbox" class="pos-rel p-l-30" value="1" @if(Input::old('activate', $user->isActivated())) checked="checked" @endif  >--}}
-                                        {{--</div>--}}
-                                        {{--<span>If user is not activated, mail will be sent to user with activation link</span>--}}
-                                    {{--</div>--}}
-                                    
-                                
-                                </section>
-                            
                             </form>
                             <!-- END FORM WIZARD WITH VALIDATION --> 
                         </div>

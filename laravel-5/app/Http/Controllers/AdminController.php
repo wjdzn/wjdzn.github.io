@@ -349,5 +349,14 @@ class AdminController extends Controller {
         $product = Product::find($id);
         return view('admin.products.show',array('product'=>$product));
     }
+    public function update_product($id = null)
+    {
+        $product = Product::find($id);
+        return view('admin.products.edit',array('product'=>$product));
+    }
+    public function post_update_product($id = null)
+    {
+
+    }
 
 }
