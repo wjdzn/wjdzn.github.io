@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-Add User
+Add Product
 @parent
 @stop
 
@@ -13,8 +13,12 @@ Add User
 <link rel="stylesheet" href="{{ asset('/plugins/AdminJhon/vendors/wizard/jquery-steps/css/jquery.steps.css') }}">
 <link href="{{ asset('/plugins/AdminJhon/vendors/jasny-bootstrap/css/jasny-bootstrap.css') }}" rel="stylesheet" />
 <!--end of page level css-->
+    <style  type="text/css">
+        .disabled{
+            display: none;
+        }
+    </style>
 @stop
-
 
 {{-- Page content --}}
 @section('content')
