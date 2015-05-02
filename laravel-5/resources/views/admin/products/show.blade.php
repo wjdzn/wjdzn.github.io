@@ -39,7 +39,7 @@ View Product Details
         <div class="col-lg-12">
             <ul class="nav  nav-tabs ">
                 <li class="active">
-                    <a href="#tab1" data-toggle="tab"> <i class="livicon" data-name="user" data-size="16" data-c="#000" data-hc="#000" data-loop="true"></i>
+                    <a href="#tab1" data-toggle="tab"> <i class="livicon" data-name="shopping-cart" data-size="16" data-c="#000" data-hc="#000" data-loop="true"></i>
                         Product Profile
                     </a>
                 </li>
