@@ -294,7 +294,7 @@ class AdminController extends Controller {
      * @param   int   $id
      * @return  View
      */
-    public function getModalDelete($email = null)
+    public function getModalDeleteUser($email = null)
     {
         $confirm_route = route('user_delete',['email' => $email]);
         return View('admin.layouts.modal_confirmation', array("model"=>"users","confirm_route"=>$confirm_route,"email"=>$email));
@@ -329,6 +329,18 @@ class AdminController extends Controller {
     {
         $product_new = new Product(Input::all());
         $product_new->save();
+        $products = Product::all();
+        return view('admin.products.index',array('products' => $products));
+    }
+    public function getModalDeleteProduct($id = null)
+    {
+        $confirm_route = route('product_delete',['id' => $id]);
+        return View('admin.layouts.modal_confirmation', array("model"=>"products","confirm_route"=>$confirm_route,"id"=>$id));
+    }
+    public function delete_product($id = null)
+    {
+        $product = Product::find($id);
+        $product->delete();
         $products = Product::all();
         return view('admin.products.index',array('products' => $products));
     }
