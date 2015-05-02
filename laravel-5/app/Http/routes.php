@@ -45,7 +45,7 @@ Route::get('admin/users/{email}/confirm_delete',array('as' => 'user_confirme_del
 Route::get('admin/users/{email}/delete',array('as' => 'user_delete', 'uses' => 'AdminController@delete_user'));
 /*Routes with products*/
 Route::get('admin/products/new',array('as' => 'product_new', 'uses' => 'AdminController@new_product'));
-Route::post('admin/products/new',array('as' => 'product_new', 'uses' => 'AdminController@save+product'));
+Route::post('admin/products/new',array('as' => 'product_new', 'uses' => 'AdminController@save_product'));
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
