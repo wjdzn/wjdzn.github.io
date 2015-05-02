@@ -94,7 +94,7 @@ View Product Details
                                                     <tr>
                                                         <td>@lang('products/title.link')</td>
                                                         <td>
-                                                            {{ $product->link }}
+                                                           <a href="{{$product->link}}">{{ $product->link }}</a>
                                                         </td>
                                                     </tr>
                                                     @endif
