@@ -73,7 +73,7 @@ Add User
                                 <h1>Product</h1>
 
                                 <section>
-                                
+
                                     <div class="form-group">
                                         <label for="name" class="col-sm-2 control-label">Name *</label>
                                         <div class="col-sm-10">
@@ -86,14 +86,14 @@ Add User
                                             <textarea name="description" id="description" class="form-control" rows="4">{{{ Input::old('description') }}}</textarea>
                                         </div>
                                     </div>
-                                
+
                                     <div class="form-group">
                                         <label for="price" class="col-sm-2 control-label">Price *</label>
                                         <div class="col-sm-10">
                                             <input id="price" name="price" placeholder="Price" type="number" class="form-control required number" value="{{{ Input::old('price') }}}" />
                                         </div>
                                     </div>
-                                
+
                                     <div class="form-group">
                                         <label for="stock_amount" class="col-sm-2 control-label">Stock Amount *</label>
                                         <div class="col-sm-10">
@@ -121,7 +121,7 @@ Add User
                                     </div>
 
                                     <p>(*) Mandatory</p>
-                                
+
                                 </section>
                             </form>
                             <!-- END FORM WIZARD WITH VALIDATION --> 
