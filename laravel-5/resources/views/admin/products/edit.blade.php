@@ -138,4 +138,9 @@ Edit Product
     <script src="{{ asset('/plugins/AdminJhon/vendors/wizard/jquery-steps/js/jquery.steps.js') }}"></script>
     <script src="{{ asset('/plugins/AdminJhon/vendors/jasny-bootstrap/js/jasny-bootstrap.js') }}"></script>
     <script src="{{ asset('/plugins/AdminJhon/js/pages/add_user.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function(e){
+            $('.disabled').css('display','none');
+        });
+    </script>
 @stop
