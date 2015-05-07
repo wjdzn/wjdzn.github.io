@@ -202,7 +202,7 @@ View User Details
                                                 <span class="input-group-addon">
                                                     <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>
                                                 </span>
-                                                <input type="password" placeholder="Password" class="form-control"/>
+                                                <input type="password" name="password" id="password" placeholder="Password" class="form-control"/>
                                             </div>
                                         </div>
                                     </div>
@@ -216,7 +216,7 @@ View User Details
                                                 <span class="input-group-addon">
                                                     <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>
                                                 </span>
-                                                <input type="password" placeholder="Password" class="form-control"/>
+                                                <input type="password" name="password_re" id="password_re" placeholder="Password" class="form-control"/>
                                             </div>
                                         </div>
                                     </div>
