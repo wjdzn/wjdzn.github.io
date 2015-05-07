@@ -69,7 +69,7 @@ Edit Product
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                                 <!-- first tab -->
                                 <h1>Product Profile</h1>
-                                <section style="overflow: auto;">
+                                <section>
                                     <div class="form-group">
                                         <label for="name" class="col-sm-2 control-label">Name *</label>
                                         <div class="col-sm-10">
@@ -79,7 +79,7 @@ Edit Product
                                     <div class="form-group">
                                         <label for="description" class="col-sm-2 control-label">Description</label>
                                         <div class="col-sm-10">
-                                            <textarea name="description" id="description" class="form-control" rows="4">{{{ Input::old('description', $product->description) }}}</textarea>
+                                            <textarea name="description" id="description" class="form-control" rows="2">{{{ Input::old('description', $product->description) }}}</textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
