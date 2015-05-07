@@ -372,7 +372,7 @@ class AdminController extends Controller {
         $product->description = Input::file('description');
         $product->price = Input::file('name');
         $product->stock_amount = Input::file('name');
-        $product->tax = Input::file('tax');
+        $product->tax_value = Input::file('tax_value');
         $product->valid_at = Input::file('valid_at');
         $product->link = Input::file('link');
         $product->save();
