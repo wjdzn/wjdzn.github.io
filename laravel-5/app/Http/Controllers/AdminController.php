@@ -360,7 +360,24 @@ class AdminController extends Controller {
     }
     public function post_update_product($id = null)
     {
-
+        $product = Product::find($id);
+        $file = Input::file('file');
+        if(isset($file))
+        {
+            $fileName = $file->getClientOriginalName();
+            $file->move(public_path().'/uploads', $fileName);
+            $product->image = "/uploads/".$fileName;
+        }
+        $product->name = Input::file('name');
+        $product->description = Input::file('description');
+        $product->price = Input::file('name');
+        $product->stock_amount = Input::file('name');
+        $product->tax = Input::file('tax');
+        $product->valid_at = Input::file('valid_at');
+        $product->link = Input::file('link');
+        $product->save();
+        $products = Product::all();
+        return view('admin.products.index',array('products' => $products));
     }
 
 }
