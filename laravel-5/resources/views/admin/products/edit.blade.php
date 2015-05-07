@@ -69,8 +69,7 @@ Edit Product
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                                 <!-- first tab -->
                                 <h1>Product Profile</h1>
-                                <section>
-                                
+                                <section style="overflow: auto;">
                                     <div class="form-group">
                                         <label for="name" class="col-sm-2 control-label">Name *</label>
                                         <div class="col-sm-10">
@@ -113,6 +112,12 @@ Edit Product
                                         <label for="link" class="col-sm-2 control-label">External Link</label>
                                         <div class="col-sm-10">
                                             <input id="link" name="link" type="text" placeholder="External Link" class="form-control" value="{{{ Input::old('link', $product->link) }}}" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="file" class="col-sm-2 control-label">Image</label>
+                                        <div class="col-sm-10">
+                                            <input id="file" name="file" type="file" placeholder="Image" class="form-control" value="{{{ Input::old('file', $product->image) }}}" />
                                         </div>
                                     </div>
                                     
