@@ -316,6 +316,21 @@ class AdminController extends Controller {
         $forum_user = UserForum::where('email',$user_local->email)->first();
         return View('admin.users.show', array("user_forum"=>$forum_user,"user_local"=>$user_local));
     }
+    public function change_password_user($id = null)
+    {
+        $user_local = User::find($id);
+        $forum_user = UserForum::where('email',$user_local->email)->first();
+        $password_new = Input::get('password');
+        $password_new_re = Input::get('password_re');
+        if($password_new==$password_new_re)
+        {
+            $user_local->password = bcrypt($password_new);
+            $user_local->save();
+            $forum_user->password =  md5(e(Input::get('password')) . "forumiumpro");
+            $forum_user->save();
+        }
+        return View('admin.users.show', array("user_forum"=>$forum_user,"user_local"=>$user_local));
+    }
     public function products()
     {
         $products = Product::all();
@@ -368,13 +383,13 @@ class AdminController extends Controller {
             $file->move(public_path().'/uploads', $fileName);
             $product->image = "/uploads/".$fileName;
         }
-        $product->name = Input::file('name');
-        $product->description = Input::file('description');
-        $product->price = Input::file('name');
-        $product->stock_amount = Input::file('name');
-        $product->tax_value = Input::file('tax_value');
-        $product->valid_at = Input::file('valid_at');
-        $product->link = Input::file('link');
+        $product->name = Input::get('name');
+        $product->description = Input::get('description');
+        $product->price = Input::get('price');
+        $product->stock_amount = Input::get('stock_amount');
+        $product->tax_value = Input::get('tax_value');
+        $product->valid_at = Input::get('valid_at');
+        $product->link = Input::get('link');
         $product->save();
         $products = Product::all();
         return view('admin.products.index',array('products' => $products));

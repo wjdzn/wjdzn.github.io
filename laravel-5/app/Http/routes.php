@@ -43,6 +43,7 @@ Route::get('admin/users/{email}/edit',array('as' => 'user_update', 'uses' => 'Ad
 Route::post('admin/users/{email}/edit',array('as' => 'user_update', 'uses' => 'AdminController@post_update_user'));
 Route::get('admin/users/{email}/confirm_delete',array('as' => 'user_confirm_delete', 'uses' => 'AdminController@getModalDeleteUser'));
 Route::get('admin/users/{email}/delete',array('as' => 'user_delete', 'uses' => 'AdminController@delete_user'));
+Route::get('admin/users/{id}/change_password',array('as'=>'user_change_password','uses'=>'AdminController@change_password_user'));
 /*Routes with products*/
 Route::get('admin/products/new',array('as' => 'product_new', 'uses' => 'AdminController@new_product'));
 Route::post('admin/products/new',array('as' => 'product_new', 'uses' => 'AdminController@save_product'));

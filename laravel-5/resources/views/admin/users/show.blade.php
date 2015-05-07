@@ -187,7 +187,7 @@ View User Details
                 <div id="tab2" class="tab-pane fade">
                     <div class="row">
                         <div class="col-md-12 pd-top">
-                            <form action="#" class="form-horizontal">
+                            <form action="{{route('user_change_password', $user_local->id) }}" class="form-horizontal">
                                 <!-- CSRF Token -->
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                                 
