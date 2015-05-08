@@ -204,10 +204,10 @@
 <!-- Part 6: #Services2 -->
 
 
-<div class="pixfort_corporate_2">
+{{--<div class="pixfort_corporate_2">--}}
 
-    <div class="amazing_style">
-        <div class="container">
+    {{--<div class="amazing_style">--}}
+        {{--<div class="container">--}}
             {{--<div class="sixteen columns">--}}
                 {{--<div class="gstyle">--}}
                     {{--<div class="t1_style">Our Services Prices and Plans</div>--}}
@@ -286,10 +286,10 @@
 
 
             {{--</div>--}}
-        </div><!-- container -->
-    </div>
+        {{--</div><!-- container -->--}}
+    {{--</div>--}}
 
-</div>
+{{--</div>--}}
 
 
 <!-- Part 7: #Partners -->
