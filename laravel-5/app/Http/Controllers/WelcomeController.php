@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Auth\Guard as Auth;
 use Illuminate\Http\RedirectResponse;
 use App\User;
+use App\Models\CalendarEvent;
 
 class WelcomeController extends Controller {
 
@@ -47,6 +48,24 @@ class WelcomeController extends Controller {
     public function calendar()
     {
         return view('calendar');
+    }
+    public function events()
+    {
+        $events = CalendarEvent::all();
+        $result = array();
+        $count=0;
+        foreach($events as $ev)
+        {
+            $result[$count]['id']=$ev->id;
+            $result[$count]['title']=$ev->name;
+            $result[$count]['start']=$ev->init_at;
+            $result[$count]['end']=$ev->end_at;
+            $result[$count]['allDay']=$ev->all_day;
+            $result[$count]['forceEventDuration']=true;
+            $result[$count]['backgroundColor']=$ev->backgroundcolor;
+            $count++;
+        }
+        echo  json_encode($result);
     }
     public function update_from_forum()
     {
