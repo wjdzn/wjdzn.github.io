@@ -189,7 +189,8 @@ class AdminController extends Controller {
         $forum_user->email =  Input::get('email');
         if(!$user_local->is(Input::get('rol')))
         {
-            $user_local->attachRole(Input::get('rol'));
+            $rol = Role::where('slug',Input::get('rol'))->first();
+            $user_local->changeRole($rol);
         }
         $user_local->save();
         $forum_user->save();

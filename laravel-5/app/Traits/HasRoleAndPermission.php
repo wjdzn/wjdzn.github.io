@@ -94,7 +94,21 @@ trait HasRoleAndPermission
 
         return false;
     }
-
+    /**
+     * Change role.
+     *
+     * @param int|\Bican\Roles\Models\Role $role
+     * @return mixed
+     */
+    public function changeRole($role)
+    {
+        $roles = $this->roles()->get();
+        foreach($roles as $rol)
+        {
+            $this->roles()->detach($rol);
+        }
+        return $this->roles()->attach($role);
+    }
     /**
      * Attach role.
      *
