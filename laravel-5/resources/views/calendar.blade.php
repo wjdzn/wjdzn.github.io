@@ -1,58 +1,128 @@
-<?php
-print_r( time());
-$date=date(strtotime("5/4/2015 5:00:00"));
-print_r(date('Y:m:d h:i:s', $date));
-print_r(date_create_from_format("y:m:d h:i:s",strtotime(date('m/d/Y h:i:s a', time()))));
-die();
-?>
+@extends('admin/layouts/default')
 
-<html>
-	<head>
-		<title>Laravel</title>
-		
-		<link href="{{ asset('/plugins/fullcalendar/css/jquery-ui-1.9.2.custom.css') }}" rel="stylesheet">
-        <link href="{{ asset('/plugins/fullcalendar/css/fullcalendar.css') }}" rel="stylesheet">
-        <link href="{{ asset('/plugins/fullcalendar/css/view_calendar.css') }}" rel="stylesheet">
-        <link href="{{ asset('/plugins/fullcalendar/css/jquery.miniColors.css') }}" rel="stylesheet" type="text/css" />
-	</head>
-	<body>
-    <div id="content_wrapper">
+{{-- Page title --}}
+@section('title')
+    Calendar
+    @parent
+@stop
 
-        <!-- Calendar div -->
-        <div id="calendar">
-        </div>
+{{-- page level styles --}}
+@section('header_styles')
+    <link href="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/css/fullcalendar.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/plugins/AdminJhon/css/pages/calendar_custom.css') }}" rel="stylesheet" type="text/css" />
+@stop
 
-        <!-- Event generation -->
-        <div id="event_generation_wrapper">
-            <div class='left'>
-                <div class='text'>Background:</div><br />
-                <div class='text'>Border:</div><br />
-                <div class='text'>Text:</div><br />
+
+{{-- Page content --}}
+@section('content')
+    <section class="content-header">
+        <h1>Calendar</h1>
+        <ol class="breadcrumb">
+            <li>
+                <a href="{{route('admin')}}"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
+                    Home
+                </a>
+            </li>
+            <li>Calendar</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="box">
+                    <div class="box-title">
+                        <h3>Draggable Events</h3>
+                        <div class="pull-right box-toolbar">
+                            <a href="#" class="btn btn-link btn-xs" data-toggle="modal" data-target="#myModal"> <i class="fa fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div id='external-events'>
+                            <div class='external-event palette-warning'>Team Out</div>
+                            <div class='external-event palette-primary'>Product Seminar</div>
+                            <div class='external-event palette-danger'>Client Meeting</div>
+                            <div class='external-event palette-info'>Repeating Event</div>
+                            <div class='external-event palette-success'>Anniversary Celebrations</div>
+                            <p class="well no-border no-radius">
+                                <input type='checkbox' id='drop-remove' style="opacity:1 !important" />
+                                <label for='drop-remove'>remove after drop</label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#myModal">Create event</a>
+                    </div>
+                </div>
+                <!-- /.box --> </div>
+            <div class="col-md-9">
+                <div class="box">
+                    <div class="box-body">
+                        <div id="calendar"></div>
+                    </div>
+                </div>
+                <!-- /.box --> </div>
+            <!-- /.col --> </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            <i class="fa fa-plus"></i>
+                            Create Event
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group">
+                            <input type="text" id="new-event" class="form-control" placeholder="Event">
+                            <div class="input-group-btn">
+                                <button type="button" id="color-chooser-btn" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    Type
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" id="color-chooser">
+                                    <li>
+                                        <a class="palette-primary" href="#">Primary</a>
+                                    </li>
+                                    <li>
+                                        <a class="palette-success" href="#">Success</a>
+                                    </li>
+                                    <li>
+                                        <a class="palette-info" href="#">Info</a>
+                                    </li>
+                                    <li>
+                                        <a class="palette-warning" href="#">warning</a>
+                                    </li>
+                                    <li>
+                                        <a class="palette-danger" href="#">Danger</a>
+                                    </li>
+                                    <li>
+                                        <a class="palette-default" href="#">Default</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /btn-group --> </div>
+                        <textarea id="new-event-description" class="form-control">Description</textarea>
+                        <!-- /input-group --> </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger pull-right" data-dismiss="modal">
+                            Close
+                            <i class="fa fa-times"></i>
+                        </button>
+                        <button type="button" class="btn btn-success pull-left" id="add-new-event" data-dismiss="modal">
+                            <i class="fa fa-plus"></i>
+                            Add
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class='right'>
-                <input id="txt_background_color" type='hidden' class='color_picker' value='#2795C3' /><br />
-                <input id="txt_border_color" type='hidden' class='color_picker' value='#6AB3D3' /><br />
-                <input id="txt_text_color" type='hidden' class='color_picker' value='#ffffff' /><br />
-            </div>
-            <input id='txt_title' type='text' value='Title' /><br />
-            <textarea id='txt_description'>Description</textarea><br />
-            <input id='txt_price' type='text' value='5.00' /><br />
-            <input id='txt_available' type='text' value='5' /><br />
-            <input id="btn_gen_event" type="button" value="New Template" class='btn' />
-            <input id="btn_update_event" type="button" value="Update Event" class='btn'/>
-            <input id="txt_current_event" type="hidden" value="" />
         </div>
+    </section>
+@stop
 
-        <!-- Booking types list -->
-        <div id='external_events'>
-            <div id='external_event_template' class='external-event ui-draggable'>One Hour</div>
-        </div>
-    </div>
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
-    <script src="{{ asset('/plugins/fullcalendar/jquery-ui-1.9.2.custom.min.js') }}"></script>
-    <script src="{{ asset('/plugins/fullcalendar/fullcalendar.js') }}"></script>
-    <script src="{{ asset('/plugins/fullcalendar/view_calendar.js') }}"></script>
-    <script src="{{ asset('/plugins/fullcalendar/jquery.miniColors.js') }}"></script>
-	</body>
-</html>
-
+@section('footer_scripts')
+    <script src="{{ asset('/js/calendar.js') }}" type="text/javascript"></script>
+@stop

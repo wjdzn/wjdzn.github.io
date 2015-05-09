@@ -195,7 +195,8 @@ class AdminController extends Controller {
         $user_local->save();
         $forum_user->save();
         $users = User::role('subscriber')->get();
-        return view('admin.users.index',array('users' => $users));
+        return redirect()->guest('admin/users')->with(array('users'=>$users,"success"=>"ok"));
+        //return view('admin.users.index',array('users' => $users));
     }
     /**
      * Delete Confirm
