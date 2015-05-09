@@ -3,22 +3,6 @@
 @stop
 
 @section('content')
-    <!-- Part 1: #Header -->
-    <div class="pixfort_corporate_2">
-
-    <div class="header_style">
-        <div class="container">
-            <div class="sixteen columns header_area">
-                <a href="#" class="yt_button"></a>
-                <a href="#" class="twitter_button"></a>
-                <a href="#" class="facebook_button"></a>
-
-                <div class="htext_style">Stay connected</div>
-            </div>
-        </div><!-- container -->
-    </div>
-
-</div>
     <!-- Part 2: #Contact -->
     <div class="pixfort_corporate_2">
 
