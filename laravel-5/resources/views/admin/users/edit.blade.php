@@ -129,7 +129,7 @@ Edit User
                                             <select class="form-control " title="Select group..." name="rol" id="rol" required>
                                                 <option value="">Select</option>
                                                 @foreach($roles as $role)
-                                                    <option value="{{{ $role->slug }}}" {{($user_local->is($role) ? ' selected="selected"' : '') }}>{{ $role->name }}</option>
+                                                    <option value="{{{ $role->slug }}}" {{($user_local->is($role->slug) ? ' selected="selected"' : '') }}>{{ $role->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
