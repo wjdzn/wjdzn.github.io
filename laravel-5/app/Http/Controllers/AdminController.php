@@ -146,8 +146,8 @@ class AdminController extends Controller {
     {
         try{
             // Get the user information
-            $user_local =User::find($id);
-            $user =UserForum::where('email',$user_local->email)->first();
+            $forum_user = UserForum::find($id);
+            $user_local = User::where('email',$forum_user->email)->first();
              // Get a list of all the available groups
             $roles = Role::all();
             if(!isset($user))
@@ -171,8 +171,8 @@ class AdminController extends Controller {
     }
     public function post_update_user($id = null)
     {
-        $user_local = User::find($id);
-        $forum_user = UserForum::where('email',$user_local->email)->first();
+        $forum_user = UserForum::find($id);
+        $user_local = User::where('email',$forum_user->email)->first();
         $password_new = Input::get('password');
         $password_new_re = Input::get('password_confirm');
         if(strlen($password_new)>0 && $password_new_re==$password_new)
