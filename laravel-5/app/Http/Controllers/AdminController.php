@@ -182,7 +182,7 @@ class AdminController extends Controller {
             $forum_user->password =  md5(e(Input::get('password')) . "forumiumpro");
             $forum_user->save();
         }
-        $user_local->name =  Input::get('first_name');
+        $user_local->first_name =  Input::get('first_name');
         $forum_user->first_name = Input::get('first_name');
         $forum_user->surname = Input::get('last_name');
         $user_local->email =  Input::get('email');
