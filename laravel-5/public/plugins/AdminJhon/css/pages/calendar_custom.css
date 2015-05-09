@@ -103,6 +103,6 @@ color: #666;
 margin-left: 10px;
 }
 .topContainer{
-    top:100px;
-    margin-bottom: 100px;
+    top:50px;
+    bottom: 50px;
 }
