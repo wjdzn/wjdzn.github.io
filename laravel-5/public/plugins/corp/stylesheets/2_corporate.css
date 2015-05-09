@@ -515,7 +515,13 @@ body{ font-family: 'Open Sans', sans-serif; !important; }
     }
 
 /*--- Part 9:  #Contact     ---*/
-
+    .pixfort_corporate_2 .calendar_section{background: url("../images/2_corporate/bg.png") #fff fixed no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding-bottom: 50px;
+    }
 
     .pixfort_corporate_2 .contact_section{background: url("../images/2_corporate/map.png") #fff fixed no-repeat;
         -webkit-background-size: cover;
