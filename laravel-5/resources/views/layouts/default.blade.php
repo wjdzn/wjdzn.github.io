@@ -25,12 +25,11 @@
     <link href="{{ asset('/plugins/corp/stylesheets/box.css') }}" rel="stylesheet">
     <link href="{{ asset('/plugins/corp/stylesheets/custom.css') }}" rel="stylesheet">
     <link href="{{ asset('http://fonts.googleapis.com/css?family=Knewave') }}" rel='stylesheet' type='text/css'>
-    <!--[if lt IE 9]>
-    <script src="{{ asset('http://html5shim.googlecode.com/svn/trunk/html5.js') }}"></script>
     <link href="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/css/fullcalendar.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('/plugins/AdminJhon/css/pages/calendar_custom.css') }}" rel="stylesheet" type="text/css" />
-
-    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="{{ asset('http://html5shim.googlecode.com/svn/trunk/html5.js') }}"></script>
+   <![endif]-->
 
     <!-- Favicons
     ================================================== -->
