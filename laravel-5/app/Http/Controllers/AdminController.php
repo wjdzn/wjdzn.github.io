@@ -171,122 +171,30 @@ class AdminController extends Controller {
     }
     public function post_update_user($id = null)
     {
-        try
+        $user_local = User::find($id);
+        $forum_user = UserForum::where('email',$user_local->email)->first();
+        $password_new = Input::get('password');
+        $password_new_re = Input::get('password_confirm');
+        if(strlen($password_new)>0 && $password_new_re==$password_new)
         {
-            // Get the user information
-            $user = Sentry::getUserProvider()->findById($id);
+            $user_local->password = bcrypt($password_new);
+            $user_local->save();
+            $forum_user->password =  md5(e(Input::get('password')) . "forumiumpro");
+            $forum_user->save();
         }
-        catch (UserNotFoundException $e)
+        $user_local->name =  Input::get('first_name');
+        $forum_user->first_name = Input::get('first_name');
+        $forum_user->surname = Input::get('last_name');
+        $user_local->email =  Input::get('email');
+        $forum_user->email =  Input::get('email');
+        if(!$user_local->is(Input::get('rol')))
         {
-            // Prepare the error message
-            $error = Lang::get('users/message.user_not_found', compact('id'));
-
-            // Redirect to the user management page
-            return Redirect::route('users')->with('error', $error);
+            $user_local->attachRole(Input::get('rol'));
         }
-
-        //
-        $this->validationRules['email'] = "required|email|unique:users,email,{$user->email},email";
-
-        // Do we want to update the user password?
-        if ( ! $password = Input::get('password'))
-        {
-            unset($this->validationRules['password']);
-            unset($this->validationRules['password_confirm']);
-        }
-
-        // Create a new validator instance from our validation rules
-        $validator = Validator::make(Input::all(), $this->validationRules);
-
-        // If validation fails, we'll exit the operation now.
-        if ($validator->fails()) {
-            // Ooops.. something went wrong
-            return Redirect::back()->withInput()->withErrors($validator);
-        }
-
-        try {
-            // Update the user
-            $user->first_name  = Input::get('first_name');
-            $user->last_name   = Input::get('last_name');
-            $user->email       = Input::get('email');
-            $user->dob   = Input::get('dob');
-            $user->bio   = Input::get('bio');
-            $user->gender   = Input::get('gender');
-            $user->country   = Input::get('country');
-            $user->state   = Input::get('state');
-            $user->city   = Input::get('city');
-            $user->address   = Input::get('address');
-            $user->postal   = Input::get('postal');
-            $user->activated   = Input::get('activate')?1:0;
-
-            // Do we want to update the user password?
-            if ($password) {
-                $user->password = $password;
-            }
-
-            // is new image uploaded?
-            if ($file = Input::file('pic'))
-            {
-                $fileName        = $file->getClientOriginalName();
-                $extension       = $file->getClientOriginalExtension() ?: 'png';
-                $folderName      = '/uploads/users/';
-                $destinationPath = public_path() . $folderName;
-                $safeName        = str_random(10).'.'.$extension;
-                $file->move($destinationPath, $safeName);
-
-                //delete old pic if exists
-                if(File::exists(public_path() . $folderName.$user->pic))
-                {
-                    File::delete(public_path() . $folderName.$user->pic);
-                }
-
-                //save new file path into db
-                $user->pic   = $safeName;
-
-            }
-
-            // Get the current user groups
-            $userGroups = $user->groups()->lists('group_id', 'group_id');
-
-            // Get the selected groups
-            $selectedGroups = Input::get('groups', array());
-
-            // Groups comparison between the groups the user currently
-            // have and the groups the user wish to have.
-            $groupsToAdd    = array_diff($selectedGroups, $userGroups);
-            $groupsToRemove = array_diff($userGroups, $selectedGroups);
-
-            // Assign the user to groups
-            foreach ($groupsToAdd as $groupId) {
-                $group = Sentry::getGroupProvider()->findById($groupId);
-
-                $user->addGroup($group);
-            }
-
-            // Remove the user from groups
-            foreach ($groupsToRemove as $groupId) {
-                $group = Sentry::getGroupProvider()->findById($groupId);
-
-                $user->removeGroup($group);
-            }
-
-            // Was the user updated?
-            if ($user->save()) {
-                // Prepare the success message
-                $success = Lang::get('users/message.success.update');
-
-                // Redirect to the user page
-                return redirect()->guest('users.update', $id)->with('success', $success);
-            }
-
-            // Prepare the error message
-            $error = Lang::get('users/message.error.update');
-        } catch (LoginRequiredException $e) {
-            $error = Lang::get('users/message.user_login_required');
-        }
-
-        // Redirect to the user page
-        return redirect()->guest('users.update', $id)->withInput()->with('error', $error);
+        $user_local->save();
+        $forum_user->save();
+        $users = User::role('subscriber')->get();
+        return view('admin.users.index',array('users' => $users));
     }
     /**
      * Delete Confirm

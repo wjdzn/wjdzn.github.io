@@ -22,7 +22,7 @@ class UserForum extends Model implements AuthenticatableContract, CanResetPasswo
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['first_name', 'email', 'password','surname','points','membership', 'points','views', 'last_seen', 'ip', 'country', 'access_token', 'activated', 'activation_code', 'fb_id'];
+	protected $fillable = ['first_name', 'email', 'password','surname','points','membership','views', 'last_seen', 'ip', 'country', 'access_token', 'activated', 'activation_code', 'fb_id'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.

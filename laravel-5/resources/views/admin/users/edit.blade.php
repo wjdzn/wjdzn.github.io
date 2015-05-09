@@ -93,7 +93,12 @@ Edit User
                                             <input id="email" name="email" placeholder="E-Mail" type="text" class="form-control required email" value="{{{ Input::old('email', $user->email) }}}" />
                                         </div>
                                     </div>
-                                
+                                    {{--<div class="form-group">--}}
+                                        {{--<label for="city" class="col-sm-2 control-label">City</label>--}}
+                                        {{--<div class="col-sm-10">--}}
+                                            {{--<input id="city" name="city" type="text" class="form-control" value="{{{ Input::old('city', $user->city) }}}" />--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
                                     <div class="form-group">
                                         <p class="text-warning">If you don't want to change password... please leave them empty</p>
                                         <label for="password" class="col-sm-2 control-label">Password *</label>
@@ -108,14 +113,6 @@ Edit User
                                             <input id="password_confirm" name="password_confirm" type="password" placeholder="Confirm Password " class="form-control" value="{{{ Input::old('password_confirm') }}}" />
                                         </div>
                                     </div>
-
-                                    <div class="form-group">
-                                        <label for="city" class="col-sm-2 control-label">City</label>
-                                        <div class="col-sm-10">
-                                            <input id="city" name="city" type="text" class="form-control" value="{{{ Input::old('city', $user->city) }}}" />
-                                        </div>
-                                    </div>
-                                    
                                     <p>(*) Mandatory</p>
                                 
                                 </section>
@@ -129,10 +126,10 @@ Edit User
                                     <div class="form-group">
                                         <label for="group" class="col-sm-2 control-label">Rol *</label>
                                         <div class="col-sm-10">
-                                            <select class="form-control " title="Select group..." name="groups[]" id="groups" required>
+                                            <select class="form-control " title="Select group..." name="rol" id="rol" required>
                                                 <option value="">Select</option>
                                                 @foreach($roles as $role)
-                                                    <option value="{{{ $role->id }}}" {{($user_local->is($role) ? ' selected="selected"' : '') }}>{{ $role->name }}</option>
+                                                    <option value="{{{ $role->slug }}}" {{($user_local->is($role) ? ' selected="selected"' : '') }}>{{ $role->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
