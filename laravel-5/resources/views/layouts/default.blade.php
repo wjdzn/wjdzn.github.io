@@ -27,6 +27,9 @@
     <link href="{{ asset('http://fonts.googleapis.com/css?family=Knewave') }}" rel='stylesheet' type='text/css'>
     <!--[if lt IE 9]>
     <script src="{{ asset('http://html5shim.googlecode.com/svn/trunk/html5.js') }}"></script>
+    <link href="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/css/fullcalendar.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/plugins/AdminJhon/css/pages/calendar_custom.css') }}" rel="stylesheet" type="text/css" />
+
     <![endif]-->
 
     <!-- Favicons
@@ -104,6 +107,8 @@
 <script src="{{ asset('/plugins/corp/assets/js/smoothscroll.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('/plugins/corp/assets/js/appear.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('/plugins/corp/assets/js/animations.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/fullcalendar.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/calendarcustom.min.js') }}" type="text/javascript"></script>
 
 <script>
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
