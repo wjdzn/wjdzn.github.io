@@ -36,7 +36,9 @@
             <div class="sixteen columns">
 
                 <div class="four columns  alpha">
-                    {!! HTML::image('/plugins/corp/images/2_corporate/calendar.png') !!}
+                    <a href="{{url('calendar')}}">
+                        {!! HTML::image('/plugins/corp/images/2_corporate/calendar.png') !!}
+                    </a>
                     <div class="head_style">InventPalooza!2015</div>
                     <div class="c_style">
                         Learn about the independent inventor's event of the year. Participate in the national inventor community.
@@ -44,7 +46,9 @@
                 </div>
 
                 <div class="four columns  ">
-                    {!! HTML::image('/plugins/corp/images/2_corporate/discuss.png') !!}
+                    <a href="{{url('forum')}}">
+                        {!! HTML::image('/plugins/corp/images/2_corporate/discuss.png') !!}
+                    </a>
                     <div class="head_style">Engage</div>
                     <div class="c_style">
                         Join an active community of independent inventors. Share resources and experience with an international community of grassroots inventors and business people.

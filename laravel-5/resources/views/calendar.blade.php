@@ -17,7 +17,15 @@
 @section('content')
     <div class="pixfort_corporate_2">
         <div class="contact_section">
-            <div class="container topContainer">
+            <div class="sixteen columns context_style">
+                <div class="logotext">
+                    Calendar InventPalooza!
+                </div>
+                <div class="subtitle_style">
+                    <h3 class="strapline">Work smarter, work safer, work together.</h3>
+                </div>
+            </div>
+            <div class="container">
                 <div class="col-md-12">
                     <div class="box">
                         <div class="box-body">
