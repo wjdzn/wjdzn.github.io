@@ -142,12 +142,12 @@ class AdminController extends Controller {
         $users = User::role('subscriber')->get();
         return view('admin.users.index',array('users' => $users));
     }
-    public function update_user($email = null)
+    public function update_user($id = null)
     {
         try{
             // Get the user information
-            $user = UserForum::where('email',$email)->first();
-            $user_local = User::where('email',$email)->first();
+            $user_local =User::find($id);
+            $user =UserForum::where('email',$user_local->email)->first();
              // Get a list of all the available groups
             $roles = Role::all();
             if(!isset($user))

@@ -64,7 +64,7 @@ Edit User
                         <div class="col-md-12">
 
                             <!-- BEGIN FORM WIZARD WITH VALIDATION -->
-                            <form class="form-wizard form-horizontal" action="" method="POST" id="wizard" enctype="multipart/form-data">
+                            <form class="form-wizard form-horizontal" action="{{route('user_update', $user->id) }}" method="POST" id="wizard" enctype="multipart/form-data">
                                 <!-- CSRF Token -->
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
