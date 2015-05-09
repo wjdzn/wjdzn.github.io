@@ -29,34 +29,7 @@
     <!-- Main content -->
     <section class="content">
         <div class="row">
-            <div class="col-md-3">
-                <div class="box">
-                    <div class="box-title">
-                        <h3>Draggable Events</h3>
-                        <div class="pull-right box-toolbar">
-                            <a href="#" class="btn btn-link btn-xs" data-toggle="modal" data-target="#myModal"> <i class="fa fa-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="box-body">
-                        <div id='external-events'>
-                            <div class='external-event palette-warning'>Team Out</div>
-                            <div class='external-event palette-primary'>Product Seminar</div>
-                            <div class='external-event palette-danger'>Client Meeting</div>
-                            <div class='external-event palette-info'>Repeating Event</div>
-                            <div class='external-event palette-success'>Anniversary Celebrations</div>
-                            <p class="well no-border no-radius">
-                                <input type='checkbox' id='drop-remove' style="opacity:1 !important" />
-                                <label for='drop-remove'>remove after drop</label>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="box-footer">
-                        <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#myModal">Create event</a>
-                    </div>
-                </div>
-                <!-- /.box --> </div>
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="box">
                     <div class="box-body">
                         <div id="calendar"></div>
