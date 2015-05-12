@@ -28,6 +28,9 @@ Route::get('cart', 'CartController@index');
 Route::get('forum', function() {
     return Redirect::to('http://inventpalooza.com/forum/public/');
 });
+Route::get('login', function() {
+    return view('login');
+});
 
 /* Admin Routes */
 Route::get('admin',array('as' => 'admin', 'uses' => 'AdminController@index'));
