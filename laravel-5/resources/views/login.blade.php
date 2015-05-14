@@ -68,7 +68,16 @@
     <div class="page_style">
         <div class="container">
             <div class="sixteen columns context_style">
-
+                @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="logotext">
                     InventPalooza!
                 </div>
@@ -343,44 +352,58 @@
                 <h3 class="modal-title modal_transparent_title" id="ModalFinal">Login to your account</h3>
             </div>
             <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="controls mbottom5">
-                            <div class="input-group">
-                                        <span class="input-group-addon minWidtht40">
-                                            <i class="fa fa-envelope-o"></i>
-                                        </span>
-                                <input type="text" id="email" class="form-control fS17" placeholder="Email">
+                <form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="controls mbottom5">
+                                <div class="input-group">
+                                            <span class="input-group-addon minWidtht40">
+                                                <i class="fa fa-envelope-o"></i>
+                                            </span>
+                                    <input type="text" id="email" name="email" value="{{ old('email') }}" class="form-control fS17" placeholder="Email">
+                                </div>
                             </div>
-                        </div>
-                        <div class="controls mbottom5">
-                            <div class="input-group">
-                                        <span class="input-group-addon minWidtht40">
-                                            <i class="fa fa-lock "></i>
-                                        </span>
-                                <input type="text" id="password" class="form-control fS17" placeholder="Password">
+                            <div class="controls mbottom5">
+                                <div class="input-group">
+                                            <span class="input-group-addon minWidtht40">
+                                                <i class="fa fa-lock "></i>
+                                            </span>
+                                    <input type="password" id="password"  name="password" class="form-control fS17" placeholder="Password">
+                                </div>
                             </div>
-                        </div>
-                        <div class="controls mbottom5 pull-right">
-                            <div class="input-group">
-                                <button type="button" class="btn btn-primary" id="senddata">
-                                    Login <i class="fa fa-arrow-right"></i>
-                                </button>
+                            <div class="controls pull-left">
+                                <div class="input-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="remember"> Remember Me
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="controls mbottom5  pull-right mTop50">
-                            <div class="input-group">
-                                <h4>Forgot your password ?</h4>
-                                <h5>no worries, click <a href="#">here</a> to reset your password.</h5>
+                            <div class="controls mbottom5 pull-right">
+                                <div class="input-group">
+                                    <button type="submit" class="btn btn-primary" id="senddata">
+                                        Login <i class="fa fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="controls mbottom5 mTop50">
+                                <div class="input-group">
+                                    <h4>Forgot your password ?</h4>
+                                    <h5>no worries, click <a href="{{ url('/password/email') }}">here</a> to reset your password.</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary" id="savedata">Generate Contract</button>
-                <button type="button" class="btn btn-primary" id="senddata">Send Contract</button>
+            <div class="modal-footer modal_transparent_footer">
+                <div class="controls mbottom5">
+                    <div class="input-group">
+                        <h4 class="pull-left">Don't have an account yet ?<a href="#" class="fS15"> Create an account</a> </h4>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

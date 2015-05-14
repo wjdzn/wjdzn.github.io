@@ -44,7 +44,7 @@ class Administrator {
             }
             else
             {
-                return redirect()->guest('auth/login');
+                return redirect()->guest('main');
             }
         }
 	}

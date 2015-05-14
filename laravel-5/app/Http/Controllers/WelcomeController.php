@@ -80,7 +80,7 @@ class WelcomeController extends Controller {
         $user = User::where('email','LIKE',Input::get('email'))->first();
         if($this->auth->login($user))
             return redirect()->guest('/');
-        return redirect()->guest('auth/login');
+        return redirect()->guest('main');
     }
 
 }

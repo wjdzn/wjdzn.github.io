@@ -18,12 +18,15 @@
 
     <!-- CSS
   ================================================== -->
+    <link href="{{ asset('/plugins/AdminJhon/vendors/font-awesome-4.2.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/css/login.css') }}" rel="stylesheet">
     <link href="{{ asset('/plugins/corp/stylesheets/base.css') }}" rel="stylesheet">
     <link href="{{ asset('/plugins/corp/stylesheets/skeleton.css') }}" rel="stylesheet">
     <link href="{{ asset('/plugins/corp/stylesheets/2_corporate.css') }}" rel="stylesheet">
     <link href="{{ asset('/plugins/corp/stylesheets/layout_2.css') }}" rel="stylesheet">
     <link href="{{ asset('/plugins/corp/stylesheets/box.css') }}" rel="stylesheet">
     <link href="{{ asset('/plugins/corp/stylesheets/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('/plugins/AdminJhon/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('http://fonts.googleapis.com/css?family=Knewave') }}" rel='stylesheet' type='text/css'>
     @yield('header_styles')
 
@@ -112,14 +115,17 @@
 <!-- JavaScript
   ================================================== -->
 
-<script src="{{ asset('/plugins/corp/js-files/jquery-1.7.2.min.js') }}" type="text/javascript"></script> <!-- jQuery -->
+<script src="{{ asset('/plugins/AdminJhon/js/jquery-1.11.1.min.js') }}" type="text/javascript"></script> <!-- jQuery -->
 <script src="{{ asset('/plugins/corp/js-files/jquery.easing.1.3.js') }}" type="text/javascript"></script> <!-- jQuery easing -->
 <script type='text/javascript' src="{{ asset('/plugins/corp/js-files/jquery.common.min.js') }}"></script>
 <script src="{{ asset('/plugins/corp/js-files/custom.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/AdminJhon/vendors/livicons/minified/raphael-min.js') }}"></script>
+<script src="{{ asset('/plugins/AdminJhon/vendors/livicons/minified/livicons-1.4.min.js') }}"></script>
 
 <script src="{{ asset('/plugins/corp/assets/js/smoothscroll.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('/plugins/corp/assets/js/appear.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('/plugins/corp/assets/js/animations.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/AdminJhon/js/bootstrap.js') }}" type="text/javascript"></script>
 @yield('footer_scripts')
 
 <script>

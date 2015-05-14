@@ -1,14 +1,12 @@
 .modal_transparent{
+    background-color: transparent !important;
     font-size: 20px;
     color: #fff;
+    width: 400px;
     border-radius: 0px !important;
     background: url(../img/bg-white-lock.png) repeat;
-    width: 291px;
     margin: 0 auto;
     margin-bottom: 0px;
-    padding: 30px;
-    padding-top: 20px;
-    padding-bottom: 15px;
 }
 .modal_transparent_title{
     color: #eee;
@@ -25,9 +23,15 @@
 .fS17{
     font-size: 17px !important;
 }
+.fS15{
+    font-size: 15px !important;
+}
 .without_border{
     border: 0px solid !important;
 }
 .mTop50{
     margin-top: 50px;
+}
+.modal_transparent_footer{
+    border-top: 1px #e5e5e5 dashed !important;
 }

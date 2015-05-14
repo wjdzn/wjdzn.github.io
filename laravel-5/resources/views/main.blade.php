@@ -233,5 +233,69 @@
         </div>
     </div>
     <!-- ========================================================================================================= -->
+    <div class="modal fade " id="ModModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content modal_transparent">
+                <div class="modal-header without_border">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h3 class="modal-title modal_transparent_title" id="ModalFinal">Login to your account</h3>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="controls mbottom5">
+                                    <div class="input-group">
+                                            <span class="input-group-addon minWidtht40">
+                                                <i class="fa fa-envelope-o"></i>
+                                            </span>
+                                        <input type="text" id="email" name="email" value="{{ old('email') }}" class="form-control fS17" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="controls mbottom5">
+                                    <div class="input-group">
+                                            <span class="input-group-addon minWidtht40">
+                                                <i class="fa fa-lock "></i>
+                                            </span>
+                                        <input type="password" id="password"  name="password" class="form-control fS17" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="controls pull-left">
+                                    <div class="input-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" name="remember"> Remember Me
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="controls mbottom5 pull-right">
+                                    <div class="input-group">
+                                        <button type="submit" class="btn btn-primary" id="senddata">
+                                            Login <i class="fa fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="controls mbottom5 mTop50">
+                                    <div class="input-group">
+                                        <h4>Forgot your password ?</h4>
+                                        <h5>no worries, click <a href="{{ url('/password/email') }}">here</a> to reset your password.</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer modal_transparent_footer">
+                    <div class="controls mbottom5">
+                        <div class="input-group">
+                            <h4 class="pull-left">Don't have an account yet ?<a href="#" class="fS15"> Create an account</a> </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  <!-- Modal -->
 @stop
 
