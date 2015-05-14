@@ -18,6 +18,8 @@
 
     <!-- CSS
   ================================================== -->
+    <link href="{{ asset('/plugins/AdminJhon/vendors/font-awesome-4.2.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/css/login.css') }}" rel="stylesheet">
     <link href="{{ asset('/plugins/corp/stylesheets/base.css') }}" rel="stylesheet">
     <link href="{{ asset('/plugins/corp/stylesheets/skeleton.css') }}" rel="stylesheet">
     <link href="{{ asset('/plugins/corp/stylesheets/2_corporate.css') }}" rel="stylesheet">
@@ -336,30 +338,44 @@
 <div class="modal fade " id="ModModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content modal_transparent">
-            <div class="modal-header">
+            <div class="modal-header without_border">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                 <h3 class="modal-title modal_transparent_title" id="ModalFinal">Login to your account</h3>
             </div>
             <div class="modal-body">
-                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 350px;">
-                    <div class="scroller" style="height: 350px; overflow: hidden; width: auto;" data-always-visible="1" data-rail-visible1="1" data-initialized="1">
-                        <div class="row">
-                            <div class="col-md-6">
-                                 <h4>Email:</h4>
-                                <p>
-                                    <input id="m_email" type="text" class="col-md-12 form-control">
-                                </p>
-                                <h4>Address:</h4>
-                                <p>
-                                    <input id="m_address"  type="text" class="col-md-12 form-control save_data">
-                                </p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="controls mbottom5">
+                            <div class="input-group">
+                                        <span class="input-group-addon minWidtht40">
+                                            <i class="fa fa-envelope-o"></i>
+                                        </span>
+                                <input type="text" id="email" class="form-control fS17" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="controls mbottom5">
+                            <div class="input-group">
+                                        <span class="input-group-addon minWidtht40">
+                                            <i class="fa fa-lock "></i>
+                                        </span>
+                                <input type="text" id="password" class="form-control fS17" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="controls mbottom5 pull-right">
+                            <div class="input-group">
+                                <button type="button" class="btn btn-primary" id="senddata">
+                                    Login <i class="fa fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="controls mbottom5  pull-right mTop50">
+                            <div class="input-group">
+                                <h4>Forgot your password ?</h4>
+                                <h5>no worries, click <a href="#">here</a> to reset your password.</h5>
                             </div>
                         </div>
                     </div>
-                    <div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 300px; background: rgb(187, 187, 187);"></div>
-                    <div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(234, 234, 234);"></div>
                 </div>
-
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
@@ -380,6 +396,8 @@
     <script src="{{ asset('/plugins/corp/js-files/jquery.easing.1.3.js') }}" type="text/javascript"></script> <!-- jQuery easing -->
     <script type='text/javascript' src="{{ asset('/plugins/corp/js-files/jquery.common.min.js') }}"></script>
     <script src="{{ asset('/plugins/corp/js-files/custom.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('/plugins/AdminJhon/vendors/livicons/minified/raphael-min.js') }}"></script>
+    <script src="{{ asset('/plugins/AdminJhon/vendors/livicons/minified/livicons-1.4.min.js') }}"></script>
 
     <script src="{{ asset('/plugins/corp/assets/js/smoothscroll.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/plugins/corp/assets/js/appear.min.js') }}" type="text/javascript"></script>

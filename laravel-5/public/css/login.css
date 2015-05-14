@@ -1,13 +1,33 @@
 .modal_transparent{
-    background-color: transparent;
     font-size: 20px;
     color: #fff;
-    width: 400px;
-    border-radius: 0px;
+    border-radius: 0px !important;
+    background: url(../img/bg-white-lock.png) repeat;
+    width: 291px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 15px;
 }
 .modal_transparent_title{
     color: #eee;
     text-align: center;
     font-weight: 300;
     font-size: 24.5px;
+}
+.minWidtht40{
+    min-width: 40px;
+}
+.mbottom5{
+    margin-bottom: 5px;
+}
+.fS17{
+    font-size: 17px !important;
+}
+.without_border{
+    border: 0px solid !important;
+}
+.mTop50{
+    margin-top: 50px;
 }
