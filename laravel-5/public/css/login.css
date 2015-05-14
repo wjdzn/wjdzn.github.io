@@ -8,6 +8,9 @@
     margin: 0 auto;
     margin-bottom: 0px;
 }
+.modal_transparent a{
+    color:#337ab7 !important;
+}
 .modal_transparent_title{
     color: #eee;
     text-align: center;
@@ -34,4 +37,7 @@
 }
 .modal_transparent_footer{
     border-top: 1px #e5e5e5 dashed !important;
+}
+.a_join{
+    cursor: pointer;
 }

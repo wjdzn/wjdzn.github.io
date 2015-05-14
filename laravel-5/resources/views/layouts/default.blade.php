@@ -110,7 +110,23 @@
 </div>
 
 
-
+<div class="modal fade " id="MSGModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content modal_transparent">
+            <div class="modal-header without_border">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h3 class="modal-title modal_transparent_title" id="MSGModalTitle"></h3>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 id="h4MSG"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  <!-- Modal -->
 
 <!-- JavaScript
   ================================================== -->
@@ -126,6 +142,7 @@
 <script src="{{ asset('/plugins/corp/assets/js/appear.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('/plugins/corp/assets/js/animations.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('/plugins/AdminJhon/js/bootstrap.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/js/main.js') }}" type="text/javascript"></script>
 @yield('footer_scripts')
 
 <script>

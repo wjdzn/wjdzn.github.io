@@ -9,7 +9,9 @@
     <div class="page_style">
         <div class="container">
             <div class="sixteen columns context_style">
-
+                @if (count($errors) > 0)
+                    <input type="hidden" id="errors" value="@foreach ($errors->all() as $error){{ $error." "}}@endforeach ">
+                @endif
                 <div class="logotext">
                     InventPalooza!
                 </div>
@@ -18,7 +20,7 @@
                 </div>
 
                 <div class="contact_style">
-                    <div class="contact_btn"> <a href="#">Join</a> </div>
+                    <div class="contact_btn"> <a class="a_join">Join</a> </div>
                 </div>
 
 
@@ -233,7 +235,7 @@
         </div>
     </div>
     <!-- ========================================================================================================= -->
-    <div class="modal fade " id="ModModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade " id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content modal_transparent">
                 <div class="modal-header without_border">
@@ -290,7 +292,7 @@
                 <div class="modal-footer modal_transparent_footer">
                     <div class="controls mbottom5">
                         <div class="input-group">
-                            <h4 class="pull-left">Don't have an account yet ?<a href="#" class="fS15"> Create an account</a> </h4>
+                            <h4 class="pull-left">Don't have an account yet ?<a href="{{ url('/auth/register') }}" class="fS15"> Create an account</a> </h4>
                         </div>
                     </div>
                 </div>
