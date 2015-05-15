@@ -28,6 +28,9 @@ Route::get('cart', 'CartController@index');
 Route::get('forum', function() {
     return Redirect::to('http://inventpalooza.com/forum/public/');
 });
+Route::get('forum_register', function() {
+    return Redirect::to('http://inventpalooza.com/forum/public/register');
+});
 Route::get('login', function() {
     return view('login');
 });

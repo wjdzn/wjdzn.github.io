@@ -292,7 +292,7 @@
                 <div class="modal-footer modal_transparent_footer">
                     <div class="controls mbottom5">
                         <div class="input-group">
-                            <h4 class="pull-left">Don't have an account yet ?<a href="{{ url('/auth/register') }}" class="fS15"> Create an account</a> </h4>
+                            <h4 class="pull-left">Don't have an account yet ?<a href="{{ url('forum_register') }}" class="fS15"> Create an account</a> </h4>
                         </div>
                     </div>
                 </div>
