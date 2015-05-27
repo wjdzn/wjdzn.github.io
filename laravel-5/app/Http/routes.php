@@ -31,6 +31,9 @@ Route::get('forum', function() {
 Route::get('forum_register', function() {
     return Redirect::to('http://inventpalooza.com/forum/public/register');
 });
+Route::get('forum_forgot_password', function() {
+    return Redirect::to('http://inventpalooza.com/forum/public/forgot');
+});
 Route::get('login', function() {
     return view('login');
 });

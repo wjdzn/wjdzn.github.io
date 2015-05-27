@@ -282,7 +282,7 @@
                                 <div class="controls mbottom5 mTop50">
                                     <div class="input-group">
                                         <h4>Forgot your password ?</h4>
-                                        <h5>no worries, click <a href="{{ url('/password/email') }}">here</a> to reset your password.</h5>
+                                        <h5>no worries, click <a href="{{ url('forum_forgot_password') }}">here</a> to reset your password.</h5>
                                     </div>
                                 </div>
                             </div>
