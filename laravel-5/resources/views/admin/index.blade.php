@@ -143,7 +143,7 @@ Dashboard
             <div class="panel panel-border">
                 <div class="panel-heading border-light">
                     <h4 class="panel-title">
-                        <i class="livicon" data-name="calendar" data-size="16" data-loop="true" data-c="#333" data-hc="#333"></i>
+                        <i class="livicon" data-name="calendar" data-size="16" data-loop="true" data-c="#F89A14" data-hc="#F89A14"></i>
                         Calendar
                     </h4>
                     <span class="pull-right">

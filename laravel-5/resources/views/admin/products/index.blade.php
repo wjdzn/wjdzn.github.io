@@ -37,7 +37,7 @@ Products List
         <div class="panel panel-primary ">
             <button class="btn btn-primary btn-create" onclick="window.location='{{route("product_new")}}'">Create new product</button>
             <div class="panel-heading">
-                <h4 class="panel-title"> <i class="livicon" data-name="user" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
+                <h4 class="panel-title"> <i class="livicon" data-name="barcode" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
                     Products List
                 </h4>
             </div>
