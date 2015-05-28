@@ -88,3 +88,4 @@ Route::get('rejectRequest/{id}', 'UserController@rejectRequest');
 
 //mias
 Route::get('login_from_site', 'UserController@loginFromSite');
+Route::get('go_to_site', 'HomeController@getSite');
