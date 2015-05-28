@@ -11,6 +11,14 @@ class HomeController extends BaseController
         return View::make('home.index', array('categories' => $categories, 'acategories' => $acategories));
     }
 
+    public function getSite()
+    {
+        //Go to laravel-5 Site and remain login it.
+        $email = Session::get('logged');
+        $url = "http://inventpalooza.com/laravel-5/public/login_from_forum?email=".$email;
+        return Redirect::to($url);
+    }
+
     public function getRegister()
     {
         if (Session::has('logged')) {
