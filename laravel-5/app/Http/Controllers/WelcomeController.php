@@ -77,6 +77,10 @@ class WelcomeController extends Controller {
     }
     public function login_forum()
     {
+        $usr = Input::get('email');
+        if($usr == ""){
+            return redirect()->guest('/');
+        }
         $user = User::where('email','LIKE',Input::get('email'))->first();
         if($this->auth->login($user))
             return redirect()->guest('/');
