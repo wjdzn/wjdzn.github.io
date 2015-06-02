@@ -14,4 +14,8 @@ $(document).ready(function() {
     //Kick off the initial slide animation when the document is ready
     $(".transition-timer-carousel-progress-bar", "#transition-timer-carousel")
         .css("width", "100%");
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

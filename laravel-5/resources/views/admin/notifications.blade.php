@@ -196,4 +196,8 @@ Notifications
 @section('footer_scripts')
 <script type="text/javascript" src="{{ asset('assets/vendors/noty-2.2.4/js/noty/packaged/jquery.noty.packaged.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/vendors/noty-2.2.4/js/script.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

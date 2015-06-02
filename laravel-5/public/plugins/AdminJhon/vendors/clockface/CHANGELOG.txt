@@ -9,4 +9,8 @@ Version 1.0.1  Aug 27, 2013
 
 Version 1.0.0  Dec 18, 2012
 -----------------------------
+<<<<<<< HEAD
 Initial release.
+=======
+Initial release.
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

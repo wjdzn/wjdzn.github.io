@@ -1,0 +1,111 @@
+[23-Apr-2015 21:16:47 UTC] PHP Warning:  require(/home/inventpalooza/public_html/laravel-5/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /home/inventpalooza/public_html/laravel-5/bootstrap/autoload.php on line 17
+[23-Apr-2015 21:16:47 UTC] PHP Fatal error:  require(): Failed opening required '/home/inventpalooza/public_html/laravel-5/bootstrap/../vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/inventpalooza/public_html/laravel-5/bootstrap/autoload.php on line 17
+[23-Apr-2015 21:16:57 UTC] PHP Warning:  require(/home/inventpalooza/public_html/laravel-5/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /home/inventpalooza/public_html/laravel-5/bootstrap/autoload.php on line 17
+[23-Apr-2015 21:16:57 UTC] PHP Fatal error:  require(): Failed opening required '/home/inventpalooza/public_html/laravel-5/bootstrap/../vendor/autoload.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/inventpalooza/public_html/laravel-5/bootstrap/autoload.php on line 17
+[23-Apr-2015 21:27:43 UTC] PHP Warning:  require(/home/inventpalooza/public_html/laravel-5/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Resources/functions/dump.php): failed to open stream: No such file or directory in /home/inventpalooza/public_html/laravel-5/vendor/composer/autoload_real.php on line 58
+[23-Apr-2015 21:27:43 UTC] PHP Fatal error:  require(): Failed opening required '/home/inventpalooza/public_html/laravel-5/vendor/symfony/var-dumper/Symfony/Component/VarDumper/Resources/functions/dump.php' (include_path='/home/inventpalooza/public_html/laravel-5/vendor/phpunit/php-text-template:/home/inventpalooza/public_html/laravel-5/vendor/phpunit/php-timer:.:/usr/lib/php:/usr/local/lib/php') in /home/inventpalooza/public_html/laravel-5/vendor/composer/autoload_real.php on line 58
+[23-Apr-2015 21:59:03 UTC] PHP Fatal error:  Class 'Controller' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/CartController.php on line 2
+[23-Apr-2015 22:59:00 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Cart' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/CartController.php on line 33
+[23-Apr-2015 23:07:48 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Cart' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/CartController.php on line 33
+[23-Apr-2015 23:10:07 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Cart' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/CartController.php on line 33
+[24-Apr-2015 12:53:00 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Cart' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/CartController.php on line 33
+[24-Apr-2015 14:11:29 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Cart' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/CartController.php on line 33
+[24-Apr-2015 14:55:08 UTC] PHP Fatal error:  Interface 'App\HasRoleAndPermissionContract' not found in /home/inventpalooza/public_html/laravel-5/app/User.php on line 9
+[24-Apr-2015 15:18:41 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Cart' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/CartController.php on line 33
+[24-Apr-2015 15:19:34 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Cart' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/CartController.php on line 33
+[24-Apr-2015 15:19:36 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Cart' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/CartController.php on line 33
+[24-Apr-2015 15:22:07 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Cart' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/CartController.php on line 33
+[24-Apr-2015 15:30:11 UTC] PHP Fatal error:  Class 'App\Providers\Cart' not found in /home/inventpalooza/public_html/laravel-5/app/Providers/ShoppingcartServiceProvider.php on line 18
+[24-Apr-2015 15:30:18 UTC] PHP Fatal error:  Class 'App\Providers\Cart' not found in /home/inventpalooza/public_html/laravel-5/app/Providers/ShoppingcartServiceProvider.php on line 18
+[24-Apr-2015 15:35:44 UTC] PHP Fatal error:  Call to undefined method App\Facades\Cart::add() in /home/inventpalooza/public_html/laravel-5/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php on line 219
+[25-Apr-2015 15:21:43 UTC] PHP Fatal error:  Call to a member function is() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Middleware/Administrator.php on line 35
+[25-Apr-2015 15:23:03 UTC] PHP Fatal error:  Call to a member function is() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Middleware/Administrator.php on line 35
+[25-Apr-2015 15:23:16 UTC] PHP Fatal error:  Call to a member function is() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Middleware/Administrator.php on line 36
+[25-Apr-2015 16:21:29 UTC] PHP Fatal error:  Class 'Sentry' not found in /home/inventpalooza/public_html/laravel-5/storage/framework/views/d5dfb5ba766febc073dc47ace1eb45db on line 186
+[25-Apr-2015 16:22:52 UTC] PHP Fatal error:  Class 'Sentry' not found in /home/inventpalooza/public_html/laravel-5/storage/framework/views/d5dfb5ba766febc073dc47ace1eb45db on line 186
+[25-Apr-2015 18:28:36 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Input' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 55
+[25-Apr-2015 18:30:20 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Request' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 55
+[26-Apr-2015 21:30:52 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:31:03 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:33:09 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:33:14 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:36:47 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:36:53 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:38:02 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:39:51 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:41:54 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:42:39 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:44:45 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:45:01 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:45:03 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:45:06 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:52:17 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:55:56 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:55:58 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 21:55:59 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 22:08:27 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 22:08:29 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 22:08:30 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 34
+[26-Apr-2015 22:33:45 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 58
+[26-Apr-2015 22:33:52 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 58
+[26-Apr-2015 22:37:48 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 58
+[26-Apr-2015 22:37:54 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 58
+[26-Apr-2015 22:37:56 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 58
+[26-Apr-2015 22:37:58 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 58
+[26-Apr-2015 22:37:59 UTC] PHP Parse error:  syntax error, unexpected '_corporate' (T_STRING) in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 130
+[26-Apr-2015 22:40:05 UTC] PHP Parse error:  syntax error, unexpected '_corporate' (T_STRING) in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 130
+[26-Apr-2015 22:46:59 UTC] PHP Fatal error:  Class 'HTML' not found in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 58
+[26-Apr-2015 23:16:48 UTC] PHP Parse error:  syntax error, unexpected '!' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 112
+[26-Apr-2015 23:29:19 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 311
+[26-Apr-2015 23:31:07 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 311
+[26-Apr-2015 23:31:14 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 311
+[26-Apr-2015 23:33:06 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 311
+[26-Apr-2015 23:33:12 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 311
+[26-Apr-2015 23:50:56 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/8b8816b922fd4d14641a4c7cee4cfa58 on line 166
+[27-Apr-2015 13:11:38 UTC] PHP Fatal error:  Call to a member function is() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Middleware/Administrator.php on line 36
+[27-Apr-2015 13:14:36 UTC] PHP Fatal error:  Call to a member function is() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Middleware/Administrator.php on line 36
+[27-Apr-2015 13:18:01 UTC] PHP Fatal error:  Call to a member function is() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Middleware/Administrator.php on line 36
+[27-Apr-2015 13:21:08 UTC] PHP Fatal error:  Call to a member function is() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Middleware/Administrator.php on line 36
+[27-Apr-2015 13:26:33 UTC] PHP Fatal error:  Call to a member function is() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Middleware/Administrator.php on line 36
+[27-Apr-2015 13:28:16 UTC] PHP Fatal error:  Can't use method return value in write context in /home/inventpalooza/public_html/laravel-5/app/Http/Middleware/Administrator.php on line 36
+[27-Apr-2015 18:56:40 UTC] PHP Fatal error:  Class 'App\Http\Controllers\DateTime' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 59
+[28-Apr-2015 13:37:25 UTC] PHP Fatal error:  Class 'App\Http\Controllers\DateTime' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 59
+[28-Apr-2015 14:06:47 UTC] PHP Fatal error:  Class 'date' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 57
+[28-Apr-2015 14:12:22 UTC] PHP Fatal error:  Call to undefined function DateTime() in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 66
+[28-Apr-2015 22:39:13 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 127
+[28-Apr-2015 22:39:22 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 127
+[28-Apr-2015 22:39:22 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 127
+[28-Apr-2015 22:39:32 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 127
+[28-Apr-2015 22:40:47 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 127
+[28-Apr-2015 22:41:47 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 127
+[28-Apr-2015 22:49:28 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 127
+[28-Apr-2015 22:49:28 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 127
+[28-Apr-2015 22:49:51 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 127
+[28-Apr-2015 22:50:01 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 127
+[28-Apr-2015 23:00:10 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 127
+[28-Apr-2015 23:00:18 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 127
+[28-Apr-2015 23:01:11 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 127
+[29-Apr-2015 16:13:25 UTC] PHP Fatal error:  Cannot instantiate interface Illuminate\Contracts\Auth\Guard in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/WelcomeController.php on line 33
+[29-Apr-2015 16:16:37 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Auth' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/WelcomeController.php on line 33
+[30-Apr-2015 14:14:56 UTC] PHP Fatal error:  Class 'App\Http\Controllers\User' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 135
+[30-Apr-2015 16:02:09 UTC] PHP Fatal error:  Class 'App\Models\UserForum' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 146
+[30-Apr-2015 16:03:16 UTC] PHP Fatal error:  Class 'App\Models\UserForum' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 146
+[30-Apr-2015 21:22:56 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Lang' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 152
+[30-Apr-2015 21:28:24 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Lang' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 152
+[30-Apr-2015 21:28:41 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Redirect' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 156
+[30-Apr-2015 21:29:49 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Redirect' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 157
+[30-Apr-2015 21:31:23 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Redirect' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 157
+[30-Apr-2015 21:31:26 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Redirect' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 157
+[30-Apr-2015 21:31:35 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Redirect' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 157
+[30-Apr-2015 21:32:04 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Redirect' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 157
+[01-May-2015 12:43:39 UTC] PHP Fatal error:  Class 'Sentry' not found in /home/inventpalooza/public_html/laravel-5/storage/framework/views/b9640c0f8806540308455f05da8ccf3b on line 69
+[01-May-2015 12:46:36 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 294
+[01-May-2015 13:54:50 UTC] PHP Fatal error:  Class 'App\Http\Controllers\DB' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/WelcomeController.php on line 58
+[01-May-2015 13:56:06 UTC] PHP Fatal error:  Class 'App\Http\Controllers\DB' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/WelcomeController.php on line 59
+[01-May-2015 13:57:26 UTC] PHP Fatal error:  Class 'App\Http\Controllers\DB' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/WelcomeController.php on line 58
+[01-May-2015 13:58:30 UTC] PHP Fatal error:  Class 'App\Http\Controllers\DB' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/WelcomeController.php on line 58
+[01-May-2015 14:08:44 UTC] PHP Fatal error:  Class 'App\Http\Controllers\DB' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/WelcomeController.php on line 58
+[01-May-2015 14:10:15 UTC] PHP Fatal error:  Class 'App\Http\Controllers\UserForum' not found in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/WelcomeController.php on line 58
+[02-May-2015 17:37:28 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/inventpalooza/public_html/laravel-5/app/Http/Controllers/AdminController.php on line 343
+[14-May-2015 18:58:23 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/956b65c722045cdaccef81bfaba62dbe on line 15
+[14-May-2015 18:58:27 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/inventpalooza/public_html/laravel-5/storage/framework/views/956b65c722045cdaccef81bfaba62dbe on line 15

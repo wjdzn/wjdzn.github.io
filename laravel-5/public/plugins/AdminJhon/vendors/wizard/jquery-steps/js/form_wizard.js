@@ -215,4 +215,8 @@ function lookup() {
     $('#fqdn').data('lookup', 1);
     $('#fqdn').data('is-valid', 1);
     $('#ip').val('127.0.0.1');
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

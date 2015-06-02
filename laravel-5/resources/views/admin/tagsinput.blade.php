@@ -327,4 +327,8 @@ $(document).on('click', '.panel-heading span.clickable', function(e) {
 <script src="{{ asset('assets/vendors/tags/bower_components/typeahead.js/dist/typeahead.min.js') }}"></script>
 <script src="{{ asset('assets/vendors/tags/bower_components/typeahead.js/test/vendor/hogan-2.0.0.js') }}"></script>
 <script src="{{ asset('assets/vendors/tags/assets/app_bs3.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

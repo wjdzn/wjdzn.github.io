@@ -78,4 +78,8 @@ $("#sparklinebar").sparkline([3, 9, 16, 8, 13, 7, 11], {
         outlierLineColor: '#141313',
         medianColor: '#EF6F6C',
         targetColor: '#00bc8c'
+<<<<<<< HEAD
     });
+=======
+    });
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

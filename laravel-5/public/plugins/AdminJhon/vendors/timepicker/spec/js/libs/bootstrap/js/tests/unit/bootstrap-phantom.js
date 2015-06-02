@@ -18,4 +18,8 @@ QUnit.done = function (opts) {
   console.log("\n======")
   console.log("Tests completed in " + opts.runtime + " milliseconds")
   console.log(opts.passed + " tests of " + opts.total + " passed, " + opts.failed + " failed.")
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

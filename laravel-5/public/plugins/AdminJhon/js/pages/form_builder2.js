@@ -138,4 +138,8 @@
 
     $(document).on("click", ".remove-link", function(ev) {
         $(this).parent().parent().remove();
+<<<<<<< HEAD
     });
+=======
+    });
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

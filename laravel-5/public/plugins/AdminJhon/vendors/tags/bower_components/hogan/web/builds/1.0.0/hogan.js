@@ -497,4 +497,8 @@ if (typeof module !== 'undefined' && module.exports) {
 } else if (typeof exports !== 'undefined') {
   exports.Hogan = Hogan;
   exports.HoganTemplate = HoganTemplate;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

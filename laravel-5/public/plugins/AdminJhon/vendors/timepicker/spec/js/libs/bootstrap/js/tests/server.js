@@ -11,4 +11,8 @@ var connect = require('connect')
 
 http.createServer(app).listen(3000);
 
+<<<<<<< HEAD
 fs.writeFileSync(__dirname + '/pid.txt', process.pid, 'utf-8')
+=======
+fs.writeFileSync(__dirname + '/pid.txt', process.pid, 'utf-8')
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

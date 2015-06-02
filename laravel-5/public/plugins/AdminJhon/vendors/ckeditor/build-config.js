@@ -163,4 +163,8 @@ var CKBUILDER_CONFIG = {
 		'vi' : 1,
 		'cy' : 1,
 	}
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

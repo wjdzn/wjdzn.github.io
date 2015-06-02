@@ -63,4 +63,8 @@ exec('node bin/hulk test/templates/list.mustache', function (error, stdout, stde
   assert(typeof templates.list   == 'object', 'defined a templates.list object');
   assert(typeof templates.list.r == 'function', 'defined a templates.list.r function');
   assert(templates.list.r() == '<ul>\n<li></li>\n<li></li>\n<li></li>\n<li></li>\n<li></li>\n<li></li>\n</ul>');
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

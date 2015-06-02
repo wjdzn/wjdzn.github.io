@@ -49,4 +49,8 @@ $("#gallery-header-center-left-icon").click(function() { if(size==0){size=1;}els
 
 check_button();
 check_size();
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

@@ -55,7 +55,21 @@
                 <a href="#" class="yt_button"></a>
                 <a href="#" class="twitter_button"></a>
                 <a href="#" class="facebook_button"></a>
+<<<<<<< HEAD
+                <div onclick="$('#ModModal').modal('show')" style="
+    background: url('../../public/img/bg-white-lock.png') repeat;
+    border-radius: 97px;
+    width: 34px;
+    height: 34px;
+    padding: 6px;
+    color: white;
+    cursor: pointer;
+    background-color: black;
+    float: right;
+">-&gt;</div>
+=======
 
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8
                 <div class="htext_style">Stay connected</div>
             </div>
         </div><!-- container -->

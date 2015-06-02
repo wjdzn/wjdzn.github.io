@@ -256,7 +256,11 @@ class AdminController extends Controller {
         $file = Input::file('file');
         $fileName = $file->getClientOriginalName();
         $file->move(public_path().'/uploads', $fileName);
+<<<<<<< HEAD
+        $product_new->image = "/uploads/".$fileName;"/uploads/".$fileName;
+=======
         $product_new->image = "/uploads/".$fileName;
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8
         $product_new->save();
         $products = Product::all();
         return view('admin.products.index',array('products' => $products));

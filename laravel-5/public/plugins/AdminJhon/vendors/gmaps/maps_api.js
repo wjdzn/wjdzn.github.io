@@ -20,4 +20,8 @@ google.maps = google.maps || {};
   };
   var loadScriptTime = (new Date).getTime();
   getScript("http://maps.gstatic.com/maps-api-v3/api/js/17/15/main.js");
+<<<<<<< HEAD
 })();
+=======
+})();
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

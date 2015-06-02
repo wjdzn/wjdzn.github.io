@@ -211,4 +211,8 @@ Form Editors
 <script type="text/javascript" src="{{ asset('assets/vendors/bootstrap-wysihtml5-rails-b3/vendor/assets/javascripts/bootstrap-wysihtml5/wysihtml5.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/vendors/bootstrap-wysihtml5-rails-b3/vendor/assets/javascripts/bootstrap-wysihtml5/core-b3.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/js/pages/editor.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

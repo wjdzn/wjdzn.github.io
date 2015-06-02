@@ -68,7 +68,11 @@ return array(
       | will not be safe. Please do this before deploying an application!
       |
      */
+<<<<<<< HEAD
+    'key' => 'GdAStrQ0a407gsKWstg90J5vbVRcYP6t',
+=======
     'key' => 'N44wSCKNhpJOFYqaz7ZMmQquDp3sOUHZ',
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8
     'cipher' => MCRYPT_RIJNDAEL_128,
     /*
       |--------------------------------------------------------------------------

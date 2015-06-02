@@ -1,0 +1,5 @@
+[24-Apr-2015 15:25:42 UTC] PHP Fatal error:  Class 'TestCase' not found in /home/inventpalooza/public_html/laravel-5/tests/ExampleTest.php on line 3
+[24-Apr-2015 15:25:49 UTC] PHP Fatal error:  Class 'Illuminate\Foundation\Testing\TestCase' not found in /home/inventpalooza/public_html/laravel-5/tests/TestCase.php on line 3
+[24-Apr-2015 15:25:57 UTC] PHP Fatal error:  Class 'TestCase' not found in /home/inventpalooza/public_html/laravel-5/tests/ExampleTest.php on line 3
+[24-Apr-2015 15:27:54 UTC] PHP Warning:  require_once(/home/inventpalooza/public_html/laravel-5/tests/helpers/SessionMock.php): failed to open stream: No such file or directory in /home/inventpalooza/public_html/laravel-5/tests/CartTest.php on line 7
+[24-Apr-2015 15:27:54 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/inventpalooza/public_html/laravel-5/tests/helpers/SessionMock.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/inventpalooza/public_html/laravel-5/tests/CartTest.php on line 7

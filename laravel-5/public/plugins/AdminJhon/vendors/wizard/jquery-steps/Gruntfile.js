@@ -153,4 +153,8 @@ module.exports = function (grunt)
     grunt.registerTask('api', ['clean:api', 'yuidoc']);
     grunt.registerTask('build', ['clean:build', 'concat', 'jshint', 'qunit']);
     grunt.registerTask('release', ['build', 'api', 'uglify', 'compress', 'exec:createPkg']);
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

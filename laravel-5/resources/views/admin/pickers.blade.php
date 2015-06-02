@@ -730,4 +730,8 @@ Pickers
 <!--spinner-->
 <script src="{{ asset('assets/vendors/spinner/dist/jquery.spinner.js') }}"></script>
 <script src="{{ asset('assets/js/pages/pickers.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

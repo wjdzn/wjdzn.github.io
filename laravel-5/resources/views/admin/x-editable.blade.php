@@ -196,4 +196,8 @@ X-Editable
 </script>
 <script src="{{ asset('assets/vendors/x-editable/demo-mock.js') }}"></script>
 <script src="{{ asset('assets/vendors/x-editable/demo.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

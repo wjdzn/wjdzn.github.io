@@ -129,4 +129,8 @@ Form Builder
 @section('footer_scripts')
 <script src="{{ asset('assets/vendors/form_builder1/js/beautifyhtml.js') }}"></script>
 <script src="{{ asset('assets/js/pages/form_builder2.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

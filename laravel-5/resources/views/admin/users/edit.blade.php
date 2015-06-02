@@ -156,4 +156,8 @@ Edit User
     <script src="{{ asset('/plugins/AdminJhon/vendors/wizard/jquery-steps/js/jquery.steps.js') }}"></script>
     <script src="{{ asset('/plugins/AdminJhon/vendors/jasny-bootstrap/js/jasny-bootstrap.js') }}"></script>
     <script src="{{ asset('/plugins/AdminJhon/js/pages/add_user.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

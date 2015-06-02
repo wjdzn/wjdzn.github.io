@@ -156,4 +156,8 @@ View Product Details
 @section('footer_scripts')
 <!-- Bootstrap WYSIHTML5 -->
 <script  src="{{ asset('/plugins/AdminJhon/vendors/jasny-bootstrap/js/jasny-bootstrap.js') }}" type="text/javascript"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

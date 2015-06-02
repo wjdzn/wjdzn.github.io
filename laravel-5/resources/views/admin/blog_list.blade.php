@@ -346,4 +346,8 @@ Blank Page
     @section('footer_scripts')
 <!--tags-->
 <script src="{{ asset('assets/vendors/tags/dist/bootstrap-tagsinput.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

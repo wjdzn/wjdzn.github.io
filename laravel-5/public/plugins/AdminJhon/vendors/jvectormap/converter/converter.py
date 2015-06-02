@@ -262,4 +262,8 @@ converter = Converter(args.input_file,
   language = args.language,
   input_file_encoding = args.input_file_encoding
 )
+<<<<<<< HEAD
 converter.convert(args.output_file)
+=======
+converter.convert(args.output_file)
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

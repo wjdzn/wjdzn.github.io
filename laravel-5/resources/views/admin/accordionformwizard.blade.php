@@ -269,4 +269,8 @@ Accordion Wizard
 <!-- begining of page level js -->
 <script src="{{ asset('assets/vendors/wizard/acc-wizard-master/js/acc-wizard.min.js') }}"></script>
 <script src="{{ asset('assets/js/pages/accordionformwizard.js') }}" type="text/javascript"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

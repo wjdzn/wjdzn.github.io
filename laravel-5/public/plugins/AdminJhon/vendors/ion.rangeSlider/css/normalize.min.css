@@ -47,4 +47,8 @@ input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-w
 input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 textarea{overflow:auto;vertical-align:top}
+<<<<<<< HEAD
 table{border-collapse:collapse;border-spacing:0}
+=======
+table{border-collapse:collapse;border-spacing:0}
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

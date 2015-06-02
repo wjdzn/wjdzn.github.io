@@ -1052,4 +1052,8 @@ User Profile
 <script src="{{ asset('assets/vendors/magnifier/imgmagnify.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/vendors/iCheck/icheck.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/js/pages/user_profile.js') }}" type="text/javascript"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

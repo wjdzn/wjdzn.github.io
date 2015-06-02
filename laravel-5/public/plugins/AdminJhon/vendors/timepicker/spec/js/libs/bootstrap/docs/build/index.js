@@ -41,4 +41,8 @@ pages.forEach(function (name) {
   })
 
   fs.writeFileSync(__dirname + '/../' + name.replace(/mustache$/, 'html'), page, 'utf-8')
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

@@ -191,4 +191,8 @@ Charts
 <script language="javascript" type="text/javascript" src="{{ asset('assets/vendors/charts/jquery.flot.spline.js') }}"></script>
 <script language="javascript" type="text/javascript" src="{{ asset('assets/vendors/charts/jquery.flot.tooltip.js') }}"></script>
 <script language="javascript" type="text/javascript" src="{{ asset('assets/js/pages/customcharts.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

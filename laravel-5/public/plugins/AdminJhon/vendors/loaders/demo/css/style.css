@@ -53,4 +53,8 @@ body ul li.gradient {
     background: -ms-linear-gradient(top, #efc5ca 0%,#ef2f43 100%); /* IE10+ */
     background: linear-gradient(top, #efc5ca 0%,#ef2f43 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efc5ca', endColorstr='#ef2f43',GradientType=0 ); /* IE6-9 */
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

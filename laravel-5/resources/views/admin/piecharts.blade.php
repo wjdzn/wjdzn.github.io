@@ -200,4 +200,8 @@ Pie Charts
 <script language="javascript" type="text/javascript" src="{{ asset('assets/vendors/charts/jquery.flot.pie.js') }}"></script>
 <script language="javascript" type="text/javascript" src="{{ asset('assets/vendors/charts/jquery.flot.resize.js') }}"></script>
 <script language="javascript" type="text/javascript" src="{{ asset('assets/js/pages/custompiecharts.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

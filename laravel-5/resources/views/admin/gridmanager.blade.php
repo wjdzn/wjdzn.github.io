@@ -212,4 +212,8 @@ Page Builder
 <script type="text/javascript" src="{{ asset('assets/vendors/tinymce/js/tinymce/jquery.tinymce.min.js') }}"></script>
 <script src="{{ asset('assets/vendors/gridmanager/dist/js/jquery.gridmanager.js') }}"></script>
 <script src="{{ asset('assets/js/pages/grid_manager.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

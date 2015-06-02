@@ -29,4 +29,8 @@ var template = Hogan.compile(homepage);
 fs.writeFileSync(path.dirname(homeTemplatePath) + '/index.html',
                  template.render(context));
 
+<<<<<<< HEAD
 fs.unlinkSync(homeTemplatePath);
+=======
+fs.unlinkSync(homeTemplatePath);
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

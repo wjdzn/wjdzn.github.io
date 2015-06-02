@@ -140,4 +140,8 @@ Image Magnifier
 {{-- page level scripts --}}
 @section('footer_scripts')
 <script type="text/javascript" src="{{ asset('assets/vendors/magnifier/imgmagnify.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

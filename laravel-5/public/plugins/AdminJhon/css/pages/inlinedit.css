@@ -10,4 +10,8 @@ table.table > tbody > tr > td { height: 30px; vertical-align: middle; }
 .buttons {display:inline-block; width:100%;padding:0px; margin:0px;}
 .btns {padding-top:15px; margin:0px;}
 .txt-align {text-align:right;}
+<<<<<<< HEAD
 .enable-btn {margin-right:10px; margin-bottom:8px;}
+=======
+.enable-btn {margin-right:10px; margin-bottom:8px;}
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

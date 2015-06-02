@@ -965,4 +965,8 @@
     return [parseInt(rgb.substr(0, 2), 16), parseInt(rgb.substr(2, 2), 16), parseInt(rgb.substr(4, 2), 16)];
   };
 
+<<<<<<< HEAD
 })(jQuery);
+=======
+})(jQuery);
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

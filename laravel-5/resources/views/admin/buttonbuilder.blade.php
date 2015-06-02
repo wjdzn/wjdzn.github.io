@@ -1141,4 +1141,8 @@ Button Builder
 <script src="{{ asset('assets/vendors/icons_files/underscore-min.js') }}"></script>
 <script src="{{ asset('assets/vendors/icons_files/backbone-min.js') }}"></script>
 <script src="{{ asset('assets/js/pages/buttonbuilder.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

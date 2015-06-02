@@ -85,4 +85,8 @@ module.exports = function(grunt) {
     //register the task
     grunt.registerTask('build', ['concat', 'removelogging', 'uglify']);
     grunt.registerTask('dev-watching', ['concat:dist']);
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

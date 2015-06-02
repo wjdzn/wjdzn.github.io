@@ -85,4 +85,8 @@ Form Builder
 {{-- page level scripts --}}
 @section('footer_scripts')
 <script data-main="{{ asset('assets/vendors/Bootstrap-Form-Builder3/assets/js/main-built.js') }}" src="{{ asset('assets/vendors/Bootstrap-Form-Builder3/assets/js/lib/require.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

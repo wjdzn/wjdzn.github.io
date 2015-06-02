@@ -168,4 +168,8 @@ JS Charts
 <!-- begining of page level js -->
 <script src="{{ asset('assets/vendors/jscharts/Chart.js') }}"></script>
 <script src="{{ asset('assets/js/pages/chartjs.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

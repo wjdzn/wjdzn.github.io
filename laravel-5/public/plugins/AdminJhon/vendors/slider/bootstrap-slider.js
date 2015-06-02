@@ -745,4 +745,8 @@
 
 })( window.jQuery );
 
+<<<<<<< HEAD
 /* vim: set noexpandtab tabstop=4 shiftwidth=4 autoindent: */
+=======
+/* vim: set noexpandtab tabstop=4 shiftwidth=4 autoindent: */
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

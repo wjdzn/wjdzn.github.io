@@ -206,4 +206,8 @@ Form Wizard
 <script src="{{ asset('assets/vendors/wizard/jquery-steps/js/jquery.steps.js') }}"></script>
 <script src="{{ asset('assets/vendors/wizard/jquery-steps/js/form_wizard.js') }}"></script>
 <script src="{{ asset('assets/js/pages/formwizard.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

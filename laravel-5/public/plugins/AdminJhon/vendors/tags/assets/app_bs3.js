@@ -58,4 +58,8 @@ elt.tagsinput('input').typeahead({
 }).bind('typeahead:selected', $.proxy(function (obj, datum) {  
 	this.tagsinput('add', datum);
 	this.tagsinput('input').typeahead('setQuery', '');
+<<<<<<< HEAD
 }, elt));
+=======
+}, elt));
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

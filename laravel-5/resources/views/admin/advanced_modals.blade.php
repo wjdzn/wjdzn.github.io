@@ -922,4 +922,8 @@ Advanced Modals
 @section('footer_scripts')
 <script src="{{ asset('assets/vendors/modal/js/classie.js') }}"></script>
 <script src="{{ asset('assets/vendors/modal/js/modalEffects.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

@@ -110,4 +110,8 @@ $(function () {
         ok(!$._data(popover[0], 'events').mouseover && !$._data(popover[0], 'events').mouseout, 'popover does not have any events')
       })
 
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

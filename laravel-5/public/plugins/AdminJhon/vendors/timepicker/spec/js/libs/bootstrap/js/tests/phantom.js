@@ -60,4 +60,8 @@ page.open(phantom.args[0], function(status){
       phantom.exit((parseInt(failedNum, 10) > 0) ? 1 : 0)
     })
   }
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

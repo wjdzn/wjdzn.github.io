@@ -15156,4 +15156,8 @@ var styleDirective = valueFn({
   });
 
 })(window, document);
+<<<<<<< HEAD
 angular.element(document).find('head').append('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none !important;}ng\\:form{display:block;}</style>');
+=======
+angular.element(document).find('head').append('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none !important;}ng\\:form{display:block;}</style>');
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

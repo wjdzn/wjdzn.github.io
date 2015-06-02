@@ -269,4 +269,8 @@ Multiple File Upload
 <!-- The File Upload user interface plugin -->
 <script src="{{ asset('assets/vendors/jQuery-File-Upload/js/jquery.fileupload-ui.js') }}"></script>
 <script src="{{ asset('assets/vendors/jQuery-File-Upload/js/main.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

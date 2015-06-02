@@ -1,5 +1,13 @@
+<<<<<<< HEAD
+/vendor
+composer.phar
+composer.lock
+.DS_Store
+Thumbs.db
+=======
 /vendor
 composer.phar
 composer.lock
 .DS_Store
 Thumbs.db
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

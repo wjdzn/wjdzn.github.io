@@ -83,4 +83,8 @@ Advanced Maps
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script type="text/javascript" src="{{ asset('assets/vendors/gmaps/gmaps.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/vendors/gmaps/adv_maps.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

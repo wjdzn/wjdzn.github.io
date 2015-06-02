@@ -1674,4 +1674,8 @@ Form Elements
 <script src="{{ asset('assets/vendors/maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/vendors/card/jquery.card.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/js/pages/formelements.js') }}" type="text/javascript"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

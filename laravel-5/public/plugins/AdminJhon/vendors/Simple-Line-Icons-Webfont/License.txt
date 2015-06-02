@@ -21,4 +21,8 @@ Prohibitions
 You do not have the rights to redistribute, resell, lease, license, sublicense or offer 
 files downloaded from GraphicBurger to any third party “as is” or as a separate attachment 
 from any of your work. If you wish to promote my resources on your site, you must link back 
+<<<<<<< HEAD
 to the resource page where users can find the download and not directly to the download file.
+=======
+to the resource page where users can find the download and not directly to the download file.
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

@@ -1422,4 +1422,8 @@ JSZip.base64 = (function() {
 }());
 
 // enforcing Stuk's coding style
+<<<<<<< HEAD
 // vim: set shiftwidth=3 softtabstop=3:
+=======
+// vim: set shiftwidth=3 softtabstop=3:
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

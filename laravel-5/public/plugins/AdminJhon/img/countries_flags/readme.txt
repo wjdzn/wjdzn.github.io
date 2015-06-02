@@ -6,4 +6,8 @@ Note that these flags are named using the ISO3166-1 alpha-2 country codes where 
 
 If you find these icons useful, please donate via paypal to mjames@gmail.com (or click the donate button available at http://www.famfamfam.com/lab/icons/silk)
 
+<<<<<<< HEAD
 Contact: mjames@gmail.com
+=======
+Contact: mjames@gmail.com
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

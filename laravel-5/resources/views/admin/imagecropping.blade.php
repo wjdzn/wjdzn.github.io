@@ -265,4 +265,8 @@ Image Cropping
 <script src="{{ asset('assets/vendors/imgcrop/jquery.Jcrop.min.js') }}"></script>
 <script src="{{ asset('assets/vendors/imgcrop/jquery.color.js') }}"></script>
 <script src="{{ asset('assets/vendors/imgcrop/cropcustom.js') }}"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

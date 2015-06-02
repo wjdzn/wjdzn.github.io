@@ -49,4 +49,8 @@
     <script src="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/fullcalendar.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/plugins/AdminJhon/vendors/fullcalendar/calendarcustom.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('/js/calendar.js') }}" type="text/javascript"></script>
+<<<<<<< HEAD
 @stop
+=======
+@stop
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8

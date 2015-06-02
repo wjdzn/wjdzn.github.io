@@ -35,4 +35,8 @@ PreloadContainer.prototype.preloadImage = function (url) {
     var image = new PreloadImage();
     image.addToPreloader(this, url);
     image.bindLoadEvent();
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> f9eb8f2935e210dc911e20d1ac3f5a5339b5f8e8
